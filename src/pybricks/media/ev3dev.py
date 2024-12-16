@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: MIT
 # Copyright (c) 2018-2020 The Pybricks Authors
 
-"""Images and Sounds for Pybricks on ev3dev."""
+"""Images et sons pour Pybricks sur ev3dev."""
 
 from __future__ import annotations
 
@@ -11,8 +11,8 @@ from ..parameters import Color
 
 
 class Image:
-    """Object representing a graphics image. This can either be an in-memory
-    copy of an image or the image displayed on a screen."""
+    """Objet représentant une image graphique. Cela peut être une copie en mémoire
+    d'une image ou l'image affichée sur un écran."""
 
     # Documentation note: This class is also treated as the `screen` object
     # on EV3 so we use |this image| when it would make sense to say "the screen"
@@ -34,54 +34,54 @@ class Image:
 
 
         Arguments:
-            source (str or Image):
-                The source of the image.
+            source (str ou Image):
+                La source de l'image.
 
-                If ``source`` is a string, then the image will be loaded from
-                the file path given by the string. Only ``.png`` files are
-                supported. As a special case, if the string is ``_screen_``,
-                the image will be configured to draw directly on the screen.
+                Si ``source`` est une chaîne de caractères, l'image sera chargée à partir
+                du chemin de fichier donné par la chaîne. Seuls les fichiers ``.png`` sont
+                pris en charge. Dans un cas particulier, si la chaîne est ``_screen_``,
+                l'image sera configurée pour dessiner directement sur l'écran.
 
-                If an :class:`Image` is given, the new object will contain a
-                copy of the ``source`` image object.
+                Si un :class:`Image` est donné, le nouvel objet contiendra une
+                copie de l'objet image ``source``.
 
             sub (bool):
-                If ``sub`` is ``True``, then the image object will act as a
-                sub-image of the ``source`` image (this only works if the type
-                of ``source`` is :class:`Image` and not when it is a ``str``).
+                Si ``sub`` est ``True``, l'objet image agira comme une
+                sous-image de l'image ``source`` (cela ne fonctionne que si le type
+                de ``source`` est :class:`Image` et non lorsqu'il s'agit d'une ``str``).
 
-                Additional keyword arguments ``x1``, ``y1``, ``x2``, ``y2`` are
-                needed when ``sub=True``. These specify the top-left and
-                bottom-right coordinates in the ``source`` image that will be
-                used as the bounds for the sub-image.
+                Des arguments supplémentaires ``x1``, ``y1``, ``x2``, ``y2`` sont
+                nécessaires lorsque ``sub=True``. Ceux-ci spécifient les coordonnées
+                en haut à gauche et en bas à droite dans l'image ``source`` qui seront
+                utilisées comme limites pour la sous-image.
         """
 
     @property
     def width(self) -> int:
-        """Gets the width of |this image| in pixels."""
+        """Obtient la largeur de |cette image| en pixels."""
         return 0
 
     @property
     def height(self) -> int:
-        """Gets the height of |this image| in pixels."""
+        """Obtient la hauteur de |cette image| en pixels."""
         return 0
 
     def clear(self) -> None:
         """clear()
 
-        Clears |this image|. All pixels on |this image| will be set to
+        Efface |cette image|. Tous les pixels de |cette image| seront définis sur
         :attr:`Color.WHITE <pybricks.parameters.Color.WHITE>`.
         """
 
     def draw_pixel(self, x: int, y: int, color: Color = Color.BLACK) -> None:
         """draw_pixel(x, y, color=Color.BLACK)
 
-        Draws a single pixel on |this image|.
+        Dessine un seul pixel sur |cette image|.
 
         Arguments:
-            x (int): The x coordinate of the pixel.
-            y (int): The y coordinate of the pixel.
-            color (Color): The color of the pixel.
+            x (int): La coordonnée x du pixel.
+            y (int): La coordonnée y du pixel.
+            color (Color): La couleur du pixel.
         """
 
     def draw_line(
@@ -95,15 +95,15 @@ class Image:
     ) -> None:
         """draw_line(x1, y1, x2, y2, width=1, color=Color.BLACK)
 
-        Draws a line on |this image|.
+        Dessine une ligne sur |cette image|.
 
         Arguments:
-            x1 (int): The x coordinate of the starting point of the line.
-            y1 (int): The y coordinate of the starting point of the line.
-            x2 (int): The x coordinate of the ending point of the line.
-            y2 (int): The y coordinate of the ending point of the line.
-            width (int): The width of the line in pixels.
-            color (Color): The color of the line.
+            x1 (int): La coordonnée x du point de départ de la ligne.
+            y1 (int): La coordonnée y du point de départ de la ligne.
+            x2 (int): La coordonnée x du point de fin de la ligne.
+            y2 (int): La coordonnée y du point de fin de la ligne.
+            width (int): La largeur de la ligne en pixels.
+            color (Color): La couleur de la ligne.
         """
 
     def draw_box(
@@ -118,17 +118,17 @@ class Image:
     ) -> None:
         """draw_box(x1, y1, x2, y2, r=0, fill=False, color=Color.BLACK)
 
-        Draws a box on |this image|.
+        Dessine une boîte sur |cette image|.
 
         Arguments:
-            x1 (int): The x coordinate of the left side of the box.
-            y1 (int): The y coordinate of the top of the box.
-            x2 (int): The x coordinate of the right side of the box.
-            y2 (int): The y coordinate of the bottom of the box.
-            r (int): The radius of the corners of the box.
-            fill (bool): If ``True``, the box will be filled with ``color``,
-                otherwise only the outline of the box will be drawn.
-            color (Color): The color of the box.
+            x1 (int): La coordonnée x du côté gauche de la boîte.
+            y1 (int): La coordonnée y du haut de la boîte.
+            x2 (int): La coordonnée x du côté droit de la boîte.
+            y2 (int): La coordonnée y du bas de la boîte.
+            r (int): Le rayon des coins de la boîte.
+            fill (bool): Si ``True``, la boîte sera remplie avec ``color``,
+                sinon seul le contour de la boîte sera dessiné.
+            color (Color): La couleur de la boîte.
         """
 
     def draw_circle(
@@ -136,15 +136,15 @@ class Image:
     ) -> None:
         """draw_circle(x, y, r, fill=False, color=Color.BLACK)
 
-        Draws a circle on |this image|.
+        Dessine un cercle sur |cette image|.
 
         Arguments:
-            x (int): The x coordinate of the center of the circle.
-            y (int): The y coordinate of the center of the circle.
-            r (int): The radius of the circle.
-            fill (bool): If ``True``, the circle will be filled with
-                ``color``, otherwise only the circumference will be drawn.
-            color (Color): The color of the circle.
+            x (int): La coordonnée x du centre du cercle.
+            y (int): La coordonnée y du centre du cercle.
+            r (int): Le rayon du cercle.
+            fill (bool): Si ``True``, le cercle sera rempli avec
+                ``color``, sinon seule la circonférence sera dessinée.
+            color (Color): La couleur du cercle.
         """
 
     def draw_image(
@@ -156,33 +156,33 @@ class Image:
     ) -> None:
         """draw_image(x, y, source, transparent=None)
 
-        Draws the ``source`` image on |this image|.
+        Dessine l'image ``source`` sur |cette image|.
 
         Arguments:
             x (int):
-                The x-axis value where the left side of the image will start.
+                La valeur de l'axe x où le côté gauche de l'image commencera.
             y (int):
-                The y-axis value where the top of the image will start.
-            source (Image or str):
-                The source :class:`Image <pybricks.media.ev3dev.Image>`. If
-                the argument is a string, then the ``source`` image is loaded
-                from file.
+                La valeur de l'axe y où le haut de l'image commencera.
+            source (Image ou str):
+                La source :class:`Image <pybricks.media.ev3dev.Image>`. Si
+                l'argument est une chaîne de caractères, l'image ``source`` est chargée
+                à partir du fichier.
             transparent (Color):
-                The color of ``image`` to treat as transparent or ``None`` for
-                no transparency.
+                La couleur de ``image`` à traiter comme transparente ou ``None`` pour
+                aucune transparence.
         """
 
     def load_image(self, source: Union[Image, ImageFile, str]) -> None:
         """load_image(source)
 
-        Clears this image, then draws the ``source`` image centered in
-        |this image|.
+        Efface cette image, puis dessine l'image ``source`` centrée dans
+        |cette image|.
 
         Arguments:
-            source (Image or str):
-                The source :class:`Image <pybricks.media.ev3dev.Image>`. If
-                the argument is a string, then the ``source`` image is loaded
-                from file.
+            source (Image ou str):
+                La source :class:`Image <pybricks.media.ev3dev.Image>`. Si
+                l'argument est une chaîne de caractères, l'image ``source`` est chargée
+                à partir du fichier.
         """
 
     def draw_text(
@@ -195,111 +195,108 @@ class Image:
     ) -> None:
         """draw_text(x, y, text, text_color=Color.BLACK, background_color=None)
 
-        Draws text on |this image|.
+        Dessine du texte sur |cette image|.
 
-        The most recent font set using :meth:`.set_font` will be used or
-        :data:`Font.DEFAULT <pybricks.media.ev3dev.Font.DEFAULT>` if no font
-        has been set yet.
+        La police la plus récente définie à l'aide de :meth:`.set_font` sera utilisée ou
+        :data:`Font.DEFAULT <pybricks.media.ev3dev.Font.DEFAULT>` si aucune police
+        n'a encore été définie.
 
         Arguments:
             x (int):
-                The x-axis value where the left side of the text will start.
+                La valeur de l'axe x où le côté gauche du texte commencera.
             y (int):
-                The y-axis value where the top of the text will start.
+                La valeur de l'axe y où le haut du texte commencera.
             text (str):
-                The text to draw.
+                Le texte à dessiner.
             text_color (Color):
-                The color used for drawing the text.
+                La couleur utilisée pour dessiner le texte.
             background_color (Color):
-                The color used to fill the rectangle behind the text or
-                ``None`` for transparent background.
+                La couleur utilisée pour remplir le rectangle derrière le texte ou
+                ``None`` pour un fond transparent.
         """
 
     def print(self, *args: Any, sep: str = " ", end: str = "\n") -> None:
         """print(*args, sep=" ", end="\\n")
 
-        Prints a line of text on |this image|.
+        Imprime une ligne de texte sur |cette image|.
 
-        This method works like the builtin ``print()`` function, but it writes
-        on |this image| instead.
+        Cette méthode fonctionne comme la fonction intégrée ``print()``, mais elle écrit
+        sur |cette image| à la place.
 
-        You can set the font using :meth:`.set_font`. If no font has been set,
-        :data:`Font.DEFAULT <pybricks.media.ev3dev.Font.DEFAULT>` will be
-        used. The text is always printed used black text with a white
-        background.
+        Vous pouvez définir la police en utilisant :meth:`.set_font`. Si aucune police n'a été définie,
+        :data:`Font.DEFAULT <pybricks.media.ev3dev.Font.DEFAULT>` sera
+        utilisée. Le texte est toujours imprimé en utilisant du texte noir avec un fond blanc.
 
-        Unlike the builtin ``print()``, the text does not wrap if it is too
-        wide to fit on |this image|. It just gets cut off. But if the text
-        would go off of the bottom of |this image|, the entire image is
-        scrolled up and the text is printed in the new blank area at the
-        bottom of |this image|.
+        Contrairement à la fonction intégrée ``print()``, le texte ne se renvoie pas à la ligne s'il est trop
+        large pour tenir sur |cette image|. Il est simplement coupé. Mais si le texte
+        dépasse le bas de |cette image|, toute l'image est
+        défilée vers le haut et le texte est imprimé dans la nouvelle zone vide en bas de |cette image|.
 
         Arguments:
-            args (Any): Zero or more objects to print.
-            sep (str): Separator that will be placed between each object that
-                is printed.
-            end (str): End of line that will be printed after the last object.
+            args (Any): Zéro ou plusieurs objets à imprimer.
+            sep (str): Séparateur qui sera placé entre chaque objet imprimé.
+            end (str): Fin de ligne qui sera imprimée après le dernier objet.
         """
 
     def set_font(self, font: Font) -> None:
         """set_font(font)
 
-        Sets the font used for writing on |this image|.
+        Définit la police utilisée pour écrire sur |cette image|.
 
-        The font is used for both :meth:`.draw_text` and :meth:`.print`.
+        La police est utilisée pour :meth:`.draw_text` et :meth:`.print`.
 
         Arguments:
             font (Font):
-                The font to use.
+                La police à utiliser.
         """
 
     @staticmethod
     def empty(width: int = 178, height: int = 128) -> Image:
         """empty(width=178, height=128) -> Image
 
-        Creates a new empty :class:`Image` object.
+        Crée un nouvel objet :class:`Image` vide.
 
         Arguments:
             width (int):
-                The width of the image in pixels.
+                La largeur de l'image en pixels.
             height (int):
-                The height of the image in pixels.
+                La hauteur de l'image en pixels.
 
         Returns:
-            A new image with all pixels set
-            to :attr:`Color.WHITE <pybricks.parameters.Color.WHITE>`.
+            Une nouvelle image avec tous les pixels définis
+            sur :attr:`Color.WHITE <pybricks.parameters.Color.WHITE>`.
 
         Raises:
             TypeError:
-                If ``width`` or ``height`` is not a number.
+                Si ``width`` ou ``height`` n'est pas un nombre.
             ValueError:
-                If ``width`` or ``height`` is less than 1.
+                Si ``width`` ou ``height`` est inférieur à 1.
             RuntimeError:
-                If there was a problem allocating a new image.
+                S'il y a eu un problème lors de l'allocation d'une nouvelle image.
         """
 
     def save(self, filename: str) -> None:
         """save(filename)
 
-        Saves |this image| as a ``.png`` file.
+        Enregistre |cette image| en tant que fichier ``.png``.
 
         Arguments:
             filename (str):
-                The path to the file to be saved.
+                Le chemin vers le fichier à enregistrer.
 
         Raises:
             TypeError:
-                ``filename`` is not a string.
+                ``filename`` n'est pas une chaîne de caractères.
             OSError:
-                There was a problem saving the file.
+                Il y a eu un problème lors de l'enregistrement du fichier.
         """
 
 
 class Font:
-    """Object that represents a font for writing text."""
+    """Objet représentant une police pour écrire du texte."""
 
     DEFAULT: Font = None  # assigned later since we can't use Font() here
-    """The default font."""
+    """La police par défaut."""
 
     def __init__(
         self,
@@ -312,79 +309,79 @@ class Font:
     ):
         """Font(family=None, size=12, bold=False, monospace=False, lang=None, script=None)
 
-        The font object will be a font that is the "best" match based on the
-        parameters given and available fonts installed.
+        L'objet police sera une police qui est la "meilleure" correspondance en fonction des
+        paramètres donnés et des polices disponibles installées.
 
         Arguments:
             family (str):
-                The preferred font family or ``None`` to use the default value.
+                La famille de polices préférée ou ``None`` pour utiliser la valeur par défaut.
             size (int):
-                The preferred font size. Most fonts have sizes between 6 and 24.
-                This is the "point" size and not the same as :attr:`height`.
+                La taille de police préférée. La plupart des polices ont des tailles comprises entre 6 et 24.
+                Il s'agit de la taille en "points" et non de la même chose que :attr:`height`.
             bold (bool):
-                When ``True``, prefer bold fonts.
+                Lorsque ``True``, préférer les polices en gras.
             monospace (bool):
-                When ``True`` prefer monospaced fonts. This is useful for
-                aligning multiple rows of text.
+                Lorsque ``True``, préférer les polices à espacement fixe. Cela est utile pour
+                aligner plusieurs lignes de texte.
             lang (str):
-                A language code, such as ``'en'`` or ``'zh-cn'`` or ``None`` to
-                use the default language. [#font_lang]_
+                Un code de langue, tel que ``'en'`` ou ``'zh-cn'`` ou ``None`` pour
+                utiliser la langue par défaut. [#font_lang]_
             script (str):
-                A unicode script identifier such as ``'Runr'`` or ``None``.
+                Un identifiant de script unicode tel que ``'Runr'`` ou ``None``.
         """
 
     @property
     def family(self) -> str:
-        """Gets the family name of the font."""
+        """Obtient le nom de la famille de la police."""
         return "Lucida"
 
     @property
     def style(self) -> str:
         """style -> str
 
-        Gets a string describing the font style.
+        Obtient une chaîne décrivant le style de la police.
 
-        Can be "Regular" or "Bold".
+        Peut être "Regular" ou "Bold".
         """
         return "Regular"
 
     @property
     def width(self) -> int:
-        """Gets the width of the widest character of the font."""
+        """Obtient la largeur du caractère le plus large de la police."""
         return 0
 
     @property
     def height(self) -> int:
-        """Gets the height of the font."""
+        """Obtient la hauteur de la police."""
         return 0
 
     def text_width(self, text: str) -> int:
         """text_width(text)
 
-        Gets the width of the text when the text is drawn using this font.
+        Obtient la largeur du texte lorsque le texte est dessiné en utilisant cette police.
 
         Arguments:
             text (str):
-                The text.
+                Le texte.
 
         Returns:
             int:
-                The width in pixels.
+                La largeur en pixels.
         """
         return 0
 
     def text_height(self, text: str) -> int:
         """text_height(text)
 
-        Gets the height of the text when the text is drawn using this font.
+        Obtient la hauteur du texte lorsque le texte est dessiné en utilisant cette police.
 
         Arguments:
             text (str):
-                The text.
+                Le texte.
 
         Returns:
             int:
-                The height in pixels.
+                La hauteur en pixels.
         """
         return 0
 
@@ -393,7 +390,7 @@ Font.DEFAULT = Font("Lucida", 12)
 
 
 class SoundFile:
-    """Paths to standard EV3 sounds."""
+    """Chemins vers les sons standard EV3."""
 
     _BASE_PATH: str = "/usr/share/sounds/ev3dev/"
     SHOUTING: str = _BASE_PATH + "expressions/shouting.wav"
@@ -504,7 +501,7 @@ class SoundFile:
 
 
 class ImageFile:
-    """Paths to standard EV3 images."""
+    """Chemins vers les images standard EV3."""
 
     _BASE_PATH: str = "/usr/share/images/ev3dev/mono/"
     RIGHT: str = _BASE_PATH + "information/right.png"

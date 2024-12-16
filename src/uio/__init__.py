@@ -6,7 +6,7 @@
 # Copyright (c) 2014-2021, Damien P. George, Paul Sokolovsky, and contributors
 
 """
-This module contains ``stream`` objects that behave like files.
+Ce module contient des objets ``stream`` qui se comportent comme des fichiers.
 """
 
 # TODO: open() is not implemented on Powered Up hubs
@@ -37,21 +37,21 @@ class BytesIO:
         BytesIO(data)
         BytesIO(alloc_size)
 
-        A binary stream using an in-memory bytes buffer.
+        Un flux binaire utilisant un tampon de bytes en mémoire.
 
         Arguments:
-            data (bytes or bytearray): Optional bytes-like object
-                that contains initial data.
-            alloc_size (int): Optional number of preallocated bytes. This
-                parameter is unique to MicroPython. It is not recommended to
-                use it in end-user code.
+            data (bytes ou bytearray): Objet optionnel de type bytes
+                contenant des données initiales.
+            alloc_size (int): Nombre optionnel de bytes préalloués. Ce
+                paramètre est unique à MicroPython. Il n'est pas recommandé de
+                l'utiliser dans le code utilisateur final.
         """
 
     def getvalue(self) -> bytes:
         """
         getvalue() -> bytes
 
-        Gets the contents of the underlying buffer.
+        Obtient le contenu du tampon sous-jacent.
         """
 
 
@@ -74,25 +74,25 @@ class StringIO:
         StringIO(string)
         StringIO(alloc_size)
 
-        A stream using an in-memory string buffer.
+        Un flux utilisant un tampon de chaîne en mémoire.
 
         Arguments:
-            string (str): Optional string with initial data.
-            alloc_size (int): Optional number of preallocated bytes. This
-                parameter is unique to MicroPython. It is not recommended to
-                use it in end-user code.
+            string (str): Chaîne optionnelle avec des données initiales.
+            alloc_size (int): Nombre optionnel de bytes préalloués. Ce
+                paramètre est unique à MicroPython. Il n'est pas recommandé de
+                l'utiliser dans le code utilisateur final.
         """
 
     def getvalue(self) -> str:
         """
         getvalue() -> str
 
-        Gets the contents of the underlying buffer.
+        Obtient le contenu du tampon sous-jacent.
         """
 
 
 class FileIO:
     """
-    This type represents a file opened in binary mode with ``open(name, 'rb')``.
-    You should not instantiate this class directly.
+    Ce type représente un fichier ouvert en mode binaire avec ``open(name, 'rb')``.
+    Vous ne devez pas instancier cette classe directement.
     """

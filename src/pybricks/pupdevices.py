@@ -22,21 +22,21 @@ if TYPE_CHECKING:
 
 
 class DCMotor(_common.DCMotor):
-    """LEGO® Powered Up motor without rotation sensors."""
+    """Moteur LEGO® Powered Up sans capteurs de rotation."""
 
     # HACK: jedi can't find inherited __init__ so we have to duplicate docs
     def __init__(self, port: Port, positive_direction: Direction = Direction.CLOCKWISE):
         """__init__(port, positive_direction=Direction.CLOCKWISE)
 
         Arguments:
-            port (Port): Port to which the motor is connected.
-            positive_direction (Direction): Which direction the motor should
-                turn when you give a positive duty cycle value.
+            port (Port): Port auquel le moteur est connecté.
+            positive_direction (Direction): La direction dans laquelle le moteur doit
+                tourner lorsque vous donnez une valeur de cycle de service positive.
         """
 
 
 class Motor(_common.Motor):
-    """LEGO® Powered Up motor with rotation sensors."""
+    """Moteur LEGO® Powered Up avec capteurs de rotation."""
 
     # HACK: jedi can't find inherited __init__ so we have to duplicate docs
     def __init__(
@@ -50,52 +50,51 @@ class Motor(_common.Motor):
         """__init__(port, positive_direction=Direction.CLOCKWISE, gears=None, reset_angle=True, profile=None)
 
         Arguments:
-            port (Port): Port to which the motor is connected.
-            positive_direction (Direction): Which direction the motor should
-                turn when you give a positive speed value or
-                angle.
+            port (Port): Port auquel le moteur est connecté.
+            positive_direction (Direction): La direction dans laquelle le moteur doit
+                tourner lorsque vous donnez une valeur de vitesse ou
+                d'angle positive.
             gears (list):
-                List of gears linked to the motor. The gear connected
-                to the motor comes first and the gear connected to the output
-                comes last.
+                Liste des engrenages reliés au moteur. L'engrenage connecté
+                au moteur vient en premier et l'engrenage connecté à la sortie
+                vient en dernier.
 
-                For example: ``[12, 36]`` represents a gear train with a
-                12-tooth gear connected to the motor and a 36-tooth gear
-                connected to the output. Use a list of lists for multiple
-                gear trains, such as ``[[12, 36], [20, 16, 40]]``.
+                Par exemple : ``[12, 36]`` représente un train d'engrenages avec un
+                engrenage de 12 dents connecté au moteur et un engrenage de 36 dents
+                connecté à la sortie. Utilisez une liste de listes pour plusieurs
+                trains d'engrenages, comme ``[[12, 36], [20, 16, 40]]``.
 
-                When you specify a gear train, all motor commands and settings
-                are automatically adjusted to account for the resulting gear
-                ratio. The motor direction remains unchanged by this.
+                Lorsque vous spécifiez un train d'engrenages, toutes les commandes et réglages
+                du moteur sont automatiquement ajustés pour tenir compte du rapport de réduction
+                résultant. La direction du moteur reste inchangée par cela.
             reset_angle (bool):
-                Choose ``True`` to reset the rotation sensor value to the
-                absolute marker angle (between -180 and 179).
-                Choose ``False`` to keep the
-                current value, so your program knows where it left off last
-                time.
-            profile (Number, deg): Precision profile. This is the approximate
-                position tolerance in degrees that is acceptable in your
-                application. A lower value gives more precise but more erratic
-                movement; a higher value gives less precise but smoother
-                movement. If no value is given, a suitable profile for this
-                motor type will be selected automatically (about 11 degrees).
+                Choisissez ``True`` pour réinitialiser la valeur du capteur de rotation à l'angle
+                du marqueur absolu (entre -180 et 179).
+                Choisissez ``False`` pour conserver la
+                valeur actuelle, afin que votre programme sache où il s'est arrêté la dernière
+                fois.
+            profile (Number, deg): Profil de précision. Il s'agit de la tolérance de position
+                approximative en degrés qui est acceptable dans votre application. Une valeur plus
+                basse donne un mouvement plus précis mais plus erratique ; une valeur plus élevée
+                donne un mouvement moins précis mais plus fluide. Si aucune valeur n'est donnée,
+                un profil adapté à ce type de moteur sera sélectionné automatiquement (environ 11 degrés).
         """
 
     def reset_angle(self, angle: Optional[Number] = None) -> None:
         """reset_angle(angle=None)
 
-        Sets the accumulated rotation angle of the motor to a desired value.
+        Définit l'angle de rotation accumulé du moteur à une valeur souhaitée.
 
-        If you don't specify an angle, the absolute angle
-        will be used if your motor supports it.
+        Si vous ne spécifiez pas d'angle, l'angle absolu
+        sera utilisé si votre moteur le prend en charge.
 
         Arguments:
-            angle (Number, deg): Value to which the angle should be reset.
+            angle (Number, deg): Valeur à laquelle l'angle doit être réinitialisé.
         """
 
 
 class Remote:
-    """LEGO® Powered Up Bluetooth Remote Control."""
+    """Télécommande Bluetooth LEGO® Powered Up."""
 
     light = _common.ExternalColorLight()
     buttons = _common.Keypad(
@@ -114,16 +113,16 @@ class Remote:
     def __init__(self, name: Optional[str] = None, timeout: int = 10000):
         """Remote(name=None, timeout=10000)
 
-        When you instantiate this class, the hub will search for a remote
-        and connect automatically.
+        Lorsque vous instanciez cette classe, le hub recherchera une télécommande
+        et se connectera automatiquement.
 
-        The remote must be on and ready for a connection, as indicated by a
-        white blinking light.
+        La télécommande doit être allumée et prête pour une connexion, comme indiqué par une
+        lumière blanche clignotante.
 
         Arguments:
-            name (str): Bluetooth name of the remote. If no name is given,
-                the hub connects to the first remote that it finds.
-            timeout (Number, ms): How long to search for the remote.
+            name (str): Nom Bluetooth de la télécommande. Si aucun nom n'est donné,
+                le hub se connecte à la première télécommande qu'il trouve.
+            timeout (Number, ms): Durée de recherche de la télécommande.
         """
 
     @overload
@@ -136,42 +135,42 @@ class Remote:
         """name(name)
         name() -> str
 
-        Sets or gets the Bluetooth name of the remote.
+        Définit ou obtient le nom Bluetooth de la télécommande.
 
         Arguments:
-            name (str): New Bluetooth name of the remote. If no name is given,
-                this method returns the current name.
+            name (str): Nouveau nom Bluetooth de la télécommande. Si aucun nom n'est donné,
+                cette méthode retourne le nom actuel.
         """
 
     def disconnect(self) -> MaybeAwaitable:
         """disconnect()
 
-        Disconnects the remote from the hub.
+        Déconnecte la télécommande du hub.
         """
 
 
 class TiltSensor:
-    """LEGO® Powered Up Tilt Sensor."""
+    """Capteur d'inclinaison LEGO® Powered Up."""
 
     def __init__(self, port: Port):
         """TiltSensor(port)
 
         Arguments:
-            port (Port): Port to which the sensor is connected.
+            port (Port): Port auquel le capteur est connecté.
         """
 
     def tilt(self) -> MaybeAwaitableTuple[int, int]:
         """tilt() -> Tuple[int, int]: deg
 
-        Measures the tilt relative to the horizontal plane.
+        Mesure l'inclinaison par rapport au plan horizontal.
 
-        Returns:
-            Tuple of pitch and roll angles.
+        Retourne :
+            Tuple des angles de tangage et de roulis.
         """
 
 
 class ColorDistanceSensor(_common.CommonColorSensor):
-    """LEGO® Powered Up Color and Distance Sensor."""
+    """Capteur de couleur et de distance LEGO® Powered Up."""
 
     light = _common.ExternalColorLight()
 
@@ -180,22 +179,22 @@ class ColorDistanceSensor(_common.CommonColorSensor):
         """__init__(port)
 
         Arguments:
-            port (Port): Port to which the sensor is connected.
+            port (Port): Port auquel le capteur est connecté.
         """
 
     def distance(self) -> MaybeAwaitableInt:
         """distance() -> int: %
 
-        Measures the relative distance between the sensor and an object
-        using infrared light.
+        Mesure la distance relative entre le capteur et un objet
+        en utilisant la lumière infrarouge.
 
-        Returns:
-            Distance ranging from 0% (closest) to 100% (farthest).
+        Retourne :
+            Distance allant de 0% (le plus proche) à 100% (le plus éloigné).
         """
 
 
 class PFMotor:
-    """Control Power Functions motors with the infrared functionality of the
+    """Contrôler les moteurs Power Functions avec la fonctionnalité infrarouge du
     :class:`ColorDistanceSensor <pybricks.pupdevices.ColorDistanceSensor>`."""
 
     def __init__(
@@ -209,46 +208,46 @@ class PFMotor:
 
         Arguments:
             sensor (ColorDistanceSensor):
-                Sensor object.
+                Objet capteur.
             channel (int):
-                Channel number of the receiver: ``1``, ``2``, ``3``, or ``4``.
+                Numéro de canal du récepteur : ``1``, ``2``, ``3`` ou ``4``.
             color (Color):
-                Color marker on the receiver:
-                :class:`Color.BLUE <.parameters.Color>` or
+                Marqueur de couleur sur le récepteur :
+                :class:`Color.BLUE <.parameters.Color>` ou
                 :class:`Color.RED <.parameters.Color>`
-            positive_direction (Direction): Which direction the motor should
-                turn when you give a positive duty cycle value.
+            positive_direction (Direction): La direction dans laquelle le moteur doit
+                tourner lorsque vous donnez une valeur de cycle de service positive.
         """
 
     def dc(self, duty: Number) -> MaybeAwaitable:
         """dc(duty)
 
-        Rotates the motor at a given duty cycle (also known as "power").
+        Fait tourner le moteur à un cycle de service donné (également appelé "puissance").
 
         Arguments:
-            duty (Number, %): The duty cycle (-100.0 to 100).
+            duty (Number, %): Le cycle de service (-100.0 à 100).
         """
 
     def stop(self) -> MaybeAwaitable:
         """stop()
 
-        Stops the motor and lets it spin freely.
+        Arrête le moteur et le laisse tourner librement.
 
-        The motor gradually stops due to friction.
+        Le moteur s'arrête progressivement en raison de la friction.
         """
 
     def brake(self) -> MaybeAwaitable:
         """brake()
 
-        Passively brakes the motor.
+        Freine passivement le moteur.
 
-        The motor stops due to friction, plus the voltage that
-        is generated while the motor is still moving.
+        Le moteur s'arrête en raison de la friction, plus la tension qui
+        est générée pendant que le moteur est encore en mouvement.
         """
 
 
 class ColorSensor(_common.AmbientColorSensor):
-    """LEGO® SPIKE Color Sensor."""
+    """Capteur de couleur LEGO® SPIKE."""
 
     lights = _common.LightArray3()
 
@@ -257,12 +256,12 @@ class ColorSensor(_common.AmbientColorSensor):
         """__init__(port)
 
         Arguments:
-            port (Port): Port to which the sensor is connected.
+            port (Port): Port auquel le capteur est connecté.
         """
 
 
 class UltrasonicSensor:
-    """LEGO® SPIKE Color Sensor."""
+    """Capteur de couleur LEGO® SPIKE."""
 
     lights = _common.LightArray4()
 
@@ -270,186 +269,183 @@ class UltrasonicSensor:
         """UltrasonicSensor(port)
 
         Arguments:
-            port (Port): Port to which the sensor is connected.
+            port (Port): Port auquel le capteur est connecté.
 
         """
 
     def distance(self) -> MaybeAwaitableInt:
         """distance() -> int: mm
 
-        Measures the distance between the sensor and an object using
-        ultrasonic sound waves.
+        Mesure la distance entre le capteur et un objet en utilisant
+        des ondes sonores ultrasoniques.
 
-        Returns:
-            Measured distance. If no valid distance was measured,
-            it returns 2000 mm.
+        Retourne :
+            Distance mesurée. Si aucune distance valide n'a été mesurée,
+            il retourne 2000 mm.
 
         """
 
     def presence(self) -> MaybeAwaitableBool:
         """presence() -> bool
 
-        Checks for the presence of other ultrasonic sensors by detecting
-        ultrasonic sounds.
+        Vérifie la présence d'autres capteurs ultrasoniques en détectant
+        des sons ultrasoniques.
 
-        Returns:
-            ``True`` if ultrasonic sounds are detected, ``False`` if not.
+        Retourne :
+            ``True`` si des sons ultrasoniques sont détectés, ``False`` sinon.
         """
 
 
 class ForceSensor:
-    """LEGO® SPIKE Force Sensor."""
+    """Capteur de force LEGO® SPIKE."""
 
     def __init__(self, port: Port):
         """ForceSensor(port)
 
         Arguments:
-            port (Port): Port to which the sensor is connected.
+            port (Port): Port auquel le capteur est connecté.
         """
 
     def force(self) -> MaybeAwaitableFloat:
         """force() -> float: N
 
-        Measures the force exerted on the sensor.
+        Mesure la force exercée sur le capteur.
 
-        Returns:
-            Measured force (up to approximately 10.00 N).
+        Retourne :
+            Force mesurée (jusqu'à environ 10.00 N).
         """
 
     def distance(self) -> MaybeAwaitableFloat:
         """distance() -> float: mm
 
-        Measures by how much the sensor button has moved.
+        Mesure de combien le bouton du capteur a bougé.
 
-        Returns:
-            Movement up to approximately 8.00 mm.
+        Retourne :
+            Mouvement jusqu'à environ 8.00 mm.
         """
 
     def pressed(self, force: Number = 3) -> MaybeAwaitableBool:
         """pressed(force=3) -> bool
 
-        Checks if the sensor button is pressed.
+        Vérifie si le bouton du capteur est pressé.
 
         Arguments:
-            force (Number, N): Minimum force to be considered pressed.
+            force (Number, N): Force minimale pour être considéré comme pressé.
 
-        Returns:
-            ``True`` if the sensor is pressed, ``False`` if it is not.
+        Retourne :
+            ``True`` si le capteur est pressé, ``False`` sinon.
         """
 
     def touched(self) -> MaybeAwaitableBool:
         """touched() -> bool
 
-        Checks if the sensor is touched.
+        Vérifie si le capteur est touché.
 
-        This is similar to :meth:`pressed`, but it detects slight movements of
-        the button even when the measured force is still considered zero.
+        Cela est similaire à :meth:`pressed`, mais il détecte de légers mouvements du
+        bouton même lorsque la force mesurée est encore considérée comme nulle.
 
-        Returns:
-            ``True`` if the sensor is touched or pressed, ``False``
-            if it is not.
+        Retourne :
+            ``True`` si le capteur est touché ou pressé, ``False``
+            sinon.
         """
 
 
 class ColorLightMatrix:
     """
-    LEGO® SPIKE 3x3 Color Light Matrix.
+    Matrice de lumière colorée 3x3 LEGO® SPIKE.
     """
 
     def __init__(self, port: Port):
         """ColorLightMatrix(port)
 
         Arguments:
-            port (Port): Port to which the device is connected.
+            port (Port): Port auquel l'appareil est connecté.
 
         """
-        ...
 
     def on(self, color: Union[Color, Collection[Color]]) -> MaybeAwaitable:
         """on(colors)
 
-        Turns the lights on.
+        Allume les lumières.
 
         Arguments:
-            colors (Color or list):
-                If a single :class:`.Color` is given, then all 9 lights are set
-                to that color. If a list of colors is given, then each light is
-                set to that color.
+            colors (Color ou liste):
+                Si une seule :class:`.Color` est donnée, alors les 9 lumières sont réglées
+                à cette couleur. Si une liste de couleurs est donnée, alors chaque lumière est
+                réglée à cette couleur.
         """
-        ...
 
     def off(self) -> MaybeAwaitable:
         """off()
 
-        Turns all lights off.
+        Éteint toutes les lumières.
         """
-        ...
 
 
 class InfraredSensor:
-    """LEGO® Powered Up Infrared Sensor."""
+    """Capteur infrarouge LEGO® Powered Up."""
 
     def __init__(self, port: Port):
         """InfraredSensor(port)
 
         Arguments:
-            port (Port): Port to which the sensor is connected.
+            port (Port): Port auquel le capteur est connecté.
         """
 
     def reflection(self) -> MaybeAwaitableInt:
         """reflection() -> int: %
 
-        Measures the reflection of a surface using an infrared light.
+        Mesure la réflexion d'une surface en utilisant une lumière infrarouge.
 
-        Returns:
-            Measured reflection, ranging from 0% (no reflection) to
-            100% (high reflection).
+        Retourne :
+            Réflexion mesurée, allant de 0% (aucune réflexion) à
+            100% (haute réflexion).
         """
 
     def distance(self) -> MaybeAwaitableInt:
         """distance() -> int: %
 
-        Measures the relative distance between the sensor and an object
-        using infrared light.
+        Mesure la distance relative entre le capteur et un objet
+        en utilisant la lumière infrarouge.
 
-        Returns:
-            Distance ranging from 0% (closest) to 100% (farthest).
+        Retourne :
+            Distance allant de 0% (le plus proche) à 100% (le plus éloigné).
         """
 
     def count(self) -> MaybeAwaitableInt:
         """count() -> int
 
-        Counts the number of objects that have passed by the sensor.
+        Compte le nombre d'objets qui sont passés devant le capteur.
 
-        Returns:
-            Number of objects counted.
+        Retourne :
+            Nombre d'objets comptés.
         """
 
 
 class Light:
-    """LEGO® Powered Up Light."""
+    """Lumière LEGO® Powered Up."""
 
     def __init__(self, port: Port):
         """Light(port)
 
         Arguments:
-            port (Port): Port to which the device is connected.
+            port (Port): Port auquel l'appareil est connecté.
         """
 
     def on(self, brightness: Number = 100) -> None:
         """on(brightness=100)
 
-        Turns on the light at the specified brightness.
+        Allume la lumière à la luminosité spécifiée.
 
         Arguments:
             brightness (Number, %):
-                Brightness of the light.
+                Luminosité de la lumière.
         """
 
     def off(self) -> None:
         """off()
 
-        Turns off the light."""
+        Éteint la lumière."""
 
 
 # HACK: exclude from jedi

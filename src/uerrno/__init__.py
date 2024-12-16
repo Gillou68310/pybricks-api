@@ -6,54 +6,54 @@
 # Copyright (c) 2014-2021, Damien P. George, Paul Sokolovsky, and contributors
 
 """
-This module provides access to symbolic error codes for `OSError` exception.
+Ce module fournit l'accès aux codes d'erreur symboliques pour l'exception `OSError`.
 """
 
 from typing import Dict
 
 EAGAIN: int
 """
-The operation is not complete and should be tried again soon.
+L'opération n'est pas terminée et doit être réessayée bientôt.
 """
 
 EBUSY: int
 """
-The device or resource is busy and cannot be used right now.
+Le périphérique ou la ressource est occupé et ne peut pas être utilisé pour le moment.
 """
 
 ECANCELED: int
 """
-The operation was canceled.
+L'opération a été annulée.
 """
 
 EINVAL: int
 """
-An invalid argument was given. Usually ``ValueError`` is used instead.
+Un argument invalide a été donné. Habituellement, ``ValueError`` est utilisé à la place.
 """
 
 EIO: int
 """
-An unspecified error occurred.
+Une erreur non spécifiée s'est produite.
 """
 
 ENODEV: int
 """
-Device was not found. For example, a sensor or motor is not plugged in the correct port.
+Le périphérique n'a pas été trouvé. Par exemple, un capteur ou un moteur n'est pas branché dans le port correct.
 """
 
 EOPNOTSUPP: int
 """
-The operation is not supported on this hub or on the connected device.
+L'opération n'est pas prise en charge sur ce hub ou sur le périphérique connecté.
 """
 
 EPERM: int
 """
-The operation cannot be performed in the current state.
+L'opération ne peut pas être effectuée dans l'état actuel.
 """
 
 ETIMEDOUT: int
 """
-The operation timed out.
+L'opération a expiré.
 """
 
 # TODO: ev3dev has additional constants
@@ -61,5 +61,5 @@ The operation timed out.
 
 errorcode: Dict[int, str]
 """
-Dictionary that maps numeric error codes to strings with symbolic error code.
+Dictionnaire qui mappe les codes d'erreur numériques aux chaînes de caractères avec le code d'erreur symbolique.
 """

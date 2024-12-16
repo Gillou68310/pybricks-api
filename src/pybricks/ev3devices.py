@@ -15,106 +15,101 @@ from .parameters import (
 
 
 class Motor(_common.Motor):
-    """LEGO® MINDSTORMS® EV3 Motor."""
+    """Moteur LEGO® MINDSTORMS® EV3."""
 
 
 class TouchSensor:
-    """LEGO® MINDSTORMS® EV3 Touch Sensor."""
+    """Capteur tactile LEGO® MINDSTORMS® EV3."""
 
     def __init__(self, port: _Port):
         """TouchSensor(port)
 
         Arguments:
-            port (Port): Port to which the sensor is connected.
+            port (Port): Port auquel le capteur est connecté.
         """
 
     def pressed(self) -> bool:
         """pressed() -> bool
 
-        Checks if the sensor is pressed.
+        Vérifie si le capteur est pressé.
 
         Returns:
-            ``True`` if the sensor is pressed, ``False`` if it is
-            not pressed.
+            ``True`` si le capteur est pressé, ``False`` s'il ne l'est pas.
         """
 
 
 class ColorSensor:
-    """LEGO® MINDSTORMS® EV3 Color Sensor."""
+    """Capteur de couleur LEGO® MINDSTORMS® EV3."""
 
     def __init__(self, port: _Port):
         """ColorSensor(port)
 
         Arguments:
-            port (Port): Port to which the sensor is connected.
+            port (Port): Port auquel le capteur est connecté.
         """
 
     def color(self) -> Optional[_Color]:
         """color() -> Color
 
-        Measures the color of a surface.
+        Mesure la couleur d'une surface.
 
         Returns:
             ``Color.BLACK``, ``Color.BLUE``, ``Color.GREEN``,
             ``Color.YELLOW``, ``Color.RED``, ``Color.WHITE``, ``Color.BROWN``,
-            or ``None`` if no color is detected.
-
+            ou ``None`` si aucune couleur n'est détectée.
         """
 
     def ambient(self) -> int:
         """ambient() -> int: %
 
-        Measures the ambient light intensity.
+        Mesure l'intensité de la lumière ambiante.
 
         Returns:
-            Ambient light intensity, ranging from 0% (dark)
-            to 100% (bright).
+            Intensité de la lumière ambiante, allant de 0% (sombre)
+            à 100% (lumineux).
         """
 
     def reflection(self) -> int:
         """reflection() -> int: %
 
-        Measures the reflection of a surface using a red light.
+        Mesure la réflexion d'une surface en utilisant une lumière rouge.
 
         Returns:
-            Reflection, ranging from 0% (no reflection) to
-            100% (high reflection).
-
+            Réflexion, allant de 0% (aucune réflexion) à
+            100% (haute réflexion).
         """
 
     def rgb(self) -> Tuple[int, int, int]:
         """rgb() -> Tuple[int, int, int]
 
-        Measures the reflection of a surface using a red, green, and then a
-        blue light.
+        Mesure la réflexion d'une surface en utilisant une lumière rouge, verte, puis
+        bleue.
 
         Returns:
-            Tuple of reflections for red, green, and blue light, each
-            ranging from 0.0% (no reflection) to 100.0% (high reflection).
+            Tuple de réflexions pour la lumière rouge, verte et bleue, chacune
+            allant de 0,0% (aucune réflexion) à 100,0% (haute réflexion).
         """
 
 
 class InfraredSensor:
-    """LEGO® MINDSTORMS® EV3 Infrared Sensor and Beacon."""
+    """Capteur infrarouge et balise LEGO® MINDSTORMS® EV3."""
 
     def __init__(self, port: _Port):
         """InfraredSensor(port)
 
         Arguments:
-            port (Port): Port to which the sensor is connected.
-
+            port (Port): Port auquel le capteur est connecté.
         """
 
     def distance(self) -> int:
         """distance() -> int: %
 
-        Measures the relative distance between the sensor and an object using
-        infrared light.
+        Mesure la distance relative entre le capteur et un objet en utilisant
+        la lumière infrarouge.
 
         Returns:
-            Relative distance ranging from 0% (closest)
-            to 100% (farthest).
-
+            Distance relative allant de 0% (plus proche)
+            à 100% (plus éloigné).
         """
 
     def beacon(self, channel: int) -> Tuple[Optional[int], Optional[int]]:
@@ -122,133 +117,127 @@ class InfraredSensor:
         beacon(channel) -> Tuple[int, int]
         beacon(channel) -> Tuple[None, None]
 
-        Measures the relative distance and angle between the remote and the
-        infrared sensor.
+        Mesure la distance et l'angle relatifs entre la télécommande et le
+        capteur infrarouge.
 
         Arguments:
-            channel (int): Channel number of the remote.
+            channel (int): Numéro de canal de la télécommande.
 
         Returns:
-            Tuple of relative distance (0% to 100%) and approximate angle
-            (-75 to 75 degrees) between remote and infrared sensor or
-            a tuple of (``None``, ``None``) if no remote is detected.
+            Tuple de distance relative (0% à 100%) et angle approximatif
+            (-75 à 75 degrés) entre la télécommande et le capteur infrarouge ou
+            un tuple de (``None``, ``None``) si aucune télécommande n'est détectée.
         """
 
     def buttons(self, channel: int) -> List[_Button]:
         """buttons(channel) -> List[Button]
 
-        Checks which buttons on the infrared remote are pressed.
+        Vérifie quels boutons de la télécommande infrarouge sont pressés.
 
-        This method can detect up to two buttons at once. If you press
-        more buttons, you'll still get just two buttons.
+        Cette méthode peut détecter jusqu'à deux boutons à la fois. Si vous appuyez
+        sur plus de boutons, vous obtiendrez toujours seulement deux boutons.
 
         Arguments:
-            channel (int): Channel number of the remote.
+            channel (int): Numéro de canal de la télécommande.
 
         Returns:
-            List of pressed buttons on the remote on the selected channel.
-
+            Liste des boutons pressés sur la télécommande sur le canal sélectionné.
         """
 
     def keypad(self) -> List[_Button]:
         """keypad() -> List[Button]
 
-        Checks which buttons on the infrared remote are pressed.
+        Vérifie quels boutons de la télécommande infrarouge sont pressés.
 
-        This method can independently detect all 4 up/down buttons, but
-        it cannot detect the beacon button.
+        Cette méthode peut détecter indépendamment les 4 boutons haut/bas, mais
+        elle ne peut pas détecter le bouton de la balise.
 
-        This method only works with the remote in channel 1.
+        Cette méthode ne fonctionne qu'avec la télécommande en canal 1.
 
         Returns:
-            List of pressed buttons.
+            Liste des boutons pressés.
         """
 
 
 class GyroSensor:
-    """LEGO® MINDSTORMS® EV3 Gyro Sensor."""
+    """Capteur gyroscopique LEGO® MINDSTORMS® EV3."""
 
     def __init__(self, port: _Port, direction: _Direction = _Direction.CLOCKWISE):
         """GyroSensor(port)
 
         Arguments:
-            port (Port): Port to which the sensor is connected.
+            port (Port): Port auquel le capteur est connecté.
             direction (Direction):
-                Positive rotation direction when looking at the red dot on top
-                of the sensor.
-
+                Direction de rotation positive en regardant le point rouge sur le dessus
+                du capteur.
         """
 
     def speed(self) -> int:
         """speed() -> int: deg/s
 
-        Gets the speed (angular velocity) of the sensor.
+        Obtient la vitesse (vitesse angulaire) du capteur.
 
         Returns:
-            Angular velocity.
-
+            Vitesse angulaire.
         """
 
     def angle(self) -> int:
         """angle() -> int: deg
 
-        Gets the accumulated angle of the sensor.
+        Obtient l'angle accumulé du capteur.
 
         Returns:
-            Rotation angle.
-
+            Angle de rotation.
         """
 
     def reset_angle(self, angle: int) -> None:
         """reset_angle(angle)
 
-        Sets the rotation angle of the sensor to a desired value.
+        Définit l'angle de rotation du capteur à une valeur souhaitée.
 
         Arguments:
-            angle (Number, deg): Value to which the angle should be reset.
+            angle (Number, deg): Valeur à laquelle l'angle doit être réinitialisé.
         """
 
 
 class UltrasonicSensor:
-    """LEGO® MINDSTORMS® EV3 Ultrasonic Sensor."""
+    """Capteur ultrasonique LEGO® MINDSTORMS® EV3."""
 
     def __init__(self, port: _Port):
         """UltrasonicSensor(port)
 
         Arguments:
-            port (Port): Port to which the sensor is connected.
-
+            port (Port): Port auquel le capteur est connecté.
         """
 
     def distance(self, silent: bool = False) -> int:
         """distance(silent=False) -> int: mm
 
-        Measures the distance between the sensor and an object using
-        ultrasonic sound waves.
+        Mesure la distance entre le capteur et un objet en utilisant
+        des ondes sonores ultrasoniques.
 
         Arguments:
-            silent (bool): Choose ``True`` to turn the sensor off after
-                           measuring the distance. This reduces interference
-                           with other ultrasonic sensors. If you do
-                           this too frequently, the sensor can freeze.
-                           If this happens, unplug it and plug it back in.
+            silent (bool): Choisissez ``True`` pour éteindre le capteur après
+                           avoir mesuré la distance. Cela réduit les interférences
+                           avec d'autres capteurs ultrasoniques. Si vous faites
+                           cela trop fréquemment, le capteur peut se bloquer.
+                           Si cela se produit, débranchez-le et rebranchez-le.
 
         Returns:
-            Measured distance.
-
+            Distance mesurée.
         """
 
     def presence(self) -> bool:
         """presence() -> bool
 
-        Checks for the presence of other ultrasonic sensors by detecting
-        ultrasonic sounds.
+        Vérifie la présence d'autres capteurs ultrasoniques en détectant
+        les sons ultrasoniques.
 
-        If the other ultrasonic sensor is operating in silent mode, you can
-        only detect the presence of that sensor while it is taking a
-        measurement.
+        Si l'autre capteur ultrasonique fonctionne en mode silencieux, vous pouvez
+        détecter sa présence uniquement lorsqu'il prend une
+        mesure.
 
         Returns:
-            ``True`` if ultrasonic sounds are detected,
-            ``False`` if not.
+            ``True`` si des sons ultrasoniques sont détectés,
+            ``False`` sinon.
         """

@@ -6,7 +6,7 @@
 # Copyright (c) 2014-2021, Damien P. George, Paul Sokolovsky, and contributors
 
 """
-Access and control MicroPython internals.
+Accéder et contrôler les internes de MicroPython.
 """
 
 from typing import Any, overload
@@ -36,20 +36,20 @@ def const(value):
     """
     const(value) -> Any
 
-    Declares the value as a constant, which makes your code more efficient.
+    Déclare la valeur comme une constante, ce qui rend votre code plus efficace.
 
-    To reduce memory usage further, prefix its name with an
-    underscore (``_ORANGES``). This constant can only be used within the
-    same file.
+    Pour réduire encore l'utilisation de la mémoire, préfixez son nom par un
+    underscore (``_ORANGES``). Cette constante ne peut être utilisée que dans le
+    même fichier.
 
-    If you want to import the value from another module, use a name without an
-    underscore (``APPLES``). This uses a bit more memory.
+    Si vous souhaitez importer la valeur d'un autre module, utilisez un nom sans
+    underscore (``APPLES``). Cela utilise un peu plus de mémoire.
 
     Arguments:
-        value (int or float or str or tuple): The literal to be made constant.
+        value (int ou float ou str ou tuple): La valeur littérale à rendre constante.
 
-    Returns:
-        The constant value.
+    Retourne :
+        La valeur constante.
     """
 
 
@@ -65,27 +65,26 @@ def opt_level(level: int) -> None:
 
 def opt_level(*args):
     """
-    Sets the optimization level for code compiled on the hub:
+    Définit le niveau d'optimisation pour le code compilé sur le hub :
 
-    0. Assertion statements are enabled. The built-in ``__debug__`` variable
-       is ``True``. Script line numbers are saved, so they can be reported when
-       an Exception occurs.
-    1. Assertions are ignored and ``__debug__`` is ``False``.
-       Script line numbers are saved.
-    2. Assertions are ignored and ``__debug__`` is ``False``.
-       Script line numbers are saved.
-    3. Assertions are ignored and ``__debug__`` is ``False``.
-       Script line numbers are *not* saved.
+    0. Les instructions d'assertion sont activées. La variable intégrée ``__debug__`` est
+       ``True``. Les numéros de ligne du script sont sauvegardés, afin qu'ils puissent être signalés lorsqu'une
+       Exception se produit.
+    1. Les assertions sont ignorées et ``__debug__`` est ``False``.
+       Les numéros de ligne du script sont sauvegardés.
+    2. Les assertions sont ignorées et ``__debug__`` est ``False``.
+       Les numéros de ligne du script sont sauvegardés.
+    3. Les assertions sont ignorées et ``__debug__`` est ``False``.
+       Les numéros de ligne du script ne sont *pas* sauvegardés.
 
-    This applies only to code that you run in the REPL, because regular scripts
-    are already compiled before they are sent to the hub.
+    Cela s'applique uniquement au code que vous exécutez dans le REPL, car les scripts réguliers
+    sont déjà compilés avant d'être envoyés au hub.
 
     Arguments:
-        level (int): The level to be set.
+        level (int): Le niveau à définir.
 
-    Returns:
-        If no argument is given, this returns the current optimization level.
-
+    Retourne :
+        Si aucun argument n'est donné, cela retourne le niveau d'optimisation actuel.
     """
 
 
@@ -104,11 +103,11 @@ def mem_info(*args):
     mem_info()
     mem_info(verbose)
 
-    Prints information about stack and heap memory usage.
+    Affiche des informations sur l'utilisation de la pile et de la mémoire heap.
 
     Arguments:
-        verbose: If any value is given, it also prints out the entire heap.
-            This indicates which blocks are used and which are free.
+        verbose: Si une valeur est donnée, cela affiche également l'ensemble de la mémoire heap.
+            Cela indique quels blocs sont utilisés et lesquels sont libres.
     """
 
 
@@ -127,14 +126,14 @@ def qstr_info(*args):
     qstr_info()
     qstr_info(verbose)
 
-    Prints how many strings are interned and how much RAM they use.
+    Affiche combien de chaînes sont internées et combien de RAM elles utilisent.
 
-    MicroPython uses string interning to save both RAM and ROM.
-    This avoids having to store duplicate copies of the same string.
+    MicroPython utilise l'internement de chaînes pour économiser à la fois la RAM et la ROM.
+    Cela évite d'avoir à stocker des copies en double de la même chaîne.
 
     Arguments:
-        verbose: If any value is given, it also prints out the names of all
-            RAM-interned strings.
+        verbose: Si une valeur est donnée, cela affiche également les noms de toutes
+            les chaînes internées en RAM.
     """
 
 
@@ -142,11 +141,11 @@ def stack_use() -> int:
     """
     stack_use() -> int
 
-    Checks the amount of stack that is being used. This can be used to
-    compute differences in stack usage at different points in a script.
+    Vérifie la quantité de pile utilisée. Cela peut être utilisé pour
+    calculer les différences d'utilisation de la pile à différents points d'un script.
 
-    Returns:
-        The amount of stack in use.
+    Retourne :
+        La quantité de pile utilisée.
     """
 
 
@@ -154,8 +153,8 @@ def heap_lock() -> None:
     """
     heap_lock()
 
-    Locks the heap. When locked, no memory allocation can occur. A
-    ``MemoryError`` will be raised if any heap allocation is attempted.
+    Verrouille la mémoire heap. Lorsqu'elle est verrouillée, aucune allocation de mémoire ne peut se produire. Une
+    ``MemoryError`` sera levée si une allocation de mémoire heap est tentée.
     """
 
 
@@ -163,13 +162,13 @@ def heap_unlock() -> int:
     """
     heap_unlock() -> int
 
-    Unlocks the heap. Memory allocation is now allowed again.
+    Déverrouille la mémoire heap. L'allocation de mémoire est à nouveau autorisée.
 
-    If :func:`heap_lock()` was called multiple times, :func:`heap_unlock()`
-    must be called the same number of times to make the heap available again.
+    Si :func:`heap_lock()` a été appelé plusieurs fois, :func:`heap_unlock()`
+    doit être appelé le même nombre de fois pour rendre la mémoire heap à nouveau disponible.
 
-    Returns:
-        The lock depth after unlocking. It is ``0`` once it is unlocked.
+    Retourne :
+        La profondeur de verrouillage après le déverrouillage. Elle est ``0`` une fois déverrouillée.
     """
 
 
@@ -177,11 +176,11 @@ def kbd_intr(chr: int) -> None:
     """
     kbd_intr(chr)
 
-    Sets the character that triggers a ``KeyboardInterrupt`` exception when
-    you type it in the input window. By default it is set to ``3``,
-    which corresponds to pressing :kbd:`Ctrl` :kbd:`C`.
+    Définit le caractère qui déclenche une exception ``KeyboardInterrupt`` lorsque
+    vous le tapez dans la fenêtre de saisie. Par défaut, il est réglé sur ``3``,
+    ce qui correspond à la pression sur :kbd:`Ctrl` :kbd:`C`.
 
     Arguments:
-        chr (int): Character that should raise the ``KeyboardInterrupt``.
-            Choose ``-1`` to disable this feature.
+        chr (int): Caractère qui doit lever l'exception ``KeyboardInterrupt``.
+            Choisissez ``-1`` pour désactiver cette fonctionnalité.
     """

@@ -6,7 +6,7 @@
 # Copyright (c) 2014-2021, Damien P. George, Paul Sokolovsky, and contributors
 
 """
-Convert between Python objects and the JSON data format.
+Convertir entre les objets Python et le format de données JSON.
 """
 
 from typing import IO, Any, Tuple
@@ -16,13 +16,13 @@ def dump(object: Any, stream: IO, separators: Tuple[str, str] = (", ", ": ")):
     """
     dump(object, stream, separators=(", ", ": "))
 
-    Serializes an object to a JSON string and write it to a stream.
+    Sérialise un objet en une chaîne JSON et l'écrit dans un flux.
 
     Arguments:
-        obj: Object to serialize.
-        stream: Stream to write the output to.
-        separators (tuple): An ``(item_separator, key_separator)`` tuple to
-            specify how elements should be separated.
+        obj: Objet à sérialiser.
+        stream: Flux dans lequel écrire la sortie.
+        separators (tuple): Un tuple ``(item_separator, key_separator)`` pour
+            spécifier comment les éléments doivent être séparés.
     """
 
 
@@ -30,15 +30,15 @@ def dumps(object: Any, separators: Tuple[str, str] = (", ", ": ")) -> str:
     """
     dumps(object, separators=(", ", ": "))
 
-    Serializes an object to JSON and return it as a string
+    Sérialise un objet en JSON et le retourne sous forme de chaîne.
 
     Arguments:
-        obj: Object to serialize.
-        separators (tuple): An ``(item_separator, key_separator)`` tuple to
-            specify how elements should be separated.
+        obj: Objet à sérialiser.
+        separators (tuple): Un tuple ``(item_separator, key_separator)`` pour
+            spécifier comment les éléments doivent être séparés.
 
-    Return:
-        The JSON string.
+    Retourne :
+        La chaîne JSON.
     """
 
 
@@ -46,17 +46,17 @@ def load(stream: IO) -> Any:
     """
     load(stream)
 
-    Parses the stream to interpret and deserialize the JSON data to a
-    MicroPython object.
+    Analyse le flux pour interpréter et désérialiser les données JSON en un
+    objet MicroPython.
 
-    Parsing continues until end-of-file is encountered. A ``ValueError`` is
-    raised if the data in stream is not correctly formed.
+    L'analyse continue jusqu'à la fin du fichier. Une ``ValueError`` est
+    levée si les données dans le flux ne sont pas correctement formées.
 
     Arguments:
-        stream: Stream from which to read the JSON string.
+        stream: Flux à partir duquel lire la chaîne JSON.
 
-    Returns:
-        The deserialized MicroPython object.
+    Retourne :
+        L'objet MicroPython désérialisé.
     """
 
 
@@ -64,14 +64,14 @@ def loads(string) -> Any:
     """
     loads(string)
 
-    Parses the string to interpret and deserialize the JSON data to a
-    MicroPython object.
+    Analyse la chaîne pour interpréter et désérialiser les données JSON en un
+    objet MicroPython.
 
-    A ``ValueError`` is raised if the string is not correctly formed.
+    Une ``ValueError`` est levée si la chaîne n'est pas correctement formée.
 
     Arguments:
-        string (str): JSON string to decode.
+        string (str): Chaîne JSON à décoder.
 
-    Returns:
-        The deserialized MicroPython object.
+    Retourne :
+        L'objet MicroPython désérialisé.
     """

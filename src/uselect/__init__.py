@@ -6,31 +6,31 @@
 # Copyright (c) 2014-2021, Damien P. George, Paul Sokolovsky, and contributors
 
 """
-This module provides functions to efficiently wait for events on multiple streams.
+Ce module fournit des fonctions pour attendre efficacement des événements sur plusieurs flux.
 """
 
 from typing import IO, Iterator, List, Tuple, overload
 
 POLLIN: int
 """
-Data is available for reading.
+Les données sont disponibles pour la lecture.
 """
 
 POLLOUT: int
 """
-More data can be written.
+Plus de données peuvent être écrites.
 """
 
 POLLERR: int
 """
-Error condition happened on the associated stream. Should be handled explicitly
-or else further invocations of :meth:`poll` may return right away.
+Une condition d'erreur s'est produite sur le flux associé. Doit être gérée explicitement
+sinon les appels ultérieurs à :meth:`poll` peuvent retourner immédiatement.
 """
 
 POLLHUP: int
 """
-Hang up happened on the associated stream. Should be handled explicitly
-or else further invocations of :meth:`poll` may return right away.
+Une déconnexion s'est produite sur le flux associé. Doit être gérée explicitement
+sinon les appels ultérieurs à :meth:`poll` peuvent retourner immédiatement.
 """
 
 
@@ -39,42 +39,42 @@ class Poll:
         """
         register(object, eventmask=POLLOUT | POLLOUT)
 
-        Register a stream object for polling. The stream object will now be
-        monitored for events. If an event happens, it becomes part of the
-        return value of :meth:`poll`.
+        Enregistre un objet flux pour le polling. L'objet flux sera maintenant
+        surveillé pour les événements. Si un événement se produit, il fait partie de la
+        valeur de retour de :meth:`poll`.
 
-        If this method is called again for the same stream object, the object
-        will not be registered again, but the ``eventmask`` flags will be
-        updated, as if calling :meth:`modify()`.
+        Si cette méthode est appelée à nouveau pour le même objet flux, l'objet
+        ne sera pas enregistré à nouveau, mais les indicateurs ``eventmask`` seront
+        mis à jour, comme si on appelait :meth:`modify()`.
 
         Arguments:
-            object (FileIO): Stream to be registered for polling.
-            eventmask (int): Which events to use. Should be ``POLLIN``,
-                ``POLLOUT``, or their logical disjunction: ``POLLIN | POLLOUT``.
+            object (FileIO): Flux à enregistrer pour le polling.
+            eventmask (int): Quels événements utiliser. Doit être ``POLLIN``,
+                ``POLLOUT``, ou leur disjonction logique : ``POLLIN | POLLOUT``.
         """
 
     def unregister(self, object: IO) -> None:
         """
         unregister(poll)
 
-        Unregister an object from polling.
+        Désenregistre un objet du polling.
 
         Arguments:
-            object (FileIO): Stream to be unregistered from polling.
+            object (FileIO): Flux à désenregistrer du polling.
         """
 
     def modify(self, obj: IO, eventmask: int) -> None:
         """
         modify(object, eventmask)
 
-        Modifies the event mask for the stream object.
+        Modifie le masque d'événements pour l'objet flux.
 
         Arguments:
-            object (FileIO): Stream to be registered for polling.
-            eventmask (int): Which events to use.
+            object (FileIO): Flux à enregistrer pour le polling.
+            eventmask (int): Quels événements utiliser.
 
-        Raises:
-            ``OSError``: If the object is not registered. The error is ``ENOENT``.
+        Lève :
+            ``OSError``: Si l'objet n'est pas enregistré. L'erreur est ``ENOENT``.
         """
 
     @overload
@@ -89,19 +89,19 @@ class Poll:
         """
         poll(timeout=-1) -> List[Tuple[FileIO, int]]
 
-        Wait until at least one of the registered objects has a new event or
-        exceptional condition ready to be handled.
+        Attendre jusqu'à ce qu'au moins un des objets enregistrés ait un nouvel événement ou
+        une condition exceptionnelle prête à être gérée.
 
         Arguments:
-            timeout (int): Timeout in milliseconds. Choose ``0`` to return
-                immediately or choose ``-1`` to wait indefinitely.
+            timeout (int): Timeout en millisecondes. Choisissez ``0`` pour retourner
+                immédiatement ou choisissez ``-1`` pour attendre indéfiniment.
 
-        Returns:
-            A list of tuples. There is one (``object``, ``eventmask``, ...)
-            tuple for each object with an event, or no tuples if there are no
-            events to be handled. The ``eventmask`` value
-            is a combination of poll flags to indicate what happened. This may
-            include ``POLLERR`` and ``POLLHUP`` even if they were not registered.
+        Retourne :
+            Une liste de tuples. Il y a un tuple (``object``, ``eventmask``, ...)
+            pour chaque objet avec un événement, ou aucun tuple s'il n'y a pas
+            d'événements à gérer. La valeur ``eventmask``
+            est une combinaison de drapeaux de polling pour indiquer ce qui s'est passé. Cela peut
+            inclure ``POLLERR`` et ``POLLHUP`` même s'ils n'ont pas été enregistrés.
         """
 
     @overload
@@ -120,30 +120,30 @@ class Poll:
         """
         ipoll(timeout=-1, flags=1) -> Iterator[Tuple[FileIO, int]]
 
-        First, just like :meth:`poll`, wait until at least one of the registered
-        objects has a new event or exceptional condition ready to be handled.
+        Tout d'abord, comme :meth:`poll`, attendre jusqu'à ce qu'au moins un des objets enregistrés
+        ait un nouvel événement ou une condition exceptionnelle prête à être gérée.
 
-        But instead of a list, this method returns an iterator for improved
-        efficiency. The iterator yields one (``object``, ``eventmask``, ...)
-        tuple at a time, and overwrites it when yielding the next value. If you
-        need the values later, make sure to copy them explicitly.
+        Mais au lieu d'une liste, cette méthode retourne un itérateur pour une efficacité accrue.
+        L'itérateur renvoie un tuple (``object``, ``eventmask``, ...)
+        à la fois, et le remplace lors de la génération de la valeur suivante. Si vous
+        avez besoin des valeurs plus tard, assurez-vous de les copier explicitement.
 
         Arguments:
-            timeout (int): Timeout in milliseconds. Choose ``0`` to return
-                immediately or choose ``-1`` to wait indefinitely.
-            flags (int): If set to ``1``, one-shot behavior for events is
-                employed. This means that streams for which events happened
-                will have their event masks automatically reset using
-                ``poll.modify(obj, 0)``. This way, new events for such a stream
-                won't be processed until a new mask is set with :meth:`modify`,
-                which is useful for asynchronous I/O schedulers.
+            timeout (int): Timeout en millisecondes. Choisissez ``0`` pour retourner
+                immédiatement ou choisissez ``-1`` pour attendre indéfiniment.
+            flags (int): Si défini à ``1``, un comportement one-shot pour les événements est
+                utilisé. Cela signifie que les flux pour lesquels des événements se sont produits
+                auront leurs masques d'événements automatiquement réinitialisés en utilisant
+                ``poll.modify(obj, 0)``. De cette façon, les nouveaux événements pour un tel flux
+                ne seront pas traités jusqu'à ce qu'un nouveau masque soit défini avec :meth:`modify`,
+                ce qui est utile pour les planificateurs d'E/S asynchrones.
         """
 
 
 def poll() -> Poll:
     """
-    Creates an instance of the :class:`Poll` class.
+    Crée une instance de la classe :class:`Poll`.
 
-    Returns:
-        The :class:`Poll` instance.
+    Retourne :
+        L'instance :class:`Poll`.
     """

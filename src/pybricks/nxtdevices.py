@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: MIT
 # Copyright (c) 2018-2022 The Pybricks Authors
 
-"""Use LEGO® MINDSTORMS® NXT motors and sensors with the EV3 brick."""
+"""Utilisez les moteurs et capteurs LEGO® MINDSTORMS® NXT avec le brique EV3."""
 
 
 from .parameters import Port
@@ -14,232 +14,230 @@ from typing import Callable, Optional, Tuple
 
 
 class TouchSensor:
-    """LEGO® MINDSTORMS® NXT Touch Sensor."""
+    """Capteur tactile LEGO® MINDSTORMS® NXT."""
 
     def __init__(self, port: Port):
         """TouchSensor(port)
 
         Arguments:
-            port (Port): Port to which the sensor is connected.
+            port (Port): Port auquel le capteur est connecté.
         """
 
     def pressed(self) -> bool:
         """pressed() -> bool
 
-        Checks if the sensor is pressed.
+        Vérifie si le capteur est pressé.
 
         Returns:
-            ``True`` if the sensor is pressed, ``False`` if it is
-            not pressed.
+            ``True`` si le capteur est pressé, ``False`` s'il ne l'est pas.
         """
 
 
 class LightSensor:
-    """LEGO® MINDSTORMS® NXT Color Sensor."""
+    """Capteur de lumière LEGO® MINDSTORMS® NXT."""
 
     def __init__(self, port: Port):
         """LightSensor(port)
 
         Arguments:
-            port (Port): Port to which the sensor is connected.
+            port (Port): Port auquel le capteur est connecté.
         """
 
     def ambient(self) -> int:
         """ambient() -> int: %
 
-        Measures the ambient light intensity.
+        Mesure l'intensité de la lumière ambiante.
 
         Returns:
-            Ambient light intensity, ranging from 0% (dark) to 100% (bright).
+            Intensité de la lumière ambiante, allant de 0% (sombre) à 100% (lumineux).
         """
 
     def reflection(self) -> int:
         """reflection() -> int: %
 
-        Measures the reflection of a surface using a red light.
+        Mesure la réflexion d'une surface en utilisant une lumière rouge.
 
         Returns:
-            Reflection, ranging from 0% (no reflection) to 100% (high
-            reflection).
+            Réflexion, allant de 0% (aucune réflexion) à 100% (haute réflexion).
         """
 
 
 class ColorSensor(CommonColorSensor):
-    """LEGO® MINDSTORMS® NXT Color Sensor."""
+    """Capteur de couleur LEGO® MINDSTORMS® NXT."""
 
     light = ColorLight()
 
     def rgb(self) -> Tuple[int, int, int]:
-        """Measures the reflection of a surface using a red, green, and then a
-        blue light.
+        """Mesure la réflexion d'une surface en utilisant une lumière rouge, verte, puis une
+        lumière bleue.
 
         Returns:
-            Tuple of reflections for red, green, and blue light, each
-            ranging from 0.0% (no reflection) to 100.0% (high reflection).
+            Tuple de réflexions pour la lumière rouge, verte et bleue, chacune
+            allant de 0,0% (aucune réflexion) à 100,0% (haute réflexion).
         """
 
 
 class UltrasonicSensor:
-    """LEGO® MINDSTORMS® NXT Ultrasonic Sensor."""
+    """Capteur ultrasonique LEGO® MINDSTORMS® NXT."""
 
     def __init__(self, port: Port):
         """UltrasonicSensor(port)
 
         Arguments:
-            port (Port): Port to which the sensor is connected.
+            port (Port): Port auquel le capteur est connecté.
         """
 
     def distance(self) -> int:
         """distance() -> int: mm
 
-        Measures the distance between the sensor and an object using
-        ultrasonic sound waves.
+        Mesure la distance entre le capteur et un objet en utilisant
+        des ondes sonores ultrasoniques.
 
         Returns:
-            Measured distance.
+            Distance mesurée.
         """
 
 
 class SoundSensor:
-    """LEGO® MINDSTORMS® NXT Sound Sensor."""
+    """Capteur sonore LEGO® MINDSTORMS® NXT."""
 
     def __init__(self, port: Port):
         """SoundSensor(port)
 
         Arguments:
-            port (Port): Port to which the sensor is connected.
+            port (Port): Port auquel le capteur est connecté.
         """
 
     def intensity(self, audible_only: bool = True) -> int:
         """intensity(audible_only=True) -> int: %
 
-        Measures the ambient sound intensity (loudness).
+        Mesure l'intensité sonore ambiante (volume).
 
         Arguments:
-            audible_only (bool): Detect only audible sounds. This tries to
-                filter out frequencies that cannot be heard by the
-                human ear.
+            audible_only (bool): Détecte uniquement les sons audibles. Cela essaie de
+                filtrer les fréquences qui ne peuvent pas être entendues par l'oreille
+                humaine.
 
         Returns:
-            Sound intensity.
+            Intensité sonore.
         """
 
 
 class TemperatureSensor:
-    """LEGO® MINDSTORMS® NXT Temperature Sensor."""
+    """Capteur de température LEGO® MINDSTORMS® NXT."""
 
     def __init__(self, port: Port):
         """TemperatureSensor(port)
 
         Arguments:
-            port (Port): Port to which the sensor is connected.
+            port (Port): Port auquel le capteur est connecté.
         """
 
     def temperature(self) -> int:
         """temperature() -> float: °C
 
-        Measures the temperature.
+        Mesure la température.
 
         Returns:
-            Measured temperature.
+            Température mesurée.
         """
 
 
 class EnergyMeter:
-    """LEGO® MINDSTORMS® Education NXT Energy Meter."""
+    """Compteur d'énergie LEGO® MINDSTORMS® Education NXT."""
 
     def __init__(self, port: Port):
         """EnergyMeter(port)
 
         Arguments:
-            port (Port): Port to which the sensor is connected.
+            port (Port): Port auquel le capteur est connecté.
         """
 
     def storage(self) -> int:
         """storage() -> int: J
 
-        Gets the total available energy stored in the battery.
+        Obtient l'énergie totale disponible stockée dans la batterie.
 
         Returns:
-            Remaining stored energy.
+            Énergie stockée restante.
         """
 
     def input(self) -> Tuple[int, int, int]:
         """input() -> Tuple[int, int, int]
 
-        Measures the electrical signals at the input (bottom) side
-        of the energy meter. It measures the voltage applied to it and the
-        current passing through it. The product of these two values is power.
-        This power value is the rate at which the stored energy increases. This
-        power is supplied by an energy source such as the provided solar panel
-        or an externally driven motor.
+        Mesure les signaux électriques à l'entrée (côté inférieur)
+        du compteur d'énergie. Il mesure la tension appliquée et le
+        courant qui le traverse. Le produit de ces deux valeurs est la puissance.
+        Cette valeur de puissance est le taux auquel l'énergie stockée augmente. Cette
+        puissance est fournie par une source d'énergie telle que le panneau solaire fourni
+        ou un moteur entraîné de manière externe.
 
         Returns:
-            Voltage (mV), current (mA), and power (mW) measured at the input
-            port.
+            Tension (mV), courant (mA) et puissance (mW) mesurés à l'entrée
+            du port.
         """
 
     def output(self) -> Tuple[int, int, int]:
         """output() -> Tuple[int, int, int]
 
-        Measures the electrical signals at the output (top) side
-        of the energy meter. It measures the voltage applied to the external
-        load and the current passing to it. The product of these two values
-        is power. This power value is the rate at which the stored energy
-        decreases. This power is consumed by the load, such as a light or a
-        motor.
+        Mesure les signaux électriques à la sortie (côté supérieur)
+        du compteur d'énergie. Il mesure la tension appliquée à la charge externe
+        et le courant qui y passe. Le produit de ces deux valeurs
+        est la puissance. Cette valeur de puissance est le taux auquel l'énergie stockée
+        diminue. Cette puissance est consommée par la charge, telle qu'une lumière ou un
+        moteur.
 
         Returns:
-            Voltage (mV), current (mA), and power (mW) measured at the output
-            port.
+            Tension (mV), courant (mA) et puissance (mW) mesurés à la sortie
+            du port.
         """
 
 
 class VernierAdapter(AnalogSensor):
-    """LEGO® MINDSTORMS® Education NXT/EV3 Adapter for Vernier Sensors."""
+    """Adaptateur LEGO® MINDSTORMS® Education NXT/EV3 pour capteurs Vernier."""
 
     def __init__(self, port: Port, conversion: Optional[Callable[[int], float]] = None):
         """VernierAdapter(port, conversion=None)
 
         Arguments:
-            port (Port): Port to which the sensor is connected.
-            conversion (callable): Function of the format :meth:`.conversion`.
-                This function is used to convert the raw analog voltage to the
-                sensor-specific output value. Each Vernier Sensor has its
-                own conversion function. The example given below demonstrates
-                the conversion for the Surface Temperature Sensor.
+            port (Port): Port auquel le capteur est connecté.
+            conversion (callable): Fonction du format :meth:`.conversion`.
+                Cette fonction est utilisée pour convertir la tension analogique brute en la
+                valeur de sortie spécifique au capteur. Chaque capteur Vernier a sa
+                propre fonction de conversion. L'exemple donné ci-dessous démontre
+                la conversion pour le capteur de température de surface.
         """
 
     def voltage(self) -> int:
         """voltage() -> int: mV
 
-        Measures the raw analog sensor voltage.
+        Mesure la tension brute du capteur analogique.
 
         Returns:
-            Analog voltage.
+            Tension analogique.
         """
 
     def conversion(self, voltage: int) -> float:
         """conversion(voltage) -> float
 
-        Converts the raw voltage (mV) to a sensor value.
+        Convertit la tension brute (mV) en une valeur de capteur.
 
-        If you did not provide a :meth:`.conversion` function earlier, no
-        conversion will be applied.
+        Si vous n'avez pas fourni de fonction :meth:`.conversion` plus tôt, aucune
+        conversion ne sera appliquée.
 
         Arguments:
-            voltage (Number, mV): Analog sensor voltage
+            voltage (Number, mV): Tension du capteur analogique
 
         Returns:
-            Converted sensor value.
+            Valeur convertie du capteur.
         """
 
     def value(self) -> float:
         """value() -> float
 
-        Measures the sensor :meth:`.voltage` and then
-        applies your :meth:`.conversion` to give you the sensor value.
+        Mesure la :meth:`.voltage` du capteur puis
+        applique votre :meth:`.conversion` pour vous donner la valeur du capteur.
 
         Returns:
-            Converted sensor value.
+            Valeur convertie du capteur.
         """

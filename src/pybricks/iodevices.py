@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: MIT
 # Copyright (c) 2018-2023 The Pybricks Authors
 
-"""Generic input/output devices."""
+"""Appareils d'entrée/sortie génériques."""
 
 from __future__ import annotations
 
@@ -16,264 +16,262 @@ if TYPE_CHECKING:
 
 
 class PUPDevice:
-    """Powered Up motor or sensor."""
+    """Moteur ou capteur Powered Up."""
 
     def __init__(self, port: _Port):
         """PUPDevice(port)
 
         Arguments:
-            port (Port): Port to which the device is connected.
+            port (Port): Port auquel l'appareil est connecté.
         """
 
     def info(self) -> Dict[str, str]:
         """info() -> Dict
 
-        Gets information about the device.
+        Obtient des informations sur l'appareil.
 
         Returns:
-            Dictionary with information, such as the device ``id``.
+            Dictionnaire avec des informations, telles que l'``id`` de l'appareil.
         """
 
     def read(self, mode: int) -> MaybeAwaitableTuple:
         """read(mode) -> Tuple
 
-        Reads values from a given mode.
+        Lit les valeurs d'un mode donné.
 
         Arguments:
-            mode (int): Device mode.
+            mode (int): Mode de l'appareil.
 
         Returns:
-            Values read from the sensor.
+            Valeurs lues du capteur.
         """
 
     def write(self, mode: int, data: Tuple) -> MaybeAwaitable:
         """write(mode, data)
 
-        Writes values to the sensor. Only selected sensors and modes support
-        this.
+        Écrit des valeurs dans le capteur. Seuls certains capteurs et modes prennent en charge
+        cela.
 
         Arguments:
-            mode (int): Device mode.
-            data (tuple): Values to be written.
+            mode (int): Mode de l'appareil.
+            data (tuple): Valeurs à écrire.
         """
 
 
 class LUMPDevice:
-    """Devices using the LEGO UART Messaging Protocol."""
+    """Appareils utilisant le protocole de messagerie LEGO UART."""
 
     def __init__(self, port: _Port):
         """LUMPDevice(port)
 
         Arguments:
-            port (Port): Port to which the device is connected.
+            port (Port): Port auquel l'appareil est connecté.
         """
 
     def read(self, mode: int) -> MaybeAwaitableTuple:
         """read(mode) -> Tuple
 
-        Reads values from a given mode.
+        Lit les valeurs d'un mode donné.
 
         Arguments:
-            mode (int): Device mode.
+            mode (int): Mode de l'appareil.
 
         Returns:
-            Values read from the sensor.
+            Valeurs lues du capteur.
         """
 
 
 class DCMotor(_common.DCMotor):
-    """DC Motor for LEGO® MINDSTORMS EV3."""
+    """Moteur DC pour LEGO® MINDSTORMS EV3."""
 
 
 class Ev3devSensor:
-    """Read values of an ev3dev-compatible sensor."""
+    """Lire les valeurs d'un capteur compatible ev3dev."""
 
     sensor_index: int
-    """Index of the ev3dev sysfs `lego-sensor`_ class."""
+    """Index de la classe ev3dev sysfs `lego-sensor`_."""
 
     port_index: int
-    """Index of the ev3dev sysfs `lego-port`_ class."""
+    """Index de la classe ev3dev sysfs `lego-port`_."""
 
     def __init__(self, port: _Port):
         """Ev3devSensor(port)
 
         Arguments:
-            port (Port): Port to which the device is connected.
+            port (Port): Port auquel l'appareil est connecté.
         """
 
     def read(self, mode: str) -> MaybeAwaitableTuple:
         """read(mode) -> Tuple
 
-        Reads values at a given mode.
+        Lit les valeurs dans un mode donné.
 
         Arguments:
-            mode (str): `Mode name`_.
+            mode (str): `Nom du mode`_.
 
         Returns:
-            values read from the sensor.
+            Valeurs lues du capteur.
         """
 
 
 class AnalogSensor:
-    """Generic or custom analog sensor."""
+    """Capteur analogique générique ou personnalisé."""
 
     def __init__(self, port: _Port):
         """AnalogSensor(port)
 
         Arguments:
-            port (Port): Port to which the sensor is connected.
+            port (Port): Port auquel le capteur est connecté.
         """
 
     def voltage(self) -> int:
         """voltage() -> int: mV
 
-        Measures analog voltage.
+        Mesure la tension analogique.
 
         Returns:
-            Analog voltage.
+            Tension analogique.
         """
 
     def resistance(self) -> int:
         """resistance() -> int: Ω
 
-        Measures resistance.
+        Mesure la résistance.
 
-        This value is only meaningful if the analog device is a passive load
-        such as a resistor or thermistor.
+        Cette valeur n'a de sens que si l'appareil analogique est une charge passive
+        telle qu'une résistance ou une thermistance.
 
         Returns:
-            Resistance of the analog device.
+            Résistance de l'appareil analogique.
         """
 
     def active(self) -> None:
         """active()
 
-        Sets sensor to active mode. This sets pin 5 of the sensor
-        port to `high`.
+        Définit le capteur en mode actif. Cela met la broche 5 du port du capteur
+        à `haut`.
 
-        This is used in some analog
-        sensors to control a switch. For example, if you use the NXT Light
-        Sensor as a custom analog sensor, this method will turn the light on.
-        From then on, ``voltage()`` returns the raw reflected light value.
+        Cela est utilisé dans certains capteurs analogiques pour contrôler un interrupteur. Par exemple, si vous utilisez le capteur de lumière NXT
+        comme capteur analogique personnalisé, cette méthode allumera la lumière.
+        À partir de ce moment, ``voltage()`` renvoie la valeur brute de la lumière réfléchie.
         """
 
     def passive(self) -> None:
         """passive()
 
-        Sets sensor to passive mode. This sets pin 5 of the sensor
-        port to `low`.
+        Définit le capteur en mode passif. Cela met la broche 5 du port du capteur
+        à `bas`.
 
-        This is used in some analog
-        sensors to control a switch. For example, if you use the NXT Light
-        Sensor as a custom analog sensor, this method will turn the light off.
-        From then on, ``voltage()`` returns the raw ambient light value.
+        Cela est utilisé dans certains capteurs analogiques pour contrôler un interrupteur. Par exemple, si vous utilisez le capteur de lumière NXT
+        comme capteur analogique personnalisé, cette méthode éteindra la lumière.
+        À partir de ce moment, ``voltage()`` renvoie la valeur brute de la lumière ambiante.
         """
 
 
 class I2CDevice:
-    """Generic or custom I2C device."""
+    """Appareil I2C générique ou personnalisé."""
 
     def __init__(self, port: _Port, address: int):
         """I2CDevice(port, address)
 
         Arguments:
-            port (Port): Port to which the device is connected.
-            address(int): I2C address of the client device. See
-                :ref:`I2C Addresses <i2caddress>`.
+            port (Port): Port auquel l'appareil est connecté.
+            address(int): Adresse I2C de l'appareil client. Voir
+                :ref:`Adresses I2C <i2caddress>`.
         """
 
     def read(self, reg: Optional[int], length: Optional[int] = 1) -> bytes:
         """read(reg, length=1)
 
-        Reads bytes, starting at a given register.
+        Lit des octets, en commençant à un registre donné.
 
         Arguments:
-            reg (int): Register at which to begin
-                reading: 0--255 or 0x00--0xFF.
-            length (int): How many bytes to read.
+            reg (int): Registre à partir duquel commencer
+                la lecture : 0--255 ou 0x00--0xFF.
+            length (int): Nombre d'octets à lire.
 
         Returns:
-            Bytes returned from the device.
+            Octets renvoyés par l'appareil.
         """
 
     def write(self, reg: Optional[int], data: Optional[bytes] = None) -> None:
         """write(reg, data=None)
 
-        Writes bytes, starting at a given register.
+        Écrit des octets, en commençant à un registre donné.
 
         Arguments:
-            reg (int): Register at which to begin
-                writing: 0--255 or 0x00--0xFF.
-            data (bytes): Bytes to be written.
+            reg (int): Registre à partir duquel commencer
+                l'écriture : 0--255 ou 0x00--0xFF.
+            data (bytes): Octets à écrire.
         """
 
 
 class UARTDevice:
-    """Generic UART device."""
+    """Appareil UART générique."""
 
     def __init__(self, port: _Port, baudrate: int, timeout: Optional[int] = None):
         """UARTDevice(port, baudrate, timeout=None)
 
         Arguments:
-            port (Port): Port to which the device is connected.
-            baudrate (int): Baudrate of the UART device.
-            timeout (Number, ms): How long to wait
-                during ``read`` before giving up. If you choose ``None``,
-                it will wait forever.
+            port (Port): Port auquel l'appareil est connecté.
+            baudrate (int): Baudrate de l'appareil UART.
+            timeout (Number, ms): Durée d'attente
+                pendant ``read`` avant d'abandonner. Si vous choisissez ``None``,
+                il attendra indéfiniment.
         """
 
     def read(self, length: int = 1) -> bytes:
         """read(length=1) -> bytes
 
-        Reads a given number of bytes from the buffer.
+        Lit un nombre donné d'octets du tampon.
 
-        Your program will wait until the requested number of bytes are
-        received. If this takes longer than ``timeout``, the ``ETIMEDOUT``
-        exception is raised.
+        Votre programme attendra jusqu'à ce que le nombre d'octets demandé soit
+        reçu. Si cela prend plus de temps que ``timeout``, l'exception ``ETIMEDOUT``
+        est levée.
 
         Arguments:
-            length (int): How many bytes to read.
+            length (int): Nombre d'octets à lire.
 
         Returns:
-            Bytes returned from the device.
+            Octets renvoyés par l'appareil.
         """
 
     def read_all(self) -> bytes:
         """read_all() -> bytes
 
-        Reads all bytes from the buffer.
+        Lit tous les octets du tampon.
 
         Returns:
-            Bytes returned from the device.
+            Octets renvoyés par l'appareil.
         """
 
     def write(self, data: bytes) -> None:
         """write(data)
 
-        Writes bytes.
+        Écrit des octets.
 
         Arguments:
-            data (bytes): Bytes to be written.
+            data (bytes): Octets à écrire.
         """
 
     def waiting(self) -> int:
         """waiting() -> int
 
-        Gets how many bytes are still waiting to be read.
+        Obtient le nombre d'octets en attente de lecture.
 
         Returns:
-            Number of bytes in the buffer.
+            Nombre d'octets dans le tampon.
         """
 
     def clear(self) -> None:
         """clear()
 
-        Empties the buffer."""
+        Vide le tampon."""
 
 
 class LWP3Device:
     """
-    Connects to a hub running official LEGO firmware using the
+    Se connecte à un hub exécutant le firmware officiel LEGO en utilisant le
     `LEGO Wireless Protocol v3`_
 
     .. _`LEGO Wireless Protocol v3`:
@@ -285,16 +283,16 @@ class LWP3Device:
 
         Arguments:
             hub_kind (int):
-                The `hub type identifier`_ of the hub to connect to.
+                L'`identifiant de type de hub`_ du hub auquel se connecter.
             name (str):
-                The name of the hub to connect to or ``None`` to connect to any
+                Le nom du hub auquel se connecter ou ``None`` pour se connecter à n'importe quel
                 hub.
             timeout (int):
-                The time, in milliseconds, to wait for a connection before
-                raising an exception.
+                Le temps, en millisecondes, d'attente pour une connexion avant
+                de lever une exception.
 
 
-        .. _`hub type identifier`:
+        .. _`identifiant de type de hub`:
             https://github.com/pybricks/technical-info/blob/master/assigned-numbers.md#hub-type-ids
         """
 
@@ -308,49 +306,49 @@ class LWP3Device:
         """name(name)
         name() -> str
 
-        Sets or gets the Bluetooth name of the device.
+        Définit ou obtient le nom Bluetooth de l'appareil.
 
         Arguments:
-            name (str): New Bluetooth name of the device. If no name is given,
-                this method returns the current name.
+            name (str): Nouveau nom Bluetooth de l'appareil. Si aucun nom n'est donné,
+                cette méthode renvoie le nom actuel.
         """
 
     def write(self, buf: bytes) -> MaybeAwaitable:
         """write(buf)
 
-        Sends a message to the remote hub.
+        Envoie un message au hub distant.
 
         Arguments:
-            buf (bytes): The raw binary message to send.
+            buf (bytes): Le message binaire brut à envoyer.
         """
 
     def read(self) -> bytes:
         """read() -> bytes
 
-        Retrieves the most recent message received from the remote hub.
+        Récupère le message le plus récent reçu du hub distant.
 
-        If a message has not been received since the last read, the method will
-        block until a message is received.
+        Si un message n'a pas été reçu depuis la dernière lecture, la méthode
+        bloquera jusqu'à ce qu'un message soit reçu.
 
         Returns:
-            The raw binary message.
+            Le message binaire brut.
         """
 
     def disconnect(self) -> MaybeAwaitable:
         """disconnect()
 
-        Disconnects the remote LWP3Device from the hub.
+        Déconnecte le LWP3Device distant du hub.
         """
 
 
 class XboxController:
-    """Use the Microsoft® Xbox® controller as a sensor in your projects to
-    control them remotely.
+    """Utilisez la manette Microsoft® Xbox® comme capteur dans vos projets pour
+    les contrôler à distance.
 
-    The hub will scan for the controller and connect to it. It will disconnect
-    when the program ends.
+    Le hub recherchera la manette et s'y connectera. Il se déconnectera
+    lorsque le programme se termine.
 
-    For tips on connectivity and pairing, see :ref:`below <xbox-controller-pairing>`.
+    Pour des conseils sur la connectivité et l'appairage, voir :ref:`ci-dessous <xbox-controller-pairing>`.
     """
 
     buttons = _common.Keypad([])
@@ -361,57 +359,57 @@ class XboxController:
     def joystick_left(self) -> Tuple[int, int]:
         """joystick_left() -> Tuple
 
-        Gets the left joystick position as percentages between -100%
-        and 100%. The center position is (0, 0).
+        Obtient la position du joystick gauche en pourcentages entre -100%
+        et 100%. La position centrale est (0, 0).
 
         Returns:
-            Tuple of X (horizontal) and Y (vertical) position.
+            Tuple de position X (horizontale) et Y (verticale).
         """
 
     def joystick_right(self) -> Tuple[int, int]:
         """joystick_right() -> Tuple
 
-        Gets the right joystick position as percentages between -100%
-        and 100%. The center position is (0, 0).
+        Obtient la position du joystick droit en pourcentages entre -100%
+        et 100%. La position centrale est (0, 0).
 
         Returns:
-            Tuple of X (horizontal) and Y (vertical) position.
+            Tuple de position X (horizontale) et Y (verticale).
         """
 
     def triggers(self) -> Tuple[int, int]:
         """triggers() -> Tuple
 
-        Gets the left and right trigger positions as percentages between 0%
-        and 100%.
+        Obtient les positions des gâchettes gauche et droite en pourcentages entre 0%
+        et 100%.
 
         Returns:
-            Tuple of left and right trigger positions.
+            Tuple des positions des gâchettes gauche et droite.
         """
 
     def dpad(self) -> int:
         """dpad() -> int
 
-        Gets the direction-pad value. ``1`` is up, ``2`` is up-right, ``3``
-        is right, ``4`` is down-right, ``5`` is down, ``6`` is down-left,
-        ``7`` is left, ``8`` is up-left, and ``0`` is not pressed.
+        Obtient la valeur du pavé directionnel. ``1`` est en haut, ``2`` est en haut à droite, ``3``
+        est à droite, ``4`` est en bas à droite, ``5`` est en bas, ``6`` est en bas à gauche,
+        ``7`` est à gauche, ``8`` est en haut à gauche, et ``0`` n'est pas pressé.
 
-        This is essentially the same as reading the state of the
-        ``Button.UP``, ``Button.RIGHT``, ``Button.DOWN``, and ``Button.LEFT``
-        buttons, but this method conveniently returns a number that indicates
-        a direction.
+        Cela est essentiellement la même chose que de lire l'état des
+        boutons ``Button.UP``, ``Button.RIGHT``, ``Button.DOWN``, et ``Button.LEFT``,
+        mais cette méthode renvoie commodément un nombre indiquant
+        une direction.
 
         Returns:
-            Direction-pad position, indicating a direction.
+            Position du pavé directionnel, indiquant une direction.
         """
 
     def profile(self) -> int:
         """profile() -> int
 
-        Gets the current profile of the controller. Only available on the
+        Obtient le profil actuel de la manette. Disponible uniquement sur la
         Xbox Elite Controller Series 2.
 
         Returns:
-            Profile number.
+            Numéro de profil.
         """
 
     def rumble(
@@ -423,25 +421,25 @@ class XboxController:
     ) -> MaybeAwaitable:
         """rumble(power=100, duration=200, count=1, delay=100)
 
-        Makes the builtin actuators rumble, creating force feedback.
+        Fait vibrer les actionneurs intégrés, créant un retour de force.
 
-        If you give a single ``power`` value, the left and right main actuators
-        will both rumble with that power. For more fine-grained control, set
-        ``power`` as a tuple of four values, which control the left main
-        actuator, right main actuator, left trigger actuator, and the right
-        trigger actuator, respectively. For example, ``power=(0, 0, 100, 0)``
-        makes the left trigger rumble at full power.
+        Si vous donnez une seule valeur ``power``, les actionneurs principaux gauche et droit
+        vibreront tous deux avec cette puissance. Pour un contrôle plus précis, définissez
+        ``power`` comme un tuple de quatre valeurs, qui contrôlent l'actionneur principal gauche,
+        l'actionneur principal droit, l'actionneur de la gâchette gauche et l'actionneur de la gâchette droite,
+        respectivement. Par exemple, ``power=(0, 0, 100, 0)``
+        fait vibrer la gâchette gauche à pleine puissance.
 
-        The rumble runs in the background while your program continues. To
-        make your program wait, just pause the program for a matching duration.
-        For one rumble, this equals ``duration``. For multiple rumbles, this
-        equals ``count * (duration + delay)``.
+        La vibration se fait en arrière-plan pendant que votre programme continue. Pour
+        faire attendre votre programme, il suffit de le mettre en pause pendant une durée correspondante.
+        Pour une seule vibration, cela équivaut à ``duration``. Pour plusieurs vibrations, cela
+        équivaut à ``count * (duration + delay)``.
 
         Arguments:
-            power (Number, % or tuple): Rumble power.
-            duration (Number, ms): Rumble duration.
-            count (int): Rumble count.
-            delay (Number, ms): Delay before each rumble. Only if ``count > 1``.
+            power (Number, % ou tuple): Puissance de la vibration.
+            duration (Number, ms): Durée de la vibration.
+            count (int): Nombre de vibrations.
+            delay (Number, ms): Délai avant chaque vibration. Seulement si ``count > 1``.
         """
 
 

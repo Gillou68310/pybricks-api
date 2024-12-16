@@ -36,67 +36,67 @@ class Mailbox(Generic[T]):
     ):
         """Mailbox(name, connection, encode=None, decode=None)
 
-        Object that represents a mailbox containing data.
+        Objet représentant une boîte aux lettres contenant des données.
 
-        You can read data that is delivered by other EV3 bricks, or send data
-        to other bricks that have the same mailbox.
+        Vous pouvez lire les données livrées par d'autres briques EV3, ou envoyer des données
+        à d'autres briques qui ont la même boîte aux lettres.
 
-        By default, the mailbox reads and send only bytes. To send other
-        data, you can provide an ``encode`` function that encodes your Python
-        object into bytes, and a ``decode`` function to convert bytes back to
-        a Python object.
+        Par défaut, la boîte aux lettres lit et envoie uniquement des octets. Pour envoyer d'autres
+        données, vous pouvez fournir une fonction ``encode`` qui encode votre objet Python
+        en octets, et une fonction ``decode`` pour convertir les octets en
+        un objet Python.
 
         Arguments:
             name (str):
-                The name of this mailbox.
+                Le nom de cette boîte aux lettres.
             connection:
-                A connection object such as :class:`BluetoothMailboxClient`.
+                Un objet de connexion tel que :class:`BluetoothMailboxClient`.
             encode (callable):
-                Function that encodes a Python object to bytes.
+                Fonction qui encode un objet Python en octets.
             decode (callable):
-                Function that creates a new Python object from bytes.
+                Fonction qui crée un nouvel objet Python à partir des octets.
         """
 
     def read(self) -> T:
         """read()
 
-        Gets the current value of the mailbox.
+        Obtient la valeur actuelle de la boîte aux lettres.
 
         Returns:
-            The current value or ``None`` if the mailbox is empty.
+            La valeur actuelle ou ``None`` si la boîte aux lettres est vide.
         """
         return ""
 
     def send(self, value: T, brick: Optional[str] = None) -> None:
         """send(value, brick=None)
 
-        Sends a value to this mailbox on connected devices.
+        Envoie une valeur à cette boîte aux lettres sur les appareils connectés.
 
         Arguments:
             value:
-                The value that will be delivered to the mailbox.
+                La valeur qui sera livrée à la boîte aux lettres.
             brick (str):
-                The name or Bluetooth address of the brick or ``None`` to
-                to broadcast to all connected devices.
+                Le nom ou l'adresse Bluetooth de la brique ou ``None`` pour
+                diffuser à tous les appareils connectés.
 
         Raises:
             OSError:
-                There is a problem with the connection.
+                Il y a un problème avec la connexion.
         """
 
     def wait(self) -> None:
         """wait()
 
-        Waits for the mailbox to be updated by remote device."""
+        Attend que la boîte aux lettres soit mise à jour par un appareil distant."""
 
     def wait_new(self) -> T:
         """wait_new()
 
-        Waits for a new value to be delivered to the mailbox that is not
-        equal to the current value in the mailbox.
+        Attend qu'une nouvelle valeur soit livrée à la boîte aux lettres qui n'est pas
+        égale à la valeur actuelle dans la boîte aux lettres.
 
         Returns:
-            The new value.
+            La nouvelle valeur.
         """
         return object()
 
@@ -105,18 +105,18 @@ class LogicMailbox(Mailbox[bool]):
     def __init__(self, name: str, connection: Connection):
         """LogicMailbox(name, connection)
 
-        Object that represents a mailbox containing boolean data.
+        Objet représentant une boîte aux lettres contenant des données booléennes.
 
-        This works just like a regular :class:`Mailbox`, but values
-        must be ``True`` or ``False``.
+        Cela fonctionne comme une :class:`Mailbox` régulière, mais les valeurs
+        doivent être ``True`` ou ``False``.
 
-        This is compatible with the "logic" mailbox type in EV3-G.
+        Cela est compatible avec le type de boîte aux lettres "logique" dans EV3-G.
 
         Arguments:
             name (str):
-                The name of this mailbox.
+                Le nom de cette boîte aux lettres.
             connection:
-                A connection object such as :class:`BluetoothMailboxClient`.
+                Un objet de connexion tel que :class:`BluetoothMailboxClient`.
         """
 
 
@@ -124,18 +124,18 @@ class NumericMailbox(Mailbox[float]):
     def __init__(self, name: str, connection: Connection):
         """NumericMailbox(name, connection)
 
-        Object that represents a mailbox containing numeric data.
+        Objet représentant une boîte aux lettres contenant des données numériques.
 
-        This works just like a regular :class:`Mailbox`, but values must be a
-        number, such as ``15`` or ``12.345``
+        Cela fonctionne comme une :class:`Mailbox` régulière, mais les valeurs doivent être un
+        nombre, tel que ``15`` ou ``12.345``.
 
-        This is compatible with the "numeric" mailbox type in EV3-G.
+        Cela est compatible avec le type de boîte aux lettres "numérique" dans EV3-G.
 
         Arguments:
             name (str):
-                The name of this mailbox.
+                Le nom de cette boîte aux lettres.
             connection:
-                A connection object such as :class:`BluetoothMailboxClient`.
+                Un objet de connexion tel que :class:`BluetoothMailboxClient`.
         """
 
 
@@ -143,29 +143,27 @@ class TextMailbox(Mailbox[str]):
     def __init__(self, name: str, connection: Connection):
         """TextMailbox(name, connection)
 
-        Object that represents a mailbox containing text data.
+        Objet représentant une boîte aux lettres contenant des données textuelles.
 
-        This works just like a regular :class:`Mailbox`, but data must be a
-        string, such as ``'hello!'``.
+        Cela fonctionne comme une :class:`Mailbox` régulière, mais les données doivent être une
+        chaîne de caractères, telle que ``'hello!'``.
 
-        This is compatible with the "text" mailbox type in EV3-G.
+        Cela est compatible avec le type de boîte aux lettres "texte" dans EV3-G.
 
         Arguments:
             name (str):
-                The name of this mailbox.
+                Le nom de cette boîte aux lettres.
             connection:
-                A connection object such as :class:`BluetoothMailboxClient`.
+                Un objet de connexion tel que :class:`BluetoothMailboxClient`.
         """
 
 
 class BluetoothMailboxServer:
-    """Object that represents a Bluetooth connection from one or more remote
-    EV3s.
+    """Objet représentant une connexion Bluetooth à partir d'un ou plusieurs EV3 distants.
 
-    The remote EV3s can either be running MicroPython or the standard EV3
-    firmware.
+    Les EV3 distants peuvent exécuter MicroPython ou le firmware standard EV3.
 
-    A "server" waits for a "client" to connect to it.
+    Un "serveur" attend qu'un "client" se connecte à lui.
     """
 
     def __enter__(self) -> BluetoothMailboxServer:
@@ -177,31 +175,30 @@ class BluetoothMailboxServer:
     def wait_for_connection(self, count: int = 1) -> None:
         """wait_for_connection(count=1)
 
-        Waits for a :class:`BluetoothMailboxClient` on a remote device to
-        connect.
+        Attend qu'un :class:`BluetoothMailboxClient` sur un appareil distant se
+        connecte.
 
         Arguments:
             count (int):
-                The number of remote connections to wait for.
+                Le nombre de connexions distantes à attendre.
 
         Raises:
             OSError:
-                There was a problem establishing the connection.
+                Il y a eu un problème pour établir la connexion.
         """
 
     def server_close(self) -> None:
         """server_close()
 
-        Closes all connections."""
+        Ferme toutes les connexions."""
 
 
 class BluetoothMailboxClient:
-    """Object that represents a Bluetooth connection to one or more remote EV3s.
+    """Objet représentant une connexion Bluetooth à un ou plusieurs EV3 distants.
 
-    The remote EV3s can either be running MicroPython or the standard EV3
-    firmware.
+    Les EV3 distants peuvent exécuter MicroPython ou le firmware standard EV3.
 
-    A "client" initiates a connection to a waiting "server".
+    Un "client" initie une connexion à un "serveur" en attente.
     """
 
     def __enter__(self) -> BluetoothMailboxClient:
@@ -213,21 +210,21 @@ class BluetoothMailboxClient:
     def connect(self, brick: str) -> None:
         """connect(brick)
 
-        Connects to an :class:`BluetoothMailboxServer` on another device.
+        Se connecte à un :class:`BluetoothMailboxServer` sur un autre appareil.
 
-        The remote device must be paired and waiting for a connection. See
+        L'appareil distant doit être appairé et en attente d'une connexion. Voir
         :meth:`BluetoothMailboxServer.wait_for_connection`.
 
         Arguments:
             brick (str):
-                The name or Bluetooth address of the remote EV3 to connect to.
+                Le nom ou l'adresse Bluetooth de l'EV3 distant à connecter.
 
         Raises:
             OSError:
-                There was a problem establishing the connection.
+                Il y a eu un problème pour établir la connexion.
         """
 
     def close(self) -> None:
         """close()
 
-        Closes all connections."""
+        Ferme toutes les connexions."""

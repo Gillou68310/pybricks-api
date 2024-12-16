@@ -8,354 +8,354 @@
 
 
 """
-Math functions.
+Fonctions mathématiques.
 """
 
 from typing import Tuple as Tuple
 
 
 e = 2.718282
-"""The mathematical constant e."""
+"""La constante mathématique e."""
 
 
 pi = 3.141593
-"""The mathematical constant π."""
+"""La constante mathématique π."""
 
 
 def sin(x: float) -> float:
     """sin(x) -> float
 
-    Gets the sine of an angle.
+    Obtient le sinus d'un angle.
 
     Arguments:
-        x (float): Angle in radians.
+        x (float): Angle en radians.
 
-    Returns:
-        Sine of ``x``.
+    Retourne :
+        Sinus de ``x``.
     """
 
 
 def asin(x: float) -> float:
     """asin(x) -> float
 
-    Applies the inverse sine operation.
+    Applique l'opération de sinus inverse.
 
     Arguments:
-        x (float): Opposite / hypotenuse.
+        x (float): Opposé / hypothénuse.
 
-    Returns:
-        Arcsine of ``x``, in radians.
+    Retourne :
+        Arcsinus de ``x``, en radians.
     """
 
 
 def cos(x: float) -> float:
     """cos(x) -> float
 
-    Gets the cosine of an angle.
+    Obtient le cosinus d'un angle.
 
     Arguments:
-        x (float): Angle in radians.
+        x (float): Angle en radians.
 
-    Returns:
-        Cosine of ``x``.
+    Retourne :
+        Cosinus de ``x``.
     """
 
 
 def acos(x: float) -> float:
     """acos(x) -> float
 
-    Applies the inverse cosine operation.
+    Applique l'opération de cosinus inverse.
 
     Arguments:
-        x (float): Adjacent / hypotenuse.
+        x (float): Adjacent / hypothénuse.
 
-    Returns:
-        Arccosine of ``x``, in radians.
+    Retourne :
+        Arccosinus de ``x``, en radians.
     """
 
 
 def tan(x: float) -> float:
     """tan(x) -> float
 
-    Gets the tangent of an angle.
+    Obtient la tangente d'un angle.
 
     Arguments:
-        x (float): Angle in radians.
+        x (float): Angle en radians.
 
-    Returns:
-        Tangent of ``x``.
+    Retourne :
+        Tangente de ``x``.
     """
 
 
 def atan(x: float) -> float:
     """atan(x) -> float
 
-    Applies the inverse tangent operation.
+    Applique l'opération de tangente inverse.
 
     Arguments:
-        x (float): Opposite / adjacent.
+        x (float): Opposé / adjacent.
 
-    Returns:
-        Arctangent of ``x``, in radians.
+    Retourne :
+        Arctangente de ``x``, en radians.
     """
 
 
 def atan2(b: float, a: float) -> float:
     """atan2(b, a) -> float
 
-    Applies the inverse tangent operation on ``b / a``, and accounts for
-    the signs of ``b`` and ``a`` to produce the expected angle.
+    Applique l'opération de tangente inverse sur ``b / a``, et prend en compte
+    les signes de ``b`` et ``a`` pour produire l'angle attendu.
 
     Arguments:
-        b (float): Opposite side of the triangle.
-        a (float): Adjacent side of the triangle.
+        b (float): Côté opposé du triangle.
+        a (float): Côté adjacent du triangle.
 
-    Returns:
-        Arctangent of ``b / a``, in radians.
+    Retourne :
+        Arctangente de ``b / a``, en radians.
     """
 
 
 def degrees(x: float) -> float:
     """degrees(x) -> float
 
-    Converts an angle from radians to degrees.
+    Convertit un angle de radians en degrés.
 
     Arguments:
-        x (float): Angle in radians.
+        x (float): Angle en radians.
 
-    Returns:
-        Angle in degrees.
+    Retourne :
+        Angle en degrés.
     """
 
 
 def radians(x: float) -> float:
     """radians(x) -> float
 
-    Converts an angle from degrees to radians.
+    Convertit un angle de degrés en radians.
 
     Arguments:
-        x (float): Angle in degrees.
+        x (float): Angle en degrés.
 
-    Returns:
-        Angle in radians.
+    Retourne :
+        Angle en radians.
     """
 
 
 def pow(x: float, y: float) -> float:
     """pow(x, y) -> float
 
-    Gets ``x`` raised to the power of ``y``.
+    Obtient ``x`` élevé à la puissance de ``y``.
 
     Arguments:
-        x (float): The base number.
-        y (float): The exponent.
+        x (float): Le nombre de base.
+        y (float): L'exposant.
 
-    Returns:
-        ``x`` raised to the power of ``y``.
+    Retourne :
+        ``x`` élevé à la puissance de ``y``.
     """
 
 
 def exp(x: float) -> float:
     """exp(x) -> float
 
-    Gets :attr:`e` raised to the power of ``x``.
+    Obtient :attr:`e` élevé à la puissance de ``x``.
 
     Arguments:
-        x (float): The exponent.
+        x (float): L'exposant.
 
-    Returns:
-        :attr:`e` raised to the power of ``x``.
+    Retourne :
+        :attr:`e` élevé à la puissance de ``x``.
     """
 
 
 def log(x: float) -> float:
     """log(x) -> float
 
-    Gets the natural logarithm.
+    Obtient le logarithme naturel.
 
     Arguments:
-        x (float): The value.
+        x (float): La valeur.
 
-    Returns:
-        The natural logarithm of ``x``.
+    Retourne :
+        Le logarithme naturel de ``x``.
     """
 
 
 def sqrt(x: float) -> float:
     """sqrt(x) -> float
 
-    Gets the square root.
+    Obtient la racine carrée.
 
     Arguments:
-        x (float): The value ``x``.
+        x (float): La valeur ``x``.
 
-    Returns:
-        The square root of ``x``.
+    Retourne :
+        La racine carrée de ``x``.
     """
 
 
 def ceil(x: float) -> int:
     """ceil(x) -> int
 
-    Rounds up.
+    Arrondit vers le haut.
 
     Arguments:
-        x (float): The value to be rounded.
+        x (float): La valeur à arrondir.
 
-    Returns:
-        Value rounded towards positive infinity.
+    Retourne :
+        Valeur arrondie vers l'infini positif.
     """
 
 
 def floor(x: float) -> int:
     """floor(x) -> int
 
-    Rounds down.
+    Arrondit vers le bas.
 
     Arguments:
-        x (float): The value to be rounded.
+        x (float): La valeur à arrondir.
 
-    Returns:
-        Value rounded towards negative infinity.
+    Retourne :
+        Valeur arrondie vers l'infini négatif.
     """
 
 
 def trunc(x: float) -> int:
     """trunc(x) -> int
 
-    Truncates decimals to get the integer part of a value.
+    Tronque les décimales pour obtenir la partie entière d'une valeur.
 
-    This is the same as rounding towards ``0``.
+    C'est la même chose que d'arrondir vers ``0``.
 
     Arguments:
-        x (float): The value to be truncated.
+        x (float): La valeur à tronquer.
 
-    Returns:
-        Integer part of the value.
+    Retourne :
+        Partie entière de la valeur.
     """
 
 
 def fmod(x: float, y: float) -> float:
     """fmod(x, y) -> float
 
-    Gets the remainder of ``x / y``.
+    Obtient le reste de ``x / y``.
 
-    Not to be confused with :func:`modf`.
+    Ne pas confondre avec :func:`modf`.
 
     Arguments:
-        x (float): The numerator.
-        y (float): The denominator.
+        x (float): Le numérateur.
+        y (float): Le dénominateur.
 
-    Returns:
-        Remainder after division
+    Retourne :
+        Reste après division.
     """
 
 
 def fabs(x: float) -> float:
     """fabs(x) -> float
 
-    Gets the absolute value.
+    Obtient la valeur absolue.
 
     Arguments:
-        x (float): The value.
+        x (float): La valeur.
 
-    Returns:
-        Absolute value of ``x``.
+    Retourne :
+        Valeur absolue de ``x``.
     """
 
 
 def modf(x: float) -> Tuple[float, float]:
     """modf(x) -> Tuple[float, float]
 
-    Gets the fractional and integral parts of ``x``, both with the same sign
-    as ``x``.
+    Obtient les parties fractionnaire et entière de ``x``, toutes deux avec le même signe
+    que ``x``.
 
-    Not to be confused with :func:`fmod`.
+    Ne pas confondre avec :func:`fmod`.
 
     Arguments:
-        x (float): The value to be decomposed.
+        x (float): La valeur à décomposer.
 
-    Returns:
-        Tuple of fractional and integral parts.
+    Retourne :
+        Tuple des parties fractionnaire et entière.
     """
 
 
 def frexp(x: float) -> Tuple[float, int]:
     """frexp(x) -> Tuple[float, float]
 
-    Decomposes a value ``x`` into a
-    tuple ``(m, p)``, such that ``x == m * (2 ** p)``.
+    Décompose une valeur ``x`` en un
+    tuple ``(m, p)``, tel que ``x == m * (2 ** p)``.
 
     Arguments:
-        x (float): The value to be decomposed.
+        x (float): La valeur à décomposer.
 
-    Returns:
-        Tuple of ``m`` and ``p``.
+    Retourne :
+        Tuple de ``m`` et ``p``.
     """
 
 
 def ldexp(m: float, p: int) -> float:
     """ldexp(m, p) -> float
 
-    Computes ``m * (2 ** p)``.
+    Calcule ``m * (2 ** p)``.
 
     Arguments:
-        m (float): The value.
-        p (float): The exponent.
+        m (float): La valeur.
+        p (float): L'exposant.
 
-    Returns:
-        Result of ``m * (2 ** p)``.
+    Retourne :
+        Résultat de ``m * (2 ** p)``.
     """
 
 
 def copysign(x: float, y: float) -> float:
     """copysign(x, y) -> float
 
-    Gets ``x`` with the sign of ``y``.
+    Obtient ``x`` avec le signe de ``y``.
 
     Arguments:
-        x (float): Determines the magnitude of the return value.
-        y (float): Determines the sign of the return value.
+        x (float): Détermine la magnitude de la valeur de retour.
+        y (float): Détermine le signe de la valeur de retour.
 
-    Returns:
-        ``x`` with the sign of ``y``.
+    Retourne :
+        ``x`` avec le signe de ``y``.
     """
 
 
 def isfinite(x: float) -> bool:
     """isfinite(x) -> bool
 
-    Checks if a value is finite.
+    Vérifie si une valeur est finie.
 
     Arguments:
-        x (float): The value to be checked.
+        x (float): La valeur à vérifier.
 
-    Returns:
-        ``True`` if ``x`` is finite, else ``False``.
+    Retourne :
+        ``True`` si ``x`` est fini, sinon ``False``.
     """
 
 
 def isinfinite(x: float) -> bool:
     """isinfinite(x) -> bool
 
-    Checks if a value is infinite.
+    Vérifie si une valeur est infinie.
 
     Arguments:
-        x (float): The value to be checked.
+        x (float): La valeur à vérifier.
 
-    Returns:
-        ``True`` if ``x`` is infinite, else ``False``.
+    Retourne :
+        ``True`` si ``x`` est infini, sinon ``False``.
     """
 
 
 def isnan(x: float) -> bool:
     """isnan(x) -> bool
 
-    Checks if a value is not-a-number.
+    Vérifie si une valeur est non numérique.
 
     Arguments:
-        x (float): The value to be checked.
+        x (float): La valeur à vérifier.
 
-    Returns:
-        ``True`` if ``x`` is not-a-number, else ``False``.
+    Retourne :
+        ``True`` si ``x`` est non numérique, sinon ``False``.
     """

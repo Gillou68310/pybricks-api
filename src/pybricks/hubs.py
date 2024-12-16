@@ -12,7 +12,7 @@ from .parameters import Button as _Button, Axis
 
 
 class EV3Brick:
-    """LEGO® MINDSTORMS® EV3 Brick."""
+    """Brique LEGO® MINDSTORMS® EV3."""
 
     # These class attributes are here for auto-documentation only.
     # In reality, they are instance attributes created by __init__.
@@ -49,20 +49,18 @@ class MoveHub:
         """MoveHub(top_side=Axis.Z, front_side=Axis.X, broadcast_channel=0, observe_channels=[])
 
         Arguments:
-            top_side (Axis): The axis that passes through the *top side* of
-                the hub.
-            front_side (Axis): The axis that passes through the *front side* of
-                the hub.
+            top_side (Axis): L'axe qui passe par le *côté supérieur* du hub.
+            front_side (Axis): L'axe qui passe par le *côté avant* du hub.
             broadcast_channel:
-                A value from 0 to 255 indicating which channel ``hub.ble.broadcast()``
-                will use. Default is channel 0.
+                Une valeur de 0 à 255 indiquant quel canal ``hub.ble.broadcast()`` utilisera.
+                La valeur par défaut est le canal 0.
             observe_channels:
-                A list of channels to listen to when ``hub.ble.observe()`` is
-                called. Listening to more channels requires more memory.
-                Default is an empty list (no channels).
+                Une liste de canaux à écouter lorsque ``hub.ble.observe()`` est appelé.
+                Écouter plus de canaux nécessite plus de mémoire.
+                La valeur par défaut est une liste vide (aucun canal).
 
         .. versionchanged:: 3.3
-            Added *broadcast_channel* and *observe_channels* arguments.
+            Ajout des arguments *broadcast_channel* et *observe_channels*.
         """
 
 
@@ -84,15 +82,15 @@ class CityHub:
 
         Arguments:
             broadcast_channel:
-                A value from 0 to 255 indicating which channel ``hub.ble.broadcast()``
-                will use. Default is channel 0.
+                Une valeur de 0 à 255 indiquant quel canal ``hub.ble.broadcast()`` utilisera.
+                La valeur par défaut est le canal 0.
             observe_channels:
-                A list of channels to listen to when ``hub.ble.observe()`` is
-                called. Listening to more channels requires more memory.
-                Default is an empty list (no channels).
+                Une liste de canaux à écouter lorsque ``hub.ble.observe()`` est appelé.
+                Écouter plus de canaux nécessite plus de mémoire.
+                La valeur par défaut est une liste vide (aucun canal).
 
         .. versionchanged:: 3.3
-            Added *broadcast_channel* and *observe_channels* arguments.
+            Ajout des arguments *broadcast_channel* et *observe_channels*.
         """
 
 
@@ -117,26 +115,24 @@ class TechnicHub:
     ):
         """TechnicHub(top_side=Axis.Z, front_side=Axis.X, broadcast_channel=0, observe_channels=[])
 
-        Initializes the hub. Optionally, specify how the hub is
-        :ref:`placed in your design <robotframe>` by saying in which
-        direction the top side (with the button) and front side
-        (with the light) are pointing.
+        Initialise le hub. Facultativement, spécifiez comment le hub est
+        :ref:`placé dans votre conception <robotframe>` en indiquant dans quelle
+        direction le côté supérieur (avec le bouton) et le côté avant
+        (avec la lumière) pointent.
 
         Arguments:
-            top_side (Axis): The axis that passes through the *top side* of
-                the hub.
-            front_side (Axis): The axis that passes through the *front side* of
-                the hub.
+            top_side (Axis): L'axe qui passe par le *côté supérieur* du hub.
+            front_side (Axis): L'axe qui passe par le *côté avant* du hub.
             broadcast_channel:
-                A value from 0 to 255 indicating which channel ``hub.ble.broadcast()``
-                will use. Default is channel 0.
+                Une valeur de 0 à 255 indiquant quel canal ``hub.ble.broadcast()`` utilisera.
+                La valeur par défaut est le canal 0.
             observe_channels:
-                A list of channels to listen to when ``hub.ble.observe()`` is
-                called. Listening to more channels requires more memory.
-                Default is an empty list (no channels).
+                Une liste de canaux à écouter lorsque ``hub.ble.observe()`` est appelé.
+                Écouter plus de canaux nécessite plus de mémoire.
+                La valeur par défaut est une liste vide (aucun canal).
 
         .. versionchanged:: 3.3
-            Added *broadcast_channel* and *observe_channels* arguments.
+            Ajout des arguments *broadcast_channel* et *observe_channels*.
         """
 
 
@@ -162,26 +158,24 @@ class EssentialHub:
     ):
         """EssentialHub(top_side=Axis.Z, front_side=Axis.X, broadcast_channel=0, observe_channels=[])
 
-        Initializes the hub. Optionally, specify how the hub is
-        :ref:`placed in your design <robotframe>` by saying in which
-        direction the top side (with the button) and the front side (with the USB
-        port, and I/O ports A and B) are pointing.
+        Initialise le hub. Facultativement, spécifiez comment le hub est
+        :ref:`placé dans votre conception <robotframe>` en indiquant dans quelle
+        direction le côté supérieur (avec le bouton) et le côté avant (avec le port USB
+        et les ports I/O A et B) pointent.
 
         Arguments:
-            top_side (Axis): The axis that passes through the *top side* of
-                the hub.
-            front_side (Axis): The axis that passes through the *front side* of
-                the hub.
+            top_side (Axis): L'axe qui passe par le *côté supérieur* du hub.
+            front_side (Axis): L'axe qui passe par le *côté avant* du hub.
             broadcast_channel:
-                A value from 0 to 255 indicating which channel ``hub.ble.broadcast()``
-                will use. Default is channel 0.
+                Une valeur de 0 à 255 indiquant quel canal ``hub.ble.broadcast()`` utilisera.
+                La valeur par défaut est le canal 0.
             observe_channels:
-                A list of channels to listen to when ``hub.ble.observe()`` is
-                called. Listening to more channels requires more memory.
-                Default is an empty list (no channels).
+                Une liste de canaux à écouter lorsque ``hub.ble.observe()`` est appelé.
+                Écouter plus de canaux nécessite plus de mémoire.
+                La valeur par défaut est une liste vide (aucun canal).
 
         .. versionchanged:: 3.3
-            Added *broadcast_channel* and *observe_channels* arguments.
+            Ajout des arguments *broadcast_channel* et *observe_channels*.
         """
         pass
 
@@ -217,26 +211,24 @@ class PrimeHub:
     ):
         """PrimeHub(top_side=Axis.Z, front_side=Axis.X, broadcast_channel=0, observe_channels=[])
 
-        Initializes the hub. Optionally, specify how the hub is
-        :ref:`placed in your design <robotframe>` by saying in which
-        direction the top side (with the buttons) and front side (with the USB
-        port) are pointing.
+        Initialise le hub. Facultativement, spécifiez comment le hub est
+        :ref:`placé dans votre conception <robotframe>` en indiquant dans quelle
+        direction le côté supérieur (avec les boutons) et le côté avant (avec le port USB)
+        pointent.
 
         Arguments:
-            top_side (Axis): The axis that passes through the *top side* of
-                the hub.
-            front_side (Axis): The axis that passes through the *front side* of
-                the hub.
+            top_side (Axis): L'axe qui passe par le *côté supérieur* du hub.
+            front_side (Axis): L'axe qui passe par le *côté avant* du hub.
             broadcast_channel:
-                A value from 0 to 255 indicating which channel ``hub.ble.broadcast()``
-                will use. Default is channel 0.
+                Une valeur de 0 à 255 indiquant quel canal ``hub.ble.broadcast()`` utilisera.
+                La valeur par défaut est le canal 0.
             observe_channels:
-                A list of channels to listen to when ``hub.ble.observe()`` is
-                called. Listening to more channels requires more memory.
-                Default is an empty list (no channels).
+                Une liste de canaux à écouter lorsque ``hub.ble.observe()`` est appelé.
+                Écouter plus de canaux nécessite plus de mémoire.
+                La valeur par défaut est une liste vide (aucun canal).
 
         .. versionchanged:: 3.3
-            Added *broadcast_channel* and *observe_channels* arguments.
+            Ajout des arguments *broadcast_channel* et *observe_channels*.
         """
 
 

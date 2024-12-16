@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: MIT
 # Copyright (c) 2018-2023 The Pybricks Authors
 
-"""Robotics module for the Pybricks API."""
+"""Module de robotique pour l'API Pybricks."""
 
 from __future__ import annotations
 
@@ -16,40 +16,40 @@ if TYPE_CHECKING:
 
 
 class DriveBase:
-    """A robotic vehicle with two powered wheels and an optional support
-    wheel or caster.
+    """Un véhicule robotique avec deux roues motrices et une roue de support
+    ou roulette optionnelle.
 
-    By specifying the dimensions of your robot, this class
-    makes it easy to drive a given distance in millimeters or turn by a given
-    number of degrees.
+    En spécifiant les dimensions de votre robot, cette classe
+    facilite la conduite sur une distance donnée en millimètres ou le virage
+    d'un nombre donné de degrés.
 
-    **Positive** distances, radii, or drive speeds mean
-    driving **forward**. **Negative** means **backward**.
+    Les distances, rayons ou vitesses de conduite **positifs** signifient
+    conduire **vers l'avant**. **Négatif** signifie **vers l'arrière**.
 
-    **Positive** angles and turn rates mean turning **right**.
-    **Negative** means **left**. So when viewed from the top,
-    positive means clockwise and negative means counterclockwise.
+    Les angles et taux de virage **positifs** signifient tourner **à droite**.
+    **Négatif** signifie **à gauche**. Donc, vu de dessus,
+    positif signifie dans le sens des aiguilles d'une montre et négatif signifie dans le sens inverse des aiguilles d'une montre.
 
-    See the `measuring`_ section for tips to measure and adjust the diameter
-    and axle track values.
+    Voir la section `mesure`_ pour des conseils sur la mesure et l'ajustement des valeurs de diamètre
+    et d'écartement des essieux.
     """
 
     distance_control = _common.Control()
-    """The traveled distance and drive speed are controlled by a PID
-    controller. You can use this attribute to change its settings.
-    See the :ref:`motor control <settings>` attribute for an overview of
-    available methods. The ``distance_control`` attribute has the same
-    functionality, but the settings apply to every millimeter driven by the
-    drive base, instead of degrees turned by one motor."""
+    """La distance parcourue et la vitesse de conduite sont contrôlées par un PID
+    contrôleur. Vous pouvez utiliser cet attribut pour changer ses paramètres.
+    Voir l'attribut :ref:`motor control <settings>` pour un aperçu des
+    méthodes disponibles. L'attribut ``distance_control`` a la même
+    fonctionnalité, mais les paramètres s'appliquent à chaque millimètre parcouru par la
+    base mobile, au lieu des degrés tournés par un moteur."""
 
     heading_control = _common.Control()
-    """The robot turn angle and turn rate are controlled by a PID
-    controller. You can use this attribute to change its settings.
-    See the :ref:`motor control <settings>` attribute for an overview of
-    available methods. The ``heading_control`` attribute has the same
-    functionality, but the settings apply to every degree of rotation of the
-    whole drive base (viewed from the top) instead of degrees turned by one
-    motor."""
+    """L'angle de rotation du robot et le taux de virage sont contrôlés par un PID
+    contrôleur. Vous pouvez utiliser cet attribut pour changer ses paramètres.
+    Voir l'attribut :ref:`motor control <settings>` pour un aperçu des
+    méthodes disponibles. L'attribut ``heading_control`` a la même
+    fonctionnalité, mais les paramètres s'appliquent à chaque degré de rotation de la
+    base mobile entière (vue de dessus) au lieu des degrés tournés par un
+    moteur."""
 
     def __init__(
         self,
@@ -62,67 +62,67 @@ class DriveBase:
 
         Arguments:
             left_motor (Motor):
-                The motor that drives the left wheel.
+                Le moteur qui entraîne la roue gauche.
             right_motor (Motor):
-                The motor that drives the right wheel.
-            wheel_diameter (Number, mm): Diameter of the wheels.
-            axle_track (Number, mm): Distance between the points where
-                both wheels touch the ground.
+                Le moteur qui entraîne la roue droite.
+            wheel_diameter (Number, mm): Diamètre des roues.
+            axle_track (Number, mm): Distance entre les points où
+                les deux roues touchent le sol.
         """
 
     def drive(self, speed: Number, turn_rate: Number) -> None:
         """drive(speed, turn_rate)
 
-        Starts driving at the specified speed and turn rate. Both values are
-        measured at the center point between the wheels of the robot.
+        Commence à conduire à la vitesse et au taux de virage spécifiés. Les deux valeurs sont
+        mesurées au point central entre les roues du robot.
 
         Arguments:
-            speed (Number, mm/s): Speed of the robot.
-            turn_rate (Number, deg/s): Turn rate of the robot.
+            speed (Number, mm/s): Vitesse du robot.
+            turn_rate (Number, deg/s): Taux de virage du robot.
         """
 
     def stop(self) -> None:
         """stop()
 
-        Stops the robot by letting the motors spin freely."""
+        Arrête le robot en laissant les moteurs tourner librement."""
 
     def brake(self) -> None:
         """brake()
 
-        Stops the robot by passively braking the motors.
+        Arrête le robot en freinant passivement les moteurs.
         """
 
     def distance(self) -> int:
         """distance() -> int: mm
 
-        Gets the estimated driven distance.
+        Obtient la distance parcourue estimée.
 
-        Returns:
-            Driven distance since last reset.
+        Retourne :
+            Distance parcourue depuis la dernière réinitialisation.
         """
 
     def angle(self) -> int:
         """angle() -> int: deg
 
-        Gets the estimated rotation angle of the drive base.
+        Obtient l'angle de rotation estimé de la base mobile.
 
-        Returns:
-            Accumulated angle since last reset.
+        Retourne :
+            Angle accumulé depuis la dernière réinitialisation.
         """
 
     def state(self) -> Tuple[int, int, int, int]:
         """state() -> Tuple[int, int, int, int]
 
-        Gets the state of the robot.
+        Obtient l'état du robot.
 
-        Returns:
-            Tuple of distance, drive speed, angle, and turn rate of the robot.
+        Retourne :
+            Tuple de la distance, de la vitesse de conduite, de l'angle et du taux de virage du robot.
         """
 
     def reset(self) -> None:
         """reset()
 
-        Resets the estimated driven distance and angle to 0."""
+        Réinitialise la distance parcourue estimée et l'angle à 0."""
 
     @overload
     def settings(
@@ -141,26 +141,26 @@ class DriveBase:
         settings(straight_speed, straight_acceleration, turn_rate, turn_acceleration)
         settings() -> Tuple[int, int, int, int]
 
-        Configures the drive base speed and acceleration.
+        Configure la vitesse et l'accélération de la base mobile.
 
-        If you give no arguments, this returns the current values as a tuple.
+        Si vous ne donnez aucun argument, cela retourne les valeurs actuelles sous forme de tuple.
 
-        The initial values are automatically configured based on your wheel
-        diameter and axle track. They are selected such that your robot
-        drives at about 40% of its maximum speed.
+        Les valeurs initiales sont automatiquement configurées en fonction de votre diamètre
+        de roue et de votre écartement des essieux. Elles sont sélectionnées de manière à ce que votre robot
+        roule à environ 40% de sa vitesse maximale.
 
-        The speed values given here do not apply to the :meth:`.drive` method,
-        since you provide your own speed values as arguments in that method.
+        Les valeurs de vitesse données ici ne s'appliquent pas à la méthode :meth:`.drive`,
+        car vous fournissez vos propres valeurs de vitesse en tant qu'arguments dans cette méthode.
 
         Arguments:
-            straight_speed (Number, mm/s): Straight-line speed of the robot.
-            straight_acceleration (Number, mm/s²): Straight-line
-                acceleration and deceleration of the robot. Provide a tuple with
-                two values to set acceleration and deceleration separately.
-            turn_rate (Number, deg/s): Turn rate of the robot.
-            turn_acceleration (Number, deg/s²): Angular acceleration and
-                deceleration of the robot. Provide a tuple with
-                two values to set acceleration and deceleration separately.
+            straight_speed (Number, mm/s): Vitesse en ligne droite du robot.
+            straight_acceleration (Number, mm/s²): Accélération et décélération
+                en ligne droite du robot. Fournissez un tuple avec
+                deux valeurs pour définir l'accélération et la décélération séparément.
+            turn_rate (Number, deg/s): Taux de virage du robot.
+            turn_acceleration (Number, deg/s²): Accélération angulaire et
+                décélération du robot. Fournissez un tuple avec
+                deux valeurs pour définir l'accélération et la décélération séparément.
         """
 
     def straight(
@@ -168,13 +168,13 @@ class DriveBase:
     ) -> MaybeAwaitable:
         """straight(distance, then=Stop.HOLD, wait=True)
 
-        Drives straight for a given distance and then stops.
+        Conduit en ligne droite sur une distance donnée, puis s'arrête.
 
         Arguments:
-            distance (Number, mm): Distance to travel
-            then (Stop): What to do after coming to a standstill.
-            wait (bool): Wait for the maneuver to complete before continuing
-                         with the rest of the program.
+            distance (Number, mm): Distance à parcourir.
+            then (Stop): Que faire après l'arrêt.
+            wait (bool): Attendre que la manœuvre soit terminée avant de continuer
+                         avec le reste du programme.
         """
 
     def turn(
@@ -182,13 +182,13 @@ class DriveBase:
     ) -> MaybeAwaitable:
         """turn(angle, then=Stop.HOLD, wait=True)
 
-        Turns in place by a given angle and then stops.
+        Tourne sur place d'un angle donné, puis s'arrête.
 
         Arguments:
-            angle (Number, deg): Angle of the turn.
-            then (Stop): What to do after coming to a standstill.
-            wait (bool): Wait for the maneuver to complete before continuing
-                         with the rest of the program.
+            angle (Number, deg): Angle du virage.
+            then (Stop): Que faire après l'arrêt.
+            wait (bool): Attendre que la manœuvre soit terminée avant de continuer
+                         avec le reste du programme.
         """
 
     def curve(
@@ -196,55 +196,55 @@ class DriveBase:
     ) -> MaybeAwaitable:
         """curve(radius, angle, then=Stop.HOLD, wait=True)
 
-        Drives an arc along a circle of a given radius, by a given angle.
+        Conduit un arc le long d'un cercle d'un rayon donné, sur un angle donné.
 
         Arguments:
-            radius (Number, mm): Radius of the circle.
-            angle (Number, deg): Angle along the circle.
-            then (Stop): What to do after coming to a standstill.
-            wait (bool): Wait for the maneuver to complete before continuing
-                         with the rest of the program.
+            radius (Number, mm): Rayon du cercle.
+            angle (Number, deg): Angle le long du cercle.
+            then (Stop): Que faire après l'arrêt.
+            wait (bool): Attendre que la manœuvre soit terminée avant de continuer
+                         avec le reste du programme.
         """
 
     def done(self) -> bool:
         """done() -> bool
 
-        Checks if an ongoing command or maneuver is done.
+        Vérifie si une commande ou une manœuvre en cours est terminée.
 
-        Returns:
-            ``True`` if the command is done, ``False`` if not.
+        Retourne :
+            ``True`` si la commande est terminée, ``False`` sinon.
         """
 
     def stalled(self) -> bool:
         """stalled() -> bool
 
-        Checks if the drive base is currently stalled.
+        Vérifie si la base mobile est actuellement bloquée.
 
-        It is stalled when it cannot reach the target speed or position, even
-        with the maximum actuation signal.
+        Elle est bloquée lorsqu'elle ne peut pas atteindre la vitesse ou la position cible, même
+        avec le signal d'actionnement maximal.
 
-        Returns:
-            ``True`` if the drivebase is stalled, ``False`` if not.
+        Retourne :
+            ``True`` si la base mobile est bloquée, ``False`` sinon.
         """
 
     def use_gyro(self, use_gyro: bool) -> None:
         """use_gyro(use_gyro)
 
-        Choose ``True`` to use the gyro sensor for turning and driving
-        straight. Choose ``False`` to rely only on the motor's built-in
-        rotation sensors.
+        Choisissez ``True`` pour utiliser le capteur gyroscopique pour tourner et conduire
+        en ligne droite. Choisissez ``False`` pour ne compter que sur les capteurs de rotation
+        intégrés du moteur.
 
         Arguments:
-            use_gyro (bool): ``True`` to enable, ``False`` to disable.
+            use_gyro (bool): ``True`` pour activer, ``False`` pour désactiver.
         """
 
 
 class Car:
-    """A vehicle with one steering motor, and one or more motors for driving.
+    """Un véhicule avec un moteur de direction et un ou plusieurs moteurs pour la conduite.
 
-    When you use this class, the steering motor will automatically find the
-    center position. This also determines which angle corresponds to 100%
-    steering.
+    Lorsque vous utilisez cette classe, le moteur de direction trouvera automatiquement la
+    position centrale. Cela détermine également quel angle correspond à 100%
+    de direction.
     """
 
     def __init__(
@@ -257,54 +257,54 @@ class Car:
 
         Arguments:
             steer_motor (Motor):
-                The motor that steers the front wheels.
-            drive_motors (Motor): The motor that drives the wheels. Use a tuple
-                for multiple motors.
-            torque_limit (Number, %): The maximum torque limit used to find the
-                endpoints for the steering mechanism, as a percentage of the
-                maximum torque of the steering motor.
+                Le moteur qui dirige les roues avant.
+            drive_motors (Motor): Le moteur qui entraîne les roues. Utilisez un tuple
+                pour plusieurs moteurs.
+            torque_limit (Number, %): La limite de couple maximale utilisée pour trouver les
+                points de fin pour le mécanisme de direction, en pourcentage du
+                couple maximal du moteur de direction.
         """
 
     def steer(self, percentage: Number) -> None:
         """steer(percentage)
 
-        Steers the front wheels by a given amount. For 100% steering, it
-        steers right by the angle that was determined on initialization.
-        For -100% steering, it steers left and 0% means straight.
+        Dirige les roues avant d'une certaine quantité. Pour une direction à 100%,
+        il tourne à droite de l'angle déterminé lors de l'initialisation.
+        Pour une direction à -100%, il tourne à gauche et 0% signifie tout droit.
 
         Arguments:
-            steering (Number, %): Amount to steer the front wheels.
+            steering (Number, %): Quantité pour diriger les roues avant.
         """
 
     def drive_power(self, power: Number) -> None:
         """drive_power(power)
 
-        Drives the car at a given power level. Positive values drive forward,
-        negative values drive backward.
+        Conduit la voiture à un niveau de puissance donné. Les valeurs positives conduisent vers l'avant,
+        les valeurs négatives conduisent vers l'arrière.
 
-        The ``power`` value is used to set the motor voltage as a percentage of
-        the battery voltage. Below 10%, the car will coast the wheels in order
-        to roll out smoothly instead of braking abruptly.
+        La valeur ``power`` est utilisée pour régler la tension du moteur en pourcentage de
+        la tension de la batterie. En dessous de 10%, la voiture laissera les roues en roue libre
+        pour rouler en douceur au lieu de freiner brusquement.
 
-        This command is useful for remote control applications where you want
-        instant response to button presses or joystick movements.
+        Cette commande est utile pour les applications de télécommande où vous souhaitez
+        une réponse instantanée aux pressions sur les boutons ou aux mouvements du joystick.
 
         Arguments:
-            speed (Number, %): Speed of the car.
+            speed (Number, %): Vitesse de la voiture.
         """
 
     def drive_speed(self, speed: Number) -> None:
         """drive_speed(speed)
 
-        Drives the car at a given motor speed. Positive values drive forward,
-        negative values drive backward.
+        Conduit la voiture à une vitesse de moteur donnée. Les valeurs positives conduisent vers l'avant,
+        les valeurs négatives conduisent vers l'arrière.
 
-        This command is useful for more precise driving with gentle
-        acceleration and deceleration. This automatically increases the power
-        to maintain speed as you drive across obstacles.
+        Cette commande est utile pour une conduite plus précise avec une accélération
+        et une décélération en douceur. Cela augmente automatiquement la puissance
+        pour maintenir la vitesse lorsque vous traversez des obstacles.
 
         Arguments:
-            speed (Number, deg/s): Angular velocity of the drive motors.
+            speed (Number, deg/s): Vitesse angulaire des moteurs de conduite.
         """
 
 

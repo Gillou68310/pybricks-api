@@ -6,8 +6,7 @@
 # Copyright (c) 2014-2021, Damien P. George, Paul Sokolovsky, and contributors
 
 """
-This module provides functions to convert between Python values and C-like
-data structs.
+Ce module fournit des fonctions pour convertir entre les valeurs Python et les structures de données de type C.
 """
 
 from typing import Union, Tuple
@@ -15,13 +14,13 @@ from typing import Union, Tuple
 
 def calcsize(format: str) -> int:
     """
-    Gets the data size corresponding to a format string
+    Obtient la taille des données correspondant à une chaîne de format.
 
     Arguments:
-        format (str): Data format string.
+        format (str): Chaîne de format des données.
 
-    Returns:
-        The number of bytes needed to represent this format.
+    Retourne :
+        Le nombre d'octets nécessaires pour représenter ce format.
     """
 
 
@@ -29,13 +28,13 @@ def pack(format: str, *values) -> bytes:
     """
     pack(format, value1, value2, ...)
 
-    Packs the values using the given format.
+    Emballe les valeurs en utilisant le format donné.
 
     Arguments:
-        format (str): Data format string.
+        format (str): Chaîne de format des données.
 
-    Returns:
-        The data encoded as bytes.
+    Retourne :
+        Les données encodées sous forme d'octets.
     """
 
 
@@ -43,13 +42,13 @@ def pack_into(format: str, buffer: bytearray, offset: int, *values) -> bytes:
     """
     pack_into(format, buffer, offset, value1, value2, ...)
 
-    Encode the values using the given format and write them to a given buffer.
+    Encode les valeurs en utilisant le format donné et les écrit dans un tampon donné.
 
     Arguments:
-        format (str): Data format string.
-        buffer (bytearray): Buffer to store the encoded data.
-        offset (int): Offset from the start of the buffer. Use a negative value
-            to count from the end of the buffer.
+        format (str): Chaîne de format des données.
+        buffer (bytearray): Tampon pour stocker les données encodées.
+        offset (int): Décalage à partir du début du tampon. Utilisez une valeur négative
+            pour compter à partir de la fin du tampon.
     """
 
 
@@ -57,14 +56,14 @@ def unpack(format: str, data: Union[bytes, bytearray]) -> Tuple:
     """
     unpack(format, data) -> Tuple
 
-    Decodes the binary data using the given format.
+    Décode les données binaires en utilisant le format donné.
 
     Arguments:
-        format (str): Data format string.
-        data (bytes or bytearray): Data to unpack.
+        format (str): Chaîne de format des données.
+        data (bytes ou bytearray): Données à déballer.
 
-    Returns:
-        The decoded data as a tuple of values.
+    Retourne :
+        Les données décodées sous forme de tuple de valeurs.
     """
 
 
@@ -72,14 +71,14 @@ def unpack_from(format: str, data: Union[bytes, bytearray], offset: int) -> Tupl
     """
     unpack_from(format, data, offset) -> Tuple
 
-    Decodes binary data from a buffer using the given format.
+    Décode les données binaires d'un tampon en utilisant le format donné.
 
     Arguments:
-        format (str): Data format string.
-        data (bytes or bytearray): Data buffer to unpack.
-        offset (int): Offset from the start of the data. Use a negative value
-            to count from the end of the data.
+        format (str): Chaîne de format des données.
+        data (bytes ou bytearray): Tampon de données à déballer.
+        offset (int): Décalage à partir du début des données. Utilisez une valeur négative
+            pour compter à partir de la fin des données.
 
-    Returns:
-        The decoded data as a tuple of values.
+    Retourne :
+        Les données décodées sous forme de tuple de valeurs.
     """

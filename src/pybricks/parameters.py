@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: MIT
 # Copyright (c) 2018-2022 The Pybricks Authors
 
-"""Constant parameters/arguments for the Pybricks API."""
+"""Paramètres/arguments constants pour l'API Pybricks."""
 
 from __future__ import annotations
 
@@ -14,24 +14,24 @@ from .tools import Matrix as _Matrix, vector as _vector
 if TYPE_CHECKING or os.environ.get("SPHINX_BUILD") == "True":
     Number = Union[int, float]
     """
-    Numbers can be represented as integers or floating point values:
+    Les nombres peuvent être représentés comme des entiers ou des valeurs à virgule flottante :
 
-        * Integers (:class:`int <ubuiltins.int>`) are whole numbers
-          like ``15`` or ``-123``.
-        * Floating point values (:class:`float <ubuiltins.float>`) are decimal
-          numbers like ``3.14`` or ``-123.45``.
+        * Les entiers (:class:`int <ubuiltins.int>`) sont des nombres entiers
+          comme ``15`` ou ``-123``.
+        * Les valeurs à virgule flottante (:class:`float <ubuiltins.float>`) sont des nombres décimaux
+          comme ``3.14`` ou ``-123.45``.
 
-    If you see :class:`Number` as the argument type, both
-    :class:`int <ubuiltins.int>` and :class:`float <ubuiltins.float>` may be used.
+    Si vous voyez :class:`Number` comme type d'argument, les deux
+    :class:`int <ubuiltins.int>` et :class:`float <ubuiltins.float>` peuvent être utilisés.
 
-    For example, :func:`wait(15) <pybricks.tools.wait>` and
-    :func:`wait(15.75) <pybricks.tools.wait>` are both allowed. In most functions,
-    however, your input value will be truncated to a whole number anyway. In this
-    example, either command makes the program pause for just 15 milliseconds.
+    Par exemple, :func:`wait(15) <pybricks.tools.wait>` et
+    :func:`wait(15.75) <pybricks.tools.wait>` sont tous deux autorisés. Dans la plupart des fonctions,
+    cependant, votre valeur d'entrée sera tronquée à un nombre entier de toute façon. Dans cet
+    exemple, l'une ou l'autre commande fait que le programme s'arrête pendant seulement 15 millisecondes.
 
     .. note::
-        The BOOST Move hub doesn't support floating point numbers due to
-        limited system resources. Only integers can be used on that hub.
+        Le hub BOOST Move ne prend pas en charge les nombres à virgule flottante en raison
+        de ressources système limitées. Seuls les entiers peuvent être utilisés sur ce hub.
     """
 
 
@@ -58,7 +58,7 @@ class _PybricksEnum(Enum, metaclass=_PybricksEnumMeta):
 
 
 class Axis:
-    """Unit axes of a coordinate system.
+    """Axes unitaires d'un système de coordonnées.
 
     .. data:: X = vector(1, 0, 0)
     .. data:: Y = vector(0, 1, 0)
@@ -72,7 +72,7 @@ class Axis:
 
 
 class Color:
-    """Light or surface color."""
+    """Couleur de la lumière ou de la surface."""
 
     NONE: Color = ...
     BLACK: Color = ...
@@ -92,24 +92,24 @@ class Color:
         """Color(h, s=100, v=100)
 
         Arguments:
-            h (Number, deg): Hue.
+            h (Number, deg): Teinte.
             s (Number, %): Saturation.
-            v (Number, %): Brightness value.
+            v (Number, %): Valeur de luminosité.
         """
 
         self.h = int(h) % 360
         """
-        The hue.
+        La teinte.
         """
 
         self.s = max(0, min(int(s), 100))
         """
-        The saturation.
+        La saturation.
         """
 
         self.v = max(0, min(int(v), 100))
         """
-        The brightness value.
+        La valeur de luminosité.
         """
 
     def __repr__(self):
@@ -147,7 +147,7 @@ Color.MAGENTA = Color(300, 100, 100)
 
 
 class Port(_PybricksEnum):
-    """Port on the programmable brick or hub."""
+    """Port sur la brique programmable ou le hub."""
 
     # Generic motor/sensor ports
     A: Port = ord("A")
@@ -165,46 +165,46 @@ class Port(_PybricksEnum):
 
 
 class Stop(_PybricksEnum):
-    """Action after the motor stops or reaches its target."""
+    """Action après que le moteur s'arrête ou atteint sa cible."""
 
     COAST: Stop = 0
-    """Let the motor move freely."""
+    """Laisser le moteur se déplacer librement."""
 
     COAST_SMART: Stop = 4
     """
-    Let the motor move freely. For the next relative angle maneuver,
-    take the last target angle (instead of the current angle) as the new
-    starting point. This reduces cumulative errors. This will apply only if the
-    current angle is less than twice the configured position tolerance.
+    Laisser le moteur se déplacer librement. Pour la prochaine manœuvre d'angle relatif,
+    prendre le dernier angle cible (au lieu de l'angle actuel) comme nouveau
+    point de départ. Cela réduit les erreurs cumulatives. Cela s'appliquera uniquement si
+    l'angle actuel est inférieur à deux fois la tolérance de position configurée.
     """
 
     BRAKE: Stop = 1
-    """Passively resist small external forces."""
+    """Résister passivement aux petites forces externes."""
 
     HOLD: Stop = 2
-    """Keep controlling the motor to hold it at the commanded angle."""
+    """Continuer à contrôler le moteur pour le maintenir à l'angle commandé."""
 
     NONE: Stop = 3
     """
-    Do not decelerate when approaching the target position. This can be used
-    to concatenate multiple motor or drive base maneuvers without stopping. If
-    no further commands are given, the motor will proceed to run indefinitely
-    at the given speed.
+    Ne pas décélérer en approchant de la position cible. Cela peut être utilisé
+    pour enchaîner plusieurs manœuvres de moteur ou de base mobile sans s'arrêter. Si
+    aucune autre commande n'est donnée, le moteur continuera à fonctionner indéfiniment
+    à la vitesse donnée.
     """
 
 
 class Direction(_PybricksEnum):
-    """Rotational direction for positive speed or angle values."""
+    """Direction de rotation pour les valeurs de vitesse ou d'angle positives."""
 
     CLOCKWISE: Direction = 0
-    """A positive speed value should make the motor move clockwise."""
+    """Une valeur de vitesse positive doit faire tourner le moteur dans le sens horaire."""
 
     COUNTERCLOCKWISE: Direction = 1
-    """A positive speed value should make the motor move counterclockwise."""
+    """Une valeur de vitesse positive doit faire tourner le moteur dans le sens antihoraire."""
 
 
 class Button(_PybricksEnum):
-    """Buttons on a hub or remote."""
+    """Boutons sur un hub ou une télécommande."""
 
     LEFT_DOWN: Button = 1
     LEFT_MINUS: Button = 1
@@ -240,7 +240,7 @@ class Button(_PybricksEnum):
 
 
 class Side(_PybricksEnum):
-    """Side of a hub or a sensor."""
+    """Côté d'un hub ou d'un capteur."""
 
     RIGHT: Side = 6
     FRONT: Side = 0
@@ -251,10 +251,10 @@ class Side(_PybricksEnum):
 
 
 class Icon:
-    """Icons to display on a light matrix.
+    """Icônes à afficher sur une matrice lumineuse.
 
-    Each of the following attributes are matrices. This means you can scale
-    icons to adjust the brightness or add icons to make composites.
+    Chacune des attributs suivants est une matrice. Cela signifie que vous pouvez
+    redimensionner les icônes pour ajuster la luminosité ou ajouter des icônes pour créer des composites.
     """
 
     UP: _Matrix = ...

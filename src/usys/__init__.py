@@ -6,7 +6,7 @@
 # Copyright (c) 2014-2021, Damien P. George, Paul Sokolovsky, and contributors
 
 """
-This module provides a subset of the standard Python ``sys`` module.
+Ce module fournit un sous-ensemble du module standard Python ``sys``.
 """
 
 from typing import Tuple
@@ -15,22 +15,22 @@ from uio import FileIO as _FileIO
 
 stdin: _FileIO = _FileIO()
 """
-This is a stream object (:class:`uio.FileIO`) that receives input from a
-connected terminal, if any.
+Ceci est un objet flux (:class:`uio.FileIO`) qui reçoit des entrées d'un
+terminal connecté, le cas échéant.
 
-Also see :func:`kbd_intr <micropython.kbd_intr>` to disable
-``KeyboardInterrupt`` when passing binary data via ``stdin``.
+Voir aussi :func:`kbd_intr <micropython.kbd_intr>` pour désactiver
+``KeyboardInterrupt`` lors du passage de données binaires via ``stdin``.
 """
 
 stdout: _FileIO = _FileIO()
 """
-This is a stream object (:class:`uio.FileIO`) that sends output to a connected
-terminal, if any.
+Ceci est un objet flux (:class:`uio.FileIO`) qui envoie des sorties à un
+terminal connecté, le cas échéant.
 """
 
 stderr: _FileIO = _FileIO()
 """
-Alias for :data:`stdout`.
+Alias pour :data:`stdout`.
 """
 
 implementation: Tuple[str, Tuple[int, int, int], str, int] = (
@@ -40,14 +40,14 @@ implementation: Tuple[str, Tuple[int, int, int], str, int] = (
     6,
 )
 """
-MicroPython version tuple. See format and example below.
+Tuple de version de MicroPython. Voir le format et l'exemple ci-dessous.
 """
 
 version: str = "3.4.0; Pybricks MicroPython v3.2.0b5 on 2022-11-11"
 """
-Python compatibility version, Pybricks version, and build date.
-See format and example below.
+Version de compatibilité Python, version Pybricks et date de construction.
+Voir le format et l'exemple ci-dessous.
 """
 
 version_info: Tuple[int, int, int] = (3, 4, 0)
-"""Python compatibility version. See format and example below."""
+"""Version de compatibilité Python. Voir le format et l'exemple ci-dessous."""
