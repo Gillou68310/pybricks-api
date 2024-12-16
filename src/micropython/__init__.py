@@ -46,7 +46,7 @@ def const(value):
     underscore (``APPLES``). Cela utilise un peu plus de mémoire.
 
     Arguments:
-        value (int ou float ou str ou tuple): La valeur littérale à rendre constante.
+        value (int or float or str or tuple): La valeur littérale à rendre constante.
 
     Retourne :
         La valeur constante.

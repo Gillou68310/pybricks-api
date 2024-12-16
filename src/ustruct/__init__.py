@@ -60,7 +60,7 @@ def unpack(format: str, data: Union[bytes, bytearray]) -> Tuple:
 
     Arguments:
         format (str): Chaîne de format des données.
-        data (bytes ou bytearray): Données à déballer.
+        data (bytes or bytearray): Données à déballer.
 
     Retourne :
         Les données décodées sous forme de tuple de valeurs.
@@ -75,7 +75,7 @@ def unpack_from(format: str, data: Union[bytes, bytearray], offset: int) -> Tupl
 
     Arguments:
         format (str): Chaîne de format des données.
-        data (bytes ou bytearray): Tampon de données à déballer.
+        data (bytes or bytearray): Tampon de données à déballer.
         offset (int): Décalage à partir du début des données. Utilisez une valeur négative
             pour compter à partir de la fin des données.
 

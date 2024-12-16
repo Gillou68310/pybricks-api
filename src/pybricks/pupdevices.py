@@ -369,7 +369,7 @@ class ColorLightMatrix:
         Allume les lumières.
 
         Arguments:
-            colors (Color ou liste):
+            colors (Color or list):
                 Si une seule :class:`.Color` est donnée, alors les 9 lumières sont réglées
                 à cette couleur. Si une liste de couleurs est donnée, alors chaque lumière est
                 réglée à cette couleur.

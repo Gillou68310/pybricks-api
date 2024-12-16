@@ -40,7 +40,7 @@ class BytesIO:
         Un flux binaire utilisant un tampon de bytes en mémoire.
 
         Arguments:
-            data (bytes ou bytearray): Objet optionnel de type bytes
+            data (bytes or bytearray): Objet optionnel de type bytes
                 contenant des données initiales.
             alloc_size (int): Nombre optionnel de bytes préalloués. Ce
                 paramètre est unique à MicroPython. Il n'est pas recommandé de

@@ -244,8 +244,8 @@ def hub_menu(*symbols: int | str) -> int | str:
     n'importe où dans un programme, pas seulement au début.
 
     Arguments:
-        symbol1 (int ou str): Le premier symbole à afficher dans le menu.
-        symbol2 (int ou str): Le deuxième symbole, et ainsi de suite...
+        symbol1 (int or str): Le premier symbole à afficher dans le menu.
+        symbol2 (int or str): Le deuxième symbole, et ainsi de suite...
 
     Retourne :
         Le symbole sélectionné.

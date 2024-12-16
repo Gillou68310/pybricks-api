@@ -30,7 +30,7 @@ class DriveBase:
     **Négatif** signifie **à gauche**. Donc, vu de dessus,
     positif signifie dans le sens des aiguilles d'une montre et négatif signifie dans le sens inverse des aiguilles d'une montre.
 
-    Voir la section `mesure`_ pour des conseils sur la mesure et l'ajustement des valeurs de diamètre
+    Voir la section `measuring`_ pour des conseils sur la mesure et l'ajustement des valeurs de diamètre
     et d'écartement des essieux.
     """
 

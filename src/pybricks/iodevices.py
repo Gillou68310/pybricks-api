@@ -436,7 +436,7 @@ class XboxController:
         équivaut à ``count * (duration + delay)``.
 
         Arguments:
-            power (Number, % ou tuple): Puissance de la vibration.
+            power (Number, % or tuple): Puissance de la vibration.
             duration (Number, ms): Durée de la vibration.
             count (int): Nombre de vibrations.
             delay (Number, ms): Délai avant chaque vibration. Seulement si ``count > 1``.

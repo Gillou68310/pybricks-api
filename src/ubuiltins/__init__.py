@@ -314,8 +314,8 @@ class complex:
 
         Arguments:
             string (str): Une chaîne de la forme ``'1+2j'``.
-            a (float ou complex): Un nombre réel ou complexe.
-            b (float ou complex): Un nombre réel ou complexe.
+            a (float or complex): Un nombre réel ou complexe.
+            b (float or complex): Un nombre réel ou complexe.
 
         Retourne :
             Le nombre complexe résultant.
@@ -522,7 +522,7 @@ class float:
         Crée un nombre à virgule flottante à partir d'un objet donné.
 
         Arguments:
-            x (int ou float ou str): Nombre ou chaîne à convertir.
+            x (int or float or str): Nombre ou chaîne à convertir.
         """
 
 
@@ -697,7 +697,7 @@ class int:
         Crée un entier.
 
         Arguments:
-            x (int ou float ou str): Objet à convertir.
+            x (int or float or str): Objet à convertir.
         """
 
     def to_bytes(self, length: _int, byteorder: Literal["little", "big"]) -> _bytes:
@@ -741,7 +741,7 @@ def isinstance(object: Any, classinfo: Union[_type, Tuple[_type]]) -> _bool:
 
     Arguments:
         object: Objet dont vérifier le type.
-        classinfo (type ou tuple): Informations sur la classe.
+        classinfo (type or tuple): Informations sur la classe.
 
     Retourne :
         ``True`` si l'argument ``object`` est une instance de l'argument ``classinfo``
@@ -757,7 +757,7 @@ def issubclass(cls: _type, classinfo: Union[_type, Tuple[_type]]) -> _bool:
 
     Arguments:
         cls: Type de classe.
-        classinfo (type ou tuple): Informations sur la classe.
+        classinfo (type or tuple): Informations sur la classe.
 
     Retourne :
         ``True`` si ``cls`` est une sous-classe de ``classinfo``.
@@ -986,7 +986,7 @@ def print(*args):
     Arguments:
         objects: Zéro ou plusieurs objets à imprimer.
 
-    Arguments par mot-clé:
+    Keyword Arguments:
         sep (str): Ceci est imprimé entre les objets, s'il y en a plus d'un.
         end (str): Ceci est imprimé après le dernier objet.
         file (FileIO): Par défaut, le résultat est imprimé dans la fenêtre du terminal. Cet

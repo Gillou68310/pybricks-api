@@ -221,9 +221,9 @@ class Control:
         lorsque vous donnez une nouvelle commande au moteur. Les manœuvres en cours ne sont pas affectées.
 
         Arguments:
-            speed (Number, deg/s ou Number, mm/s):
+            speed (Number, deg/s or Number, mm/s):
                 Vitesse maximale. Toutes les commandes de vitesse seront limitées à cette valeur.
-            acceleration (Number, deg/s² ou Number, mm/s²):
+            acceleration (Number, deg/s² or Number, mm/s²):
                 Pente de la courbe de vitesse lors de l'accélération ou de la décélération.
                 Utilisez un tuple pour définir l'accélération et la décélération séparément.
                 Si une valeur est donnée, elle est utilisée pour les deux.
@@ -259,9 +259,9 @@ class Control:
                 par degré accumulé d'erreur : µNm/(deg s).
             kd (int): Constante de contrôle dérivée de la position (ou proportionnelle à la vitesse).
                 C'est le couple de rétroaction par unité de vitesse : µNm/(deg/s).
-            integral_deadzone (Number, deg ou Number, mm): Zone autour de
+            integral_deadzone (Number, deg or Number, mm): Zone autour de
                 la cible où l'intégrale de l'erreur ne s'accumule pas.
-            integral_rate (Number, deg/s ou Number, mm/s): Taux maximal
+            integral_rate (Number, deg/s or Number, mm/s): Taux maximal
                 auquel l'intégrale de l'erreur est autorisée à croître.
         """
 
@@ -282,9 +282,9 @@ class Control:
         Si aucun argument n'est donné, cela renvoie les valeurs actuelles.
 
         Arguments:
-            speed (Number, deg/s ou Number, mm/s): Déviation autorisée
+            speed (Number, deg/s or Number, mm/s): Déviation autorisée
                 par rapport à la vitesse zéro avant que le mouvement ne soit considéré comme terminé.
-            position (Number, deg ou :ref:`distance`): Déviation autorisée
+            position (Number, deg or :ref:`distance`): Déviation autorisée
                 par rapport à la cible avant que le mouvement ne soit considéré comme terminé.
         """
 
@@ -305,7 +305,7 @@ class Control:
         Si aucun argument n'est donné, cela renvoie les valeurs actuelles.
 
         Arguments:
-            speed (Number, deg/s ou Number, mm/s): Si le contrôleur
+            speed (Number, deg/s or Number, mm/s): Si le contrôleur
                 ne peut pas atteindre cette vitesse pendant un certain ``temps`` même avec une action maximale,
                 il est bloqué.
             time (Number, ms): Combien de temps le contrôleur doit être en dessous de cette
@@ -353,7 +353,7 @@ class Model:
         .. _model settings: https://docs.pybricks.com/projects/pbio/en/latest/struct__pbio__observer__settings__t.html
 
         Arguments:
-            values (Tuple): Tuple avec les `paramètres du modèle`_.
+            values (Tuple): Tuple with `model settings`_.
         """
 
 
@@ -747,7 +747,7 @@ class LightArray3:
         Allume les lumières à la luminosité spécifiée.
 
         Arguments:
-            brightness (Number ou tuple, %):
+            brightness (Number or tuple, %):
                 Utilisez une seule valeur pour définir la luminosité de toutes les lumières en même temps.
                 Utilisez un tuple de trois valeurs pour définir la luminosité
                 de chaque lumière individuellement.
@@ -771,7 +771,7 @@ class LightArray4(LightArray3):
         Allume les lumières à la luminosité spécifiée.
 
         Arguments:
-            brightness (Number ou tuple, %):
+            brightness (Number or tuple, %):
                 Utilisez une seule valeur pour définir la luminosité de toutes les lumières en même temps.
                 Utilisez un tuple de quatre valeurs pour définir la luminosité
                 de chaque lumière individuellement. L'ordre des lumières est montré
@@ -809,10 +809,10 @@ class LightMatrix:
     def icon(self, icon: Matrix) -> None:
         """icon(icon)
 
-        Affiche une icône, représentée par une matrice de valeurs de :ref:`luminosité`.
+        Affiche une icône, représentée par une matrice de valeurs de :ref:`brightness`.
 
         Arguments:
-            icon (Matrix): Matrice d'intensités (:ref:`luminosité`). Une liste 2D est également acceptée.
+            icon (Matrix): Matrice d'intensités (:ref:`brightness`). Une liste 2D est également acceptée.
         """
 
     def animate(self, matrices: Collection[Matrix], interval: Number) -> None:
@@ -838,7 +838,7 @@ class LightMatrix:
         Arguments:
             row (Number): Indice de la grille verticale, commençant à 0 depuis le haut.
             column (Number): Indice de la grille horizontale, commençant à 0 depuis la gauche.
-            brightness (Number :ref:`luminosité`): Luminosité du pixel.
+            brightness (Number :ref:`brightness`): Luminosité du pixel.
         """
 
     def off(self) -> None:
@@ -1257,7 +1257,7 @@ class CommonColorSensor:
         Lors de la programmation avec des blocs, cela est configuré dans le bloc de configuration du capteur.
 
         Arguments:
-            colors (list ou tuple): Liste d'objets :class:`Color <.parameters.Color>` :
+            colors (list or tuple): Liste d'objets :class:`Color <.parameters.Color>` :
                 les couleurs que vous souhaitez détecter. Vous pouvez choisir
                 des couleurs standard telles que ``Color.MAGENTA``, ou fournir vos
                 propres couleurs comme ``Color(h=348, s=96, v=40)`` pour des résultats encore

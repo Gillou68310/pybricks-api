@@ -34,7 +34,7 @@ class Image:
 
 
         Arguments:
-            source (str ou Image):
+            source (str or Image):
                 La source de l'image.
 
                 Si ``source`` est une chaîne de caractères, l'image sera chargée à partir
@@ -163,7 +163,7 @@ class Image:
                 La valeur de l'axe x où le côté gauche de l'image commencera.
             y (int):
                 La valeur de l'axe y où le haut de l'image commencera.
-            source (Image ou str):
+            source (Image or str):
                 La source :class:`Image <pybricks.media.ev3dev.Image>`. Si
                 l'argument est une chaîne de caractères, l'image ``source`` est chargée
                 à partir du fichier.
@@ -179,7 +179,7 @@ class Image:
         |cette image|.
 
         Arguments:
-            source (Image ou str):
+            source (Image or str):
                 La source :class:`Image <pybricks.media.ev3dev.Image>`. Si
                 l'argument est une chaîne de caractères, l'image ``source`` est chargée
                 à partir du fichier.
