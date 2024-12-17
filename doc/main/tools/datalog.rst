@@ -1,33 +1,33 @@
-Data logging
+Enregistrement de données
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-At the moment, this class is only available on EV3.
+Pour le moment, cette classe est uniquement disponible sur EV3.
 
 .. autoclass:: pybricks.tools.DataLog
     :no-members:
 
     .. automethod:: pybricks.tools.DataLog.log
 
-    By default, this class creates a ``csv`` file on the EV3 brick with the
-    name ``log`` and the current date and time. For example, if you
-    use this class on 13 February 2020 on 10:07 and 44.431260
-    seconds, the file is called ``log_2020_02_13_10_07_44_431260.csv``.
+    Par défaut, cette classe crée un fichier ``csv`` sur la brique EV3 avec le
+    nom ``log`` et la date et l'heure actuelles. Par exemple, si vous utilisez
+    cette classe le 13 février 2020 à 10:07 et 44.431260 secondes, le fichier
+    s'appelle ``log_2020_02_13_10_07_44_431260.csv``.
 
-    See `managing files on the EV3`_ to learn how to upload
-    the log file back to your computer.
+    Voir `managing files on the EV3`_ pour apprendre comment télécharger le
+    fichier journal sur votre ordinateur.
 
-
-Examples
+Exemples
 -------------------
 
-Logging and visualizing measurements
-************************************
+Enregistrement et visualisation des mesures
+*******************************************
 
-This example shows how to log the angle of a rotating wheel as time passes.
+Cet exemple montre comment enregistrer l'angle d'une roue tournante au fil du
+temps.
 
 .. literalinclude:: ../../../examples/ev3/datalog/main.py
 
-In this example, the generated file has the following contents::
+Dans cet exemple, le fichier généré contient les éléments suivants::
 
     time, angle
     3, 0
@@ -41,34 +41,35 @@ In this example, the generated file has the following contents::
     838, 333
     942, 385
 
-When you upload the file to your computer as shown above, you can open it
-in a spreadsheet editor. You can then generate a graph of the data, as
-shown in :numref:`fig_datalog_graph`.
+Lorsque vous téléchargez le fichier sur votre ordinateur comme indiqué
+ci-dessus, vous pouvez l'ouvrir dans un éditeur de tableur. Vous pouvez
+ensuite générer un graphique des données, comme montré dans
+:numref:`fig_datalog_graph`.
 
-In this example, we see that the motor angle changes slowly at first. Then
-the angle begins to change faster, and the graph becomes a straight line.
-This means that the motor has reached a constant speed. You can verify that
-the angle increases by 500 degrees per second.
+Dans cet exemple, nous voyons que l'angle du moteur change lentement au début.
+Puis l'angle commence à changer plus rapidement, et le graphique devient une
+ligne droite. Cela signifie que le moteur a atteint une vitesse constante.
+Vous pouvez vérifier que l'angle augmente de 500 degrés par seconde.
 
 .. _fig_datalog_graph:
 
 .. figure:: ../../main/images/datalog_graph.png
     :width: 100 %
 
-    Original file contents (left) and a generated graph (right).
+    Contenu du fichier original (à gauche) et graphique généré (à droite).
 
+Utilisation des arguments optionnels
+************************************
 
-Using the optional arguments
-****************************
+Cet exemple montre comment enregistrer des données au-delà des simples
+nombres. Il montre également comment vous pouvez utiliser les arguments
+optionnels de la classe ``DataLog`` pour choisir le nom et l'extension du
+fichier.
 
-This example shows how to log data beyond just numbers. It also shows how
-you can use the optional arguments of the ``DataLog`` class to choose the
-file name and extension.
-
-In this example, ``timestamp=False``, which means that the date and time
-are not added to the file name. This can be convenient because the file
-name will always be the same. However, this means that the contents of
-``my_file.txt`` will be overwritten every time you run this script.
+Dans cet exemple, ``timestamp=False``, ce qui signifie que la date et l'heure
+ne sont pas ajoutées au nom du fichier. Cela peut être pratique car le nom du
+fichier sera toujours le même. Cependant, cela signifie que le contenu de
+``my_file.txt`` sera écrasé chaque fois que vous exécuterez ce script.
 
 .. literalinclude:: ../../../examples/ev3/datalog_extra/main.py
 

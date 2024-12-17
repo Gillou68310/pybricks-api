@@ -1,16 +1,17 @@
-:mod:`nxtdevices <pybricks.nxtdevices>` -- NXT devices
-======================================================
+:mod:`nxtdevices <pybricks.nxtdevices>` -- Appareils NXT
+========================================================
 
 .. automodule:: pybricks.nxtdevices
     :no-members:
 
-NXT Motor
-^^^^^^^^^^^^^^^^
-This motor works just like a LEGO MINDSTORMS EV3 Large Motor. You can use it in
-your programs using the :mod:`Motor <.ev3devices>` class.
+Moteur NXT
+^^^^^^^^^^
 
-NXT Touch Sensor
-^^^^^^^^^^^^^^^^
+Ce moteur fonctionne comme un moteur LEGO MINDSTORMS EV3 Large. Vous pouvez
+l'utiliser dans vos programmes en utilisant la classe :mod:`Motor <.ev3devices>`.
+
+Capteur tactile NXT
+^^^^^^^^^^^^^^^^^^^
 
 .. figure:: ../main/cad/output/nxtdevice-touch.png
    :width: 18 %
@@ -20,16 +21,16 @@ NXT Touch Sensor
 
     .. automethod:: pybricks.nxtdevices.TouchSensor.pressed
 
-NXT Light Sensor
-^^^^^^^^^^^^^^^^
+Capteur de lumière NXT
+^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: ../main/cad/output/nxtdevice-light.png
    :width: 18 %
 
 .. autoclass:: pybricks.nxtdevices.LightSensor
 
-NXT Color Sensor
-^^^^^^^^^^^^^^^^
+Capteur de couleur NXT
+^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: ../main/cad/output/nxtdevice-color.png
    :width: 18 %
@@ -45,57 +46,58 @@ NXT Color Sensor
 
     .. automethod:: pybricks.nxtdevices.ColorSensor.rgb
 
-    .. rubric:: Advanced color sensing
+    .. rubric:: Détection avancée des couleurs
 
     .. automethod:: pybricks.nxtdevices.ColorSensor.hsv
 
     .. automethod:: pybricks.nxtdevices.ColorSensor.detectable_colors
 
-    .. rubric:: Built-in light
+    .. rubric:: Lumière intégrée
 
-    This sensor has a built-in light. You can make it red, green, blue, or turn
-    it off.
+    Ce capteur a une lumière intégrée. Vous pouvez la rendre rouge, verte,
+    bleue, ou l'éteindre.
 
     .. automethod:: pybricks.nxtdevices::ColorSensor.light.on
 
     .. automethod:: pybricks.nxtdevices::ColorSensor.light.off
 
-NXT Ultrasonic Sensor
-^^^^^^^^^^^^^^^^^^^^^
+Capteur ultrasonique NXT
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: ../main/cad/output/nxtdevice-ultrasonic.png
    :width: 24 %
 
 .. autoclass:: pybricks.nxtdevices.UltrasonicSensor
 
-NXT Sound Sensor
-^^^^^^^^^^^^^^^^^^^^^
+Capteur sonore NXT
+^^^^^^^^^^^^^^^^^^
 
 .. figure:: ../main/cad/output/nxtdevice-sound.png
    :width: 18 %
 
 .. autoclass:: pybricks.nxtdevices.SoundSensor
 
-NXT Temperature Sensor
-^^^^^^^^^^^^^^^^^^^^^^
+Capteur de température NXT
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: ../main/cad/output/nxtdevice-temperature.png
    :width: 32 %
 
 .. autoclass:: pybricks.nxtdevices.TemperatureSensor
 
-NXT Energy Meter
-^^^^^^^^^^^^^^^^^
+Compteur d'énergie NXT
+^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: ../main/cad/output/nxtdevice-energy.png
    :width: 30 %
 
 .. autoclass:: pybricks.nxtdevices.EnergyMeter
 
-Vernier Adapter
-^^^^^^^^^^^^^^^^^
+Adaptateur Vernier
+^^^^^^^^^^^^^^^^^^
+
 .. autoclass:: pybricks.nxtdevices.VernierAdapter
 
-**Example: Using the Surface Temperature Sensor.**
+**Exemple : Utilisation du capteur de température de surface.**
 
 .. literalinclude:: ../../examples/ev3/vernier_surface_temperature/main.py

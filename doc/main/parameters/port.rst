@@ -5,7 +5,7 @@ Port
 
 .. class:: Port
 
-    Input and output ports:
+    Ports d'entrée et de sortie :
 
     .. autoattribute:: pybricks.parameters.Port.A
         :annotation:

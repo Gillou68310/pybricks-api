@@ -1,11 +1,12 @@
-Generic UART Device
-^^^^^^^^^^^^^^^^^^^
+Appareil UART générique
+^^^^^^^^^^^^^^^^^^^^^^^
 
 .. note::
 
-   This class is **only supported on the EV3** at this time. It could be added
-   to Powered Up hubs in a future release. If you'd like to see this happen,
-   be sure to ask us on our `support page`_.
+   Cette classe est **seulement supportée sur l'EV3** pour le moment. Elle
+   pourrait être ajoutée aux hubs Powered Up dans une future version. Si vous
+   souhaitez que cela se produise, assurez-vous de nous le demander sur notre
+   `support page`_.
 
 .. _support page: https://github.com/pybricks/support/issues/
 
@@ -14,7 +15,7 @@ Generic UART Device
 
 .. autoclass:: pybricks.iodevices.UARTDevice
 
-**Example: Read and write to a UART device**
+**Exemple : Lire et écrire sur un appareil UART**
 
 .. literalinclude::
    ../../../examples/ev3/uart_basics/main.py

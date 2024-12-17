@@ -1,14 +1,14 @@
 .. pybricks-requirements::
 
-Color
+Couleur
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. autoclass:: pybricks.parameters.Color
     :no-members:
 
-    .. rubric:: Saturated colors
+    .. rubric:: Couleurs saturées
 
-    These colors have maximum saturation and brightness value.
-    They differ only in hue.
+    Ces couleurs ont une saturation et une luminosité maximales. Elles
+    diffèrent uniquement par la teinte.
 
     .. autoattribute:: RED
 
@@ -42,15 +42,15 @@ Color
 
         .. pybricks-color:: MAGENTA
 
-    .. rubric:: Unsaturated colors
+    .. rubric:: Couleurs non saturées
 
-    These colors have zero hue and saturation. They differ only in brightness
-    value.
+    Ces couleurs ont une teinte et une saturation nulles. Elles diffèrent
+    uniquement par la luminosité.
 
-    When detecting these colors using sensors, their values depend a lot
-    on the distance to the object. If the distance between the sensor and the
-    object is not constant in your robot, it is better to use only one of these
-    colors in your programs.
+    Lors de la détection de ces couleurs à l'aide de capteurs, leurs valeurs
+    dépendent beaucoup de la distance à l'objet. Si la distance entre le
+    capteur et l'objet n'est pas constante dans votre robot, il est préférable
+    d'utiliser uniquement l'une de ces couleurs dans vos programmes.
 
     .. autoattribute:: WHITE
 
@@ -62,25 +62,26 @@ Color
 
     .. autoattribute:: BLACK
 
-        This represents dark objects that still reflect
-        a very small amount of light.
+        Cela représente des objets sombres qui reflètent encore une très
+        petite quantité de lumière.
 
         .. pybricks-color:: BLACK
 
     .. autoattribute:: NONE
 
-        This is total darkness, with no reflection or light at all.
+        Cela représente l'obscurité totale, sans réflexion ni lumière du tout.
 
         .. pybricks-color:: NONE
 
-.. rubric:: Making your own colors
+.. rubric:: Créer vos propres couleurs
 
-This example shows the basics of color properties, and how to define new colors.
+Cet exemple montre les bases des propriétés des couleurs et comment définir de
+nouvelles couleurs.
 
 .. literalinclude::
     ../../../examples/pup/parameters/color_basics.py
 
-This example shows more advanced use cases of the ``Color`` class.
+Cet exemple montre des cas d'utilisation plus avancés de la classe ``Color``.
 
 .. literalinclude::
     ../../../examples/pup/parameters/color_advanced.py

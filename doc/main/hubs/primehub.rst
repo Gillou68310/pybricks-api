@@ -13,10 +13,11 @@ Prime Hub / Inventor Hub
 
 .. class:: InventorHub
 
-    This class is the same as the ``PrimeHub`` class, shown below. Both classes
-    work on both hubs.
+    Cette classe est identique à la classe ``PrimeHub``, montrée ci-dessous.
+    Les deux classes fonctionnent sur les deux hubs.
 
-    These hubs are completely identical. They use the same Pybricks firmware.
+    Ces hubs sont complètement identiques. Ils utilisent le même firmware
+    Pybricks.
 
 .. blockimg:: pybricks_variables_set_prime_hub_option0
 
@@ -26,7 +27,7 @@ Prime Hub / Inventor Hub
 .. autoclass:: pybricks.hubs.PrimeHub
     :no-members:
 
-    .. rubric:: Using the hub status light
+    .. rubric:: Utilisation de la lumière d'état du hub
 
     .. figure:: ../../main/diagrams/primehub_light.png
         :width: 22 em
@@ -43,7 +44,7 @@ Prime Hub / Inventor Hub
 
     .. automethod:: pybricks.hubs::PrimeHub.light.animate
 
-    .. rubric:: Using the light matrix display
+    .. rubric:: Utilisation de l'affichage de la matrice lumineuse
 
     .. figure:: ../../main/diagrams/primehub_display.png
         :width: 22 em
@@ -72,7 +73,7 @@ Prime Hub / Inventor Hub
 
     .. automethod:: pybricks.hubs::PrimeHub.display.text
 
-    .. rubric:: Using the buttons
+    .. rubric:: Utilisation des boutons
 
     .. figure:: ../../main/diagrams/primehub_buttons.png
         :width: 22 em
@@ -88,7 +89,7 @@ Prime Hub / Inventor Hub
 
     .. automethod:: pybricks.hubs::PrimeHub.system.set_stop_button
 
-    .. rubric:: Using the IMU
+    .. rubric:: Utilisation de l'IMU
 
     .. blockimg:: pybricks_blockImuStatus_PrimeHub_ready
 
@@ -133,7 +134,7 @@ Prime Hub / Inventor Hub
 
     .. automethod:: pybricks.hubs::PrimeHub.imu.settings
 
-    .. rubric:: Using the speaker
+    .. rubric:: Utilisation du haut-parleur
 
     .. automethod:: pybricks.hubs::PrimeHub.speaker.volume
 
@@ -141,7 +142,7 @@ Prime Hub / Inventor Hub
 
     .. automethod:: pybricks.hubs::PrimeHub.speaker.play_notes
 
-    .. rubric:: Using connectionless Bluetooth messaging
+    .. rubric:: Utilisation de la messagerie Bluetooth sans connexion
 
     .. blockimg:: pybricks_blockBleBroadcast_PrimeHub
 
@@ -155,7 +156,7 @@ Prime Hub / Inventor Hub
 
     .. automethod:: pybricks.hubs::PrimeHub.ble.version
 
-    .. rubric:: Using the battery
+    .. rubric:: Utilisation de la batterie
 
     .. blockimg:: pybricks_blockBatteryMeasure_PrimeHub_battery.voltage
 
@@ -165,7 +166,7 @@ Prime Hub / Inventor Hub
 
     .. automethod:: pybricks.hubs::PrimeHub.battery.current
 
-    .. rubric:: Getting the charger status
+    .. rubric:: Obtenir l'état du chargeur
 
     .. automethod:: pybricks.hubs::PrimeHub.charger.connected
 
@@ -173,13 +174,13 @@ Prime Hub / Inventor Hub
 
     .. automethod:: pybricks.hubs::PrimeHub.charger.status
 
-    .. rubric:: System control
+    .. rubric:: Contrôle du système
 
     .. automethod:: pybricks.hubs::PrimeHub.system.name
 
     .. automethod:: pybricks.hubs::PrimeHub.system.storage
 
-        You can store up to 512 bytes of data on this hub.
+        Vous pouvez stocker jusqu'à 512 octets de données sur ce hub.
 
     .. blockimg:: pybricks_blockHubShutdown_PrimeHub
 
@@ -187,66 +188,66 @@ Prime Hub / Inventor Hub
 
     .. automethod:: pybricks.hubs::PrimeHub.system.reset_reason
 
-.. note:: The examples below use the ``PrimeHub`` class. The examples work fine
-        on both hubs because they are the identical. If you prefer, you can
-        change this to ``InventorHub``.
+.. note:: Les exemples ci-dessous utilisent la classe ``PrimeHub``. Les exemples fonctionnent bien
+        sur les deux hubs car ils sont identiques. Si vous préférez, vous pouvez
+        changer cela en ``InventorHub``.
 
-Status light examples
----------------------
+Exemples de lumière d'état
+--------------------------
 
-Turning the light on and off
-****************************
+Allumer et éteindre la lumière
+******************************
 
 .. literalinclude::
     ../../../examples/pup/hub_common/build/light_off_primehub.py
 
-Changing brightness and using custom colors
-*******************************************
+Changer la luminosité et utiliser des couleurs personnalisées
+*************************************************************
 
 .. literalinclude::
     ../../../examples/pup/hub_common/build/light_hsv_primehub.py
 
-Making the light blink
-**********************
+Faire clignoter la lumière
+**************************
 
 .. literalinclude::
     ../../../examples/pup/hub_common/build/light_blink_primehub.py
 
-Creating light animations
-*************************
+Créer des animations lumineuses
+*******************************
 
 .. literalinclude::
     ../../../examples/pup/hub_common/build/light_animate_primehub.py
 
-Matrix display examples
------------------------
+Exemples d'affichage de matrice
+-------------------------------
 
-Displaying images
-*****************
+Afficher des images
+*******************
 
 .. literalinclude::
     ../../../examples/pup/hub_primehub/display_image.py
 
-Displaying numbers
-******************
+Afficher des nombres
+********************
 
 .. literalinclude::
     ../../../examples/pup/hub_primehub/display_number.py
 
-Displaying text
-***************
+Afficher du texte
+*****************
 
 .. literalinclude::
     ../../../examples/pup/hub_primehub/display_text.py
 
-Displaying individual pixels
-****************************
+Afficher des pixels individuels
+*******************************
 
 .. literalinclude::
     ../../../examples/pup/hub_primehub/display_pixel.py
 
-Changing the display orientation
-********************************
+Changer l'orientation de l'affichage
+************************************
 
 .. literalinclude::
     ../../../examples/pup/hub_primehub/display_orientation.py
@@ -256,95 +257,92 @@ Changing the display orientation
 
 .. _make_icons:
 
-Making your own images
-**********************
+Créer vos propres images
+************************
 
 .. literalinclude::
     ../../../examples/pup/hub_primehub/display_matrix.py
 
-Combining icons to make expressions
-************************************
+Combiner des icônes pour créer des expressions
+**********************************************
 
 .. literalinclude::
     ../../../examples/pup/hub_primehub/display_expression.py
 
-Displaying animations
-*********************
+Afficher des animations
+***********************
 
 .. literalinclude::
     ../../../examples/pup/hub_primehub/display_animate.py
 
-Button examples
----------------
+Exemples de bouton
+------------------
 
-Detecting button presses
-************************
+Détecter les pressions sur les boutons
+**************************************
 
 .. literalinclude::
     ../../../examples/pup/hub_primehub/button_main.py
 
-IMU examples
----------------
+Exemples d'IMU
+--------------
 
-Testing which way is up
-********************************
+Tester quelle direction est vers le haut
+****************************************
 
 .. literalinclude::
     ../../../examples/pup/hub_common/build/imu_up_primehub.py
 
-
-Reading the tilt value
-********************************
+Lire la valeur de l'inclinaison
+*******************************
 
 .. literalinclude::
     ../../../examples/pup/hub_common/build/imu_tilt_primehub.py
 
-Using a custom hub orientation
-**************************************************
+Utiliser une orientation personnalisée du hub
+*********************************************
 
 .. literalinclude::
     ../../../examples/pup/hub_common/build/imu_tilt_blast_primehub.py
 
-Reading acceleration and angular velocity vectors
-**************************************************
+Lire les vecteurs d'accélération et de vitesse angulaire
+********************************************************
 
 .. literalinclude::
     ../../../examples/pup/hub_common/build/imu_read_vector_primehub.py
 
-Reading acceleration and angular velocity on one axis
-*****************************************************
+Lire l'accélération et la vitesse angulaire sur un axe
+******************************************************
 
 .. literalinclude::
     ../../../examples/pup/hub_common/build/imu_read_scalar_primehub.py
 
-
-Bluetooth examples
+Exemples Bluetooth
 ------------------
 
-Broadcasting data to other hubs
-*******************************
+Diffuser des données vers d'autres hubs
+***************************************
 
 .. literalinclude::
     ../../../examples/pup/hub_common/build/ble_broadcast_primehub.py
 
-Observing data from other hubs
-******************************
+Observer les données d'autres hubs
+**********************************
 
 .. literalinclude::
     ../../../examples/pup/hub_common/build/ble_observe_primehub.py
 
+Exemples de système
+-------------------
 
-System examples
-----------------------------------
-
-Changing the stop button combination
+Changer la combinaison de boutons d'arrêt
 *****************************************
 
 .. literalinclude::
     ../../../examples/pup/hub_primehub/button_stop.py
 
-Turning the hub off
-*****************************************
+Éteindre le hub
+***************
 
 .. literalinclude::
     ../../../examples/pup/hub_common/build/system_shutdown_primehub.py

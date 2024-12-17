@@ -1,10 +1,10 @@
-:mod:`ev3devices <pybricks.ev3devices>` -- EV3 devices
-======================================================
+:mod:`ev3devices <pybricks.ev3devices>` -- Dispositifs EV3
+==========================================================
 
 .. automodule:: pybricks.ev3devices
     :no-members:
 
-Motors
+Moteurs
 ^^^^^^^^^^^^
 
 .. _fig_ev3motors:
@@ -12,13 +12,14 @@ Motors
 .. figure:: ../main/diagrams/ev3motors.png
    :width: 100 %
 
-   EV3-compatible motors. The arrows indicate the default positive direction.
+   Moteurs compatibles EV3. Les flèches indiquent la direction positive par
+   défaut.
 
 .. autoclass:: pybricks.ev3devices.Motor
     :noindex:
     :no-members:
 
-    .. rubric:: Measuring
+    .. rubric:: Mesure
 
     .. automethod:: pybricks.ev3devices.Motor.angle
 
@@ -30,7 +31,7 @@ Motors
 
     .. automethod:: pybricks.ev3devices.Motor.stalled
 
-    .. rubric:: Stopping
+    .. rubric:: Arrêt
 
     .. automethod:: pybricks.ev3devices.Motor.stop
 
@@ -38,13 +39,13 @@ Motors
 
     .. automethod:: pybricks.ev3devices.Motor.hold
 
-    .. rubric:: Running forever
+    .. rubric:: Fonctionnement continu
 
     .. automethod:: pybricks.ev3devices.Motor.run
 
     .. automethod:: pybricks.ev3devices.Motor.dc
 
-    .. rubric:: Running by a fixed amount
+    .. rubric:: Fonctionnement par une quantité fixe
 
     .. automethod:: pybricks.ev3devices.Motor.run_time
 
@@ -58,11 +59,11 @@ Motors
 
     .. automethod:: pybricks.ev3devices.Motor.done
 
-    .. rubric:: Motor settings
+    .. rubric:: Paramètres du moteur
 
     .. automethod:: pybricks.ev3devices.Motor.settings
 
-    .. rubric:: Control settings
+    .. rubric:: Paramètres de contrôle
 
     .. automethod:: pybricks.ev3devices.Motor.control.limits
 
@@ -74,48 +75,50 @@ Motors
 
     .. attribute:: control.scale
 
-        Number of degrees that the motor turns to complete one degree at the
-        output of the gear train. This is the gear ratio determined from the
-        ``gears`` argument when initializing the motor.
+        Nombre de degrés que le moteur tourne pour compléter un degré à la
+        sortie du train d'engrenages. Il s'agit du rapport de réduction
+        déterminé à partir de l'argument ``gears`` lors de l'initialisation du
+        moteur.
 
-Touch Sensor
-^^^^^^^^^^^^
+Capteur tactile
+^^^^^^^^^^^^^^^
 
 .. figure:: ../main/cad/output/ev3device-touch.png
    :width: 18 %
 
 .. autoclass:: pybricks.ev3devices.TouchSensor
 
-Color Sensor
-^^^^^^^^^^^^
+Capteur de couleur
+^^^^^^^^^^^^^^^^^^
 
 .. figure:: ../main/cad/output/ev3device-color.png
    :width: 18 %
 
 .. autoclass:: pybricks.ev3devices.ColorSensor
 
-Infrared Sensor and Beacon
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+Capteur infrarouge et balise
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Each method of this class puts the sensor in a different *mode*. Switching
-modes takes about one second on this sensor. To make sure that your program
-runs quickly, use only of these methods in your program.
+Chaque méthode de cette classe met le capteur dans un mode différent. Le
+changement de mode prend environ une seconde sur ce capteur. Pour vous assurer
+que votre programme s'exécute rapidement, utilisez uniquement l'une de ces
+méthodes dans votre programme.
 
 .. figure:: ../main/cad/output/ev3device-infrared.png
    :width: 60 %
 
 .. autoclass:: pybricks.ev3devices.InfraredSensor
 
-Ultrasonic Sensor
-^^^^^^^^^^^^^^^^^
+Capteur ultrasonique
+^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: ../main/cad/output/ev3device-ultrasonic.png
    :width: 22 %
 
 .. autoclass:: pybricks.ev3devices.UltrasonicSensor
 
-Gyroscopic Sensor
-^^^^^^^^^^^^^^^^^
+Capteur gyroscopique
+^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: ../main/cad/output/ev3device-gyro.png
    :width: 18 %
@@ -127,8 +130,9 @@ Gyroscopic Sensor
 
     .. automethod:: pybricks.ev3devices.GyroSensor.angle
 
-         If you use the :meth:`.angle` method, you cannot use the
-         :meth:`.speed` method in the same program. Doing so would reset the
-         sensor angle to zero every time you read the speed.
+         Si vous utilisez la méthode :meth:`.angle`, vous ne pouvez pas
+         utiliser la méthode :meth:`.speed` dans le même programme. Cela
+         réinitialiserait l'angle du capteur à zéro chaque fois que vous lisez
+         la vitesse.
 
     .. automethod:: pybricks.ev3devices.GyroSensor.reset_angle

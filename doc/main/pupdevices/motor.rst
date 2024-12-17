@@ -1,7 +1,7 @@
 .. pybricks-requirements::
 
-Motors with rotation sensors
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Moteurs avec capteurs de rotation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. _fig_pupmotors:
 
@@ -9,16 +9,16 @@ Motors with rotation sensors
    :width: 100 %
    :alt: pupmotors
 
-   Powered Up motors with rotation sensors. The arrows indicate the default
-   positive direction. See the :mod:`hubs <pybricks.hubs>` module for default
-   directions of built-in motors.
+   Moteurs Powered Up avec capteurs de rotation. Les flèches indiquent la
+   direction positive par défaut. Voir le module :mod:`hubs <pybricks.hubs>`
+   pour les directions par défaut des moteurs intégrés.
 
 .. blockimg:: pybricks_variables_set_motor
 
 .. autoclass:: pybricks.pupdevices.Motor
     :no-members:
 
-    .. rubric:: Measuring
+    .. rubric:: Mesurer
 
     .. blockimg:: pybricks_blockMotorMeasure_motor_angle
 
@@ -42,7 +42,7 @@ Motors with rotation sensors
 
     .. automethod:: pybricks.pupdevices.Motor.stalled
 
-    .. rubric:: Stopping
+    .. rubric:: Arrêter
 
     .. blockimg:: pybricks_blockMotorStop_Motor_coast
 
@@ -56,7 +56,7 @@ Motors with rotation sensors
 
     .. automethod:: pybricks.pupdevices.Motor.hold
 
-    .. rubric:: Running forever
+    .. rubric:: Fonctionnement continu
 
     .. blockimg:: pybricks_blockMotorRun_run
 
@@ -66,7 +66,7 @@ Motors with rotation sensors
 
     .. automethod:: pybricks.pupdevices.Motor.dc
 
-    .. rubric:: Running by a fixed amount
+    .. rubric:: Fonctionnement par une quantité fixe
 
     .. automethod:: pybricks.pupdevices.Motor.run_time
 
@@ -90,7 +90,7 @@ Motors with rotation sensors
 
     .. _settings:
 
-    .. rubric:: Motor settings
+    .. rubric:: Paramètres du moteur
 
     .. blockimg:: pybricks_blockMotorConfigure_motor_max_voltage
 
@@ -98,7 +98,7 @@ Motors with rotation sensors
 
     .. automethod:: pybricks.pupdevices.Motor.close
 
-    .. rubric:: Control settings
+    .. rubric:: Paramètres de contrôle
 
     .. pybricks-requirements:: pybricks-common-control
 
@@ -130,14 +130,14 @@ Motors with rotation sensors
 
     .. attribute:: control.scale
 
-        Number of degrees that the motor turns to complete one degree at the
-        output of the gear train. This is the gear ratio determined from the
-        ``gears`` argument when initializing the motor.
+        Nombre de degrés que le moteur tourne pour compléter un degré à la
+        sortie de la transmission. Il s'agit du rapport de réduction déterminé
+        à partir de l'argument ``gears`` lors de l'initialisation du moteur.
 
     .. versionchanged:: 3.2
 
-        The :meth:`done`, :meth:`stalled` and :meth:`load` methods have been
-        moved.
+        Les méthodes :meth:`done`, :meth:`stalled` et :meth:`load` ont été
+        déplacées.
 
     .. pybricks-requirements:: pybricks-common-control
 
@@ -147,103 +147,103 @@ Motors with rotation sensors
 
     .. automethod:: pybricks.pupdevices.Motor.model.settings
 
-Initialization examples
------------------------
+Exemples d'initialisation
+-------------------------
 
-Making the motor move back and forth
-*******************************************************
+Faire bouger le moteur d'avant en arrière
+*****************************************
 
 .. literalinclude::
     ../../../examples/pup/motor/motor_init_basic.py
 
-Initializing multiple motors
-*******************************************************
+Initialiser plusieurs moteurs
+*****************************
 
 .. literalinclude::
     ../../../examples/pup/motor/motor_init_multiple.py
 
-Setting the positive direction as counterclockwise
-*******************************************************
+Définir la direction positive comme antihoraire
+***********************************************
 
 .. literalinclude::
     ../../../examples/pup/motor/motor_init_direction.py
 
-Using gears
-*******************************************************
+Utiliser des engrenages
+***********************
 
 .. literalinclude::
     ../../../examples/pup/motor/motor_init_gears.py
 
-Measurement examples
------------------------
+Exemples de mesure
+------------------
 
-Measuring the angle and speed
-*******************************************************
+Mesurer l'angle et la vitesse
+*****************************
 
 .. literalinclude::
     ../../../examples/pup/motor/motor_measure.py
 
-Resetting the measured angle
-*******************************************************
+Réinitialiser l'angle mesuré
+****************************
 
 .. literalinclude::
     ../../../examples/pup/motor/motor_reset_angle.py
 
-Getting the absolute angle
-*******************************************************
+Obtenir l'angle absolu
+**********************
 
 .. literalinclude::
     ../../../examples/pup/motor/motor_absolute.py
 
 
-Movement examples
------------------------
+Exemples de mouvement
+---------------------
 
-Basic usage of all run methods
-*******************************************************
+Utilisation de base de toutes les méthodes de course
+****************************************************
 
 .. literalinclude::
     ../../../examples/pup/motor/motor_action_basic.py
 
-Stopping ongoing movements in different ways
+Arrêter les mouvements en cours de différentes manières
 *******************************************************
 
 .. literalinclude::
     ../../../examples/pup/motor/motor_stop.py
 
-Using the ``then`` argument to change how a run command stops
-*************************************************************
+Utiliser l'argument ``then`` pour changer la façon dont une commande de course s'arrête
+***************************************************************************************
 
 .. literalinclude::
     ../../../examples/pup/motor/motor_action_then.py
 
-Stall examples
------------------------
+Exemples de blocage
+-------------------
 
-Running a motor until a mechanical endpoint
-*******************************************************
+Faire fonctionner un moteur jusqu'à un point de terminaison mécanique
+*********************************************************************
 
 .. literalinclude::
     ../../../examples/pup/motor/motor_until_stalled.py
 
-Centering a steering mechanism
-*******************************************************
+Centrer un mécanisme de direction
+*********************************
 
 .. literalinclude::
     ../../../examples/pup/motor/motor_until_stalled_center.py
 
 
-Parallel movement examples
---------------------------
+Exemples de mouvement parallèle
+-------------------------------
 
-Using the ``wait`` argument to run motors in parallel
-*********************************************************
+Utiliser l'argument ``wait`` pour faire fonctionner les moteurs en parallèle
+****************************************************************************
 
 .. literalinclude::
     ../../../examples/pup/motor/motor_action_wait.py
 
-Waiting for two parallel actions to complete
-*******************************************************
+Attendre que deux actions parallèles se terminent
+*************************************************
 
 .. literalinclude::
     ../../../examples/pup/motor/motor_action_wait_advanced.py

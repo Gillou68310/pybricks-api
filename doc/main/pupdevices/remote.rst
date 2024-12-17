@@ -1,6 +1,6 @@
 .. pybricks-requirements::
 
-Remote Control
+Télécommande
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: ../../main/cad/output/pupdevice-remote.png
@@ -30,59 +30,57 @@ Remote Control
 
   .. automethod:: pybricks.pupdevices::Remote.disconnect
 
-Examples
--------------------
+Exemples
+--------
 
-Checking which buttons are pressed
-**********************************
+Vérifier quels boutons sont pressés
+***********************************
 
 .. literalinclude::
     ../../../examples/pup/remote/basics.py
 
-Changing the remote light color
-**********************************
+Changer la couleur de la lumière de la télécommande
+***************************************************
 
 .. literalinclude::
     ../../../examples/pup/remote/set_color_basic.py
 
-Changing the light color using the buttons
-*******************************************
+Changer la couleur de la lumière en utilisant les boutons
+*********************************************************
 
 .. literalinclude::
     ../../../examples/pup/remote/set_color.py
 
+Utiliser le paramètre de délai d'attente
+****************************************
 
-Using the timeout setting
-**********************************
-
-You can use the ``timeout`` argument to change for how long the hub searches
-for the remote. If you choose ``None``, it will search forever.
+Vous pouvez utiliser l'argument ``timeout`` pour changer la durée pendant
+laquelle le hub recherche la télécommande. Si vous choisissez ``None``, il
+recherchera indéfiniment.
 
 .. literalinclude::
     ../../../examples/pup/remote/timeout_none.py
 
-
-If the remote was not found within the specified ``timeout``,
-an :ref:`OSError <OSError>` is raised. You can catch this exception to run
-other code if the remote is not available.
-
+Si la télécommande n'a pas été trouvée dans le délai spécifié ``timeout``, une
+:ref:`OSError <OSError>` est levée. Vous pouvez intercepter cette exception
+pour exécuter d'autres codes si la télécommande n'est pas disponible.
 
 .. literalinclude::
     ../../../examples/pup/remote/timeout_exception.py
 
-Changing the name of the remote
-*******************************
+Changer le nom de la télécommande
+*********************************
 
-You can change the Bluetooth name of the remote. The factory default name is
-``Handset``.
+Vous pouvez changer le nom Bluetooth de la télécommande. Le nom par défaut
+d'usine est ``Handset``.
 
 .. blockimg:: pybricks_variables_set_remote_connect_rename
 
 .. literalinclude::
     ../../../examples/pup/remote/set_name.py
 
-You can specify this name when connecting to the remote.
-This lets you pick the right one if multiple remotes are nearby.
+Vous pouvez spécifier ce nom lors de la connexion à la télécommande. Cela vous
+permet de choisir la bonne si plusieurs télécommandes sont à proximité.
 
 .. blockimg:: pybricks_variables_set_remote_connect_name
 

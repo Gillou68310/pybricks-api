@@ -1,50 +1,52 @@
-Generic I2C Device
-^^^^^^^^^^^^^^^^^^
+Appareil I2C générique
+^^^^^^^^^^^^^^^^^^^^^^
 
 .. note::
 
-   This class is **only supported on the EV3** at this time. It could be added
-   to Powered Up hubs in a future release. If you'd like to see this happen, be
-   sure to ask us on our `support page`_.
+   Cette classe est **seulement supportée sur l'EV3** pour le moment. Elle
+   pourrait être ajoutée aux hubs Powered Up dans une future version. Si vous
+   souhaitez que cela se produise, assurez-vous de nous le demander sur notre
+   `support page`_.
 
 .. _support page: https://github.com/pybricks/support/issues/
-
 
 .. figure:: ../../main/cad/output/iodevice-rj12cyan.png
    :width: 25 %
 
 .. autoclass:: pybricks.iodevices.I2CDevice
 
-**Example: Read and write to an I2C device**
+**Exemple : Lire et écrire sur un appareil I2C**
 
 .. literalinclude:: ../../../examples/ev3/i2c_basics/main.py
 
 .. _i2caddress:
 
-I2C Addresses
----------------
-I2C addresses are 7-bit values. However, most vendors who make LEGO compatible
-sensors provide an 8-bit address in their documentation.
-To use those addresses, you must shift them by 1 bit.
-For example, if the documented address is ``0xD2``, you can do
-``address = 0xD2 >> 1``.
+Adresses I2C
+------------
 
-Advanced I2C Commands
----------------------
-Some rudimentary I2C devices do not require a register argument or even any
-data. You can achieve this behavior as shown in the examples below.
+Les adresses I2C sont des valeurs sur 7 bits. Cependant, la plupart des
+vendeurs qui fabriquent des capteurs compatibles LEGO fournissent une adresse
+sur 8 bits dans leur documentation. Pour utiliser ces adresses, vous devez les
+décaler de 1 bit. Par exemple, si l'adresse documentée est ``0xD2``, vous
+pouvez faire ``address = 0xD2 >> 1``.
 
-**Example: Advanced I2C read and write techniques**
+Commandes I2C avancées
+----------------------
+
+Certains appareils I2C rudimentaires ne nécessitent pas d'argument de registre
+ni même de données. Vous pouvez obtenir ce comportement comme montré dans les
+exemples ci-dessous.
+
+**Exemple : Techniques avancées de lecture et d'écriture I2C**
 
 .. literalinclude:: ../../../examples/ev3/i2c_extra/main.py
 
-**Additional technical resources**
+**Ressources techniques supplémentaires**
 
-The ``I2CDevice`` class methods call functions from the Linux SMBus driver.
-To find out which commands are called under the hood, check the
-`Pybricks source code`_.
-More details about using I2C without MicroPython can be found on
-the `ev3dev I2C`_ page.
+Les méthodes de la classe ``I2CDevice`` appellent des fonctions du pilote
+Linux SMBus. Pour savoir quelles commandes sont appelées en coulisses,
+consultez le `Pybricks source code`_. Plus de détails sur l'utilisation de
+l'I2C sans MicroPython peuvent être trouvés sur la page `ev3dev I2C`_.
 
 .. _ev3dev I2C: http://docs.ev3dev.org/projects/lego-linux-drivers/en/ev3dev-stretch/i2c.html
 .. _Pybricks source code: https://github.com/pybricks/pybricks-micropython

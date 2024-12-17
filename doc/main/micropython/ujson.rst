@@ -1,7 +1,7 @@
 .. pybricks-requirements:: stm32-extra
 
-:mod:`ujson` -- JSON encoding and decoding
-===========================================
+:mod:`ujson` -- Encodage et décodage JSON
+======================================================
 
 .. automodule:: ujson
     :no-members:

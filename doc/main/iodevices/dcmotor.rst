@@ -1,10 +1,10 @@
-EV3 DC Motor
-^^^^^^^^^^^^^^^^^^
+Moteur DC EV3
+^^^^^^^^^^^^^
 
 .. note::
 
-   This class is specifically for on EV3. For Powered Up DC Motors, just use
-   the :class:`DCMotor <pybricks.pupdevices.DCMotor>` class.
+   Cette classe est spécifiquement pour l'EV3. Pour les moteurs DC Powered Up,
+   utilisez simplement la classe :class:`DCMotor <pybricks.pupdevices.DCMotor>`.
 
 .. figure:: ../../main/cad/output/iodevice-dcmotor.png
    :width: 40 %

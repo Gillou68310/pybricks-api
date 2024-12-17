@@ -1,36 +1,37 @@
-Pybricks Documentation
+Documentation Pybricks
 ==================================================================
 
-`Pybricks <https://pybricks.com/>`_ is Python coding for smart LEGO® hubs.
-Run MicroPython scripts
-directly on the hub, and get full control of your motors and sensors.
+`Pybricks <https://pybricks.com/>`_ est un codage Python pour les hubs LEGO®
+intelligents. Exécutez des scripts MicroPython directement sur le hub, et
+prenez le contrôle total de vos moteurs et capteurs.
 
-Pybricks runs on LEGO® BOOST, City, Technic, MINDSTORMS®, and SPIKE®. You
-can code using Windows, Mac, Linux, Chromebook, and Android.
+Pybricks fonctionne sur LEGO® BOOST, City, Technic, MINDSTORMS® et SPIKE®.
+Vous pouvez coder en utilisant Windows, Mac, Linux, Chromebook et Android.
 
-Click on any device below to see its documentation. Use the menu on the left
-to find documentation for additional modules. You may need to click the ☰ icon
-above to reveal this menu.
+Cliquez sur n'importe quel appareil ci-dessous pour voir sa documentation.
+Utilisez le menu à gauche pour trouver la documentation des modules
+supplémentaires. Vous devrez peut-être cliquer sur l'icône ☰ ci-dessus pour
+révéler ce menu.
 
 .. only:: main
 
-   .. note:: You are viewing the stand-alone version of the documentation. To
-             learn more about Pybricks and to start coding, visit
-             the `Pybricks website`_
+   .. note:: Vous consultez la version autonome de la documentation. Pour
+             en savoir plus sur Pybricks et commencer à coder, visitez
+             le `Pybricks website`_
 
-   .. note:: Are you using LEGO MINDSTORMS EV3? Check out the
-            `EV3 documentation`_ instead.
+   .. note:: Utilisez-vous LEGO MINDSTORMS EV3 ? Consultez plutôt la
+            `EV3 documentation`_.
 
 .. _EV3 documentation: https://pybricks.com/ev3-micropython/
 .. _Pybricks website: https://pybricks.com/
 
-.. rubric:: Programmable hubs
+.. rubric:: Hubs programmables
 
 .. figure:: ../main/cad/output/hub-all.png
    :width: 100 %
    :target: hubs/index.html
 
-.. rubric:: Powered Up motors and sensors
+.. rubric:: Moteurs et capteurs Powered Up
 
 .. figure:: ../main/cad/output/pupdevice-all.png
    :width: 100 %
@@ -46,12 +47,12 @@ above to reveal this menu.
 
 .. toctree::
     :maxdepth: 1
-    :caption: Table of contents
+    :caption: Table des matières
     :hidden:
 
 .. toctree::
    :maxdepth: 1
-   :caption: Pybricks modules
+   :caption: Modules Pybricks
    :hidden:
 
    hubs/index
@@ -64,14 +65,14 @@ above to reveal this menu.
 
 .. toctree::
    :maxdepth: 1
-   :caption: Code with blocks
+   :caption: Coder avec des blocs
    :hidden:
 
    blocks/index
 
 .. toctree::
    :maxdepth: 1
-   :caption: MicroPython modules
+   :caption: Modules MicroPython
    :hidden:
 
    micropython/builtins

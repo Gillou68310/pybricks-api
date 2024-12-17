@@ -1,5 +1,5 @@
-:mod:`robotics <pybricks.robotics>` -- Robotics and drive bases
-===============================================================
+:mod:`robotics <pybricks.robotics>` -- Robotique et bases de conduite
+=====================================================================
 
 .. automodule:: pybricks.robotics
     :no-members:
@@ -11,13 +11,14 @@
 .. autoclass:: pybricks.robotics.DriveBase
     :no-members:
 
-    .. rubric:: Driving by a given distance or angle
+    .. rubric:: Conduire sur une distance ou un angle donné
 
-    Use the following commands to drive a given distance, or turn by a
-    given angle.
+    Utilisez les commandes suivantes pour conduire sur une distance donnée ou
+    tourner d'un angle donné.
 
-    This is measured using the internal rotation sensors. Because wheels may
-    slip while moving, the traveled distance and angle are only estimates.
+    Cela est mesuré à l'aide des capteurs de rotation internes. Parce que les
+    roues peuvent glisser en mouvement, la distance parcourue et l'angle ne
+    sont que des estimations.
 
     .. blockimg:: pybricks_blockDriveBaseDrive_drivebase_drive_straight
 
@@ -43,13 +44,15 @@
 
     .. automethod:: pybricks.robotics.DriveBase.done
 
-    .. rubric:: Drive forever
+    .. rubric:: Conduire indéfiniment
 
-    Use :meth:`.drive` to begin driving at a desired speed and steering.
+    Utilisez :meth:`.drive` pour commencer à conduire à une vitesse et une
+    direction souhaitées.
 
-    It keeps going until you use :meth:`.stop` or change course by
-    using :meth:`.drive` again. For example, you can drive until a
-    sensor is triggered and then stop or turn around.
+    Il continue jusqu'à ce que vous utilisiez :meth:`.stop` ou changiez de
+    direction en utilisant à nouveau :meth:`.drive`. Par exemple, vous pouvez
+    conduire jusqu'à ce qu'un capteur soit déclenché, puis vous arrêter ou
+    faire demi-tour.
 
     .. blockimg:: pybricks_blockDriveBaseDrive_drivebase_drive_forever
 
@@ -65,7 +68,7 @@
 
     .. blockimg:: pybricks_blockDriveBaseStop_hold
 
-    .. rubric:: Measuring
+    .. rubric:: Mesurer
 
     .. blockimg:: pybricks_blockDriveBaseMeasure_drivebase_get_distance
 
@@ -87,85 +90,88 @@
 
     .. pybricks-requirements:: gyro
 
-    .. rubric:: Driving with the gyro
+    .. rubric:: Conduire avec le gyroscope
 
     .. blockimg:: pybricks_blockDriveBaseUseGyro
 
     .. automethod:: pybricks.robotics.DriveBase.use_gyro
 
-    If your hub is not mounted flat in your robot, make sure to specify
-    the ``top_side`` and ``front_side`` parameters when you initialize the
-    :class:`PrimeHub() <pybricks.hubs.PrimeHub>`,
+    Si votre hub n'est pas monté à plat dans votre robot, assurez-vous de
+    spécifier les paramètres ``top_side`` et ``front_side`` lorsque vous
+    initialisez le :class:`PrimeHub() <pybricks.hubs.PrimeHub>`,
     :class:`InventorHub() <pybricks.hubs.PrimeHub>`,
-    :class:`EssentialHub() <pybricks.hubs.EssentialHub>`, or
-    :class:`TechnicHub() <pybricks.hubs.TechnicHub>`. This way your robot
-    knows which rotation to measure when turning.
+    :class:`EssentialHub() <pybricks.hubs.EssentialHub>`, ou
+    :class:`TechnicHub() <pybricks.hubs.TechnicHub>`. De cette façon, votre
+    robot sait quelle rotation mesurer lors des virages.
 
-    The gyro in each hub is a bit different, which can cause it to be a few
-    degrees off for big turns, or many small turns in the same
-    direction. For example, you may need to use
-    :meth:`turn(357) <pybricks.robotics.DriveBase.turn>` or
-    :meth:`turn(362) <pybricks.robotics.DriveBase.turn>`
-    on your robot to make a full turn.
+    Le gyroscope dans chaque hub est un peu différent, ce qui peut entraîner
+    une erreur de quelques degrés pour les grands virages, ou de nombreux
+    petits virages dans la même direction. Par exemple, vous devrez peut-être
+    utiliser :meth:`turn(357) <pybricks.robotics.DriveBase.turn>` ou
+    :meth:`turn(362) <pybricks.robotics.DriveBase.turn>` sur votre robot pour
+    effectuer un tour complet.
 
-    By default, this class tries to maintain the robot's position after a move
-    completes. This means the wheels will spin if you pick the robot up, in an
-    effort to maintain its heading angle. To avoid this, you can choose
-    ``then=Stop.COAST`` in your last
+    Par défaut, cette classe essaie de maintenir la position du robot après un
+    mouvement. Cela signifie que les roues tourneront si vous soulevez le
+    robot, dans le but de maintenir son angle de cap. Pour éviter cela, vous
+    pouvez choisir ``then=Stop.COAST`` dans votre dernière commande
     :meth:`straight <pybricks.robotics.DriveBase.straight>`,
-    :meth:`turn <pybricks.robotics.DriveBase.turn>`, or
-    :meth:`curve <pybricks.robotics.DriveBase.curve>` command.
+    :meth:`turn <pybricks.robotics.DriveBase.turn>`, ou
+    :meth:`curve <pybricks.robotics.DriveBase.curve>`.
 
     .. _measuring:
 
-    .. rubric:: Measuring and validating the robot dimensions
+    .. rubric:: Mesurer et valider les dimensions du robot
 
-    As a first estimate, you can measure the ``wheel_diameter`` and the
-    ``axle_track`` with a ruler. Because it is hard to see where the wheels
-    effectively touch the ground, you can estimate the ``axle_track`` as
-    the distance between the midpoint of the wheels.
+    Comme première estimation, vous pouvez mesurer le ``wheel_diameter`` et le
+    ``axle_track`` avec une règle. Parce qu'il est difficile de voir où les
+    roues touchent effectivement le sol, vous pouvez estimer le ``axle_track``
+    comme la distance entre le milieu des roues.
 
-    If you don't have a ruler, you can use a LEGO beam to measure. The
-    center-to-center distance of the holes is 8 mm. For some tyres, the
-    diameter is printed on the side. For example, 62.4 x 20 means that the
-    diameter is 62.4mm and that the width is 20 mm.
+    Si vous n'avez pas de règle, vous pouvez utiliser une poutre LEGO pour
+    mesurer. La distance centre à centre des trous est de 8 mm. Pour certains
+    pneus, le diamètre est imprimé sur le côté. Par exemple, 62.4 x 20
+    signifie que le diamètre est de 62.4 mm et que la largeur est de 20 mm.
 
-    In practice, most wheels compress slightly under the weight of your robot.
-    To verify, make your robot drive 1000 mm using ``my_robot.straight(1000)``
-    and measure how far it really traveled. Compensate as follows:
+    En pratique, la plupart des roues se compressent légèrement sous le poids
+    de votre robot. Pour vérifier, faites parcourir 1000 mm à votre robot en
+    utilisant ``my_robot.straight(1000)`` et mesurez la distance réellement
+    parcourue. Compensez comme suit :
 
-        - If your robot drives **not far enough**, **decrease** the
-          ``wheel_diameter`` value slightly.
-        - If your robot drives **too far**, **increase** the
-          ``wheel_diameter`` value slightly.
+        - Si votre robot ne parcourt **pas assez loin**, **diminuez**
+          légèrement la valeur de ``wheel_diameter``.
+        - Si votre robot parcourt **trop loin**, **augmentez** légèrement la
+          valeur de ``wheel_diameter``.
 
-    Motor shafts and axles bend slightly under the load of the
-    robot, causing the ground contact point of the wheels to be closer to the
-    midpoint of your robot. To verify, make your robot turn 360 degrees
-    using ``my_robot.turn(360)`` and check that it is back in the same place:
+    Les arbres de moteur et les essieux se plient légèrement sous la charge du
+    robot, ce qui rapproche le point de contact des roues du milieu de votre
+    robot. Pour vérifier, faites tourner votre robot de 360 degrés en
+    utilisant ``my_robot.turn(360)`` et vérifiez qu'il est revenu au même
+    endroit :
 
-        - If your robot turns **not far enough**, **increase** the
-          ``axle_track`` value slightly.
-        - If your robot turns **too far**, **decrease** the ``axle_track``
-          value slightly.
+        - Si votre robot ne tourne **pas assez**, **augmentez** légèrement la
+          valeur de ``axle_track``.
+        - Si votre robot tourne **trop**, **diminuez** légèrement la valeur de
+          ``axle_track``.
 
-    When making these adjustments, always adjust the
-    ``wheel_diameter`` first, as done above. Be sure to test both turning
-    and driving straight after you are done.
+    Lors de ces ajustements, ajustez toujours d'abord le ``wheel_diameter``,
+    comme indiqué ci-dessus. Assurez-vous de tester à la fois les virages et
+    la conduite en ligne droite après avoir terminé.
 
-    .. rubric:: Using the DriveBase motors individually
+    .. rubric:: Utiliser les moteurs de la DriveBase individuellement
 
-    After creating a :class:`.DriveBase` object, you can still use its two
-    motors individually. If you start one motor, the other motor will
-    automatically stop. Likewise, if a motor is already running and you make
-    the drive base move, the original maneuver is cancelled and the drive base
-    will take over.
+    Après avoir créé un objet :class:`.DriveBase`, vous pouvez toujours
+    utiliser ses deux moteurs individuellement. Si vous démarrez un moteur,
+    l'autre moteur s'arrêtera automatiquement. De même, si un moteur est déjà
+    en marche et que vous faites bouger la base de conduite, la manœuvre
+    d'origine est annulée et la base de conduite prendra le relais.
 
-    .. rubric:: Advanced settings
+    .. rubric:: Paramètres avancés
 
-    The :meth:`.settings` method is used to adjust commonly used settings like
-    the default speed and acceleration for straight maneuvers and turns.
-    Use the following attributes to adjust more advanced control settings.
+    La méthode :meth:`.settings` est utilisée pour ajuster les paramètres
+    couramment utilisés comme la vitesse et l'accélération par défaut pour les
+    manœuvres en ligne droite et les virages. Utilisez les attributs suivants
+    pour ajuster des paramètres de contrôle plus avancés.
 
     .. autoattribute:: pybricks.robotics.DriveBase.distance_control
         :annotation:
@@ -175,7 +181,7 @@
 
     .. versionchanged:: 3.2
 
-        The :meth:`done` and :meth:`stalled` methods have been moved.
+        Les méthodes :meth:`done` et :meth:`stalled` ont été déplacées.
 
 .. pybricks-requirements::
 
@@ -198,28 +204,28 @@
 
     .. automethod:: pybricks.robotics.Car.drive_speed
 
-Examples
+Exemples
 -------------------
 
-Driving straight and turning in place with a drive base
-********************************************************
+Conduire en ligne droite et tourner sur place avec une base de conduite
+***********************************************************************
 
-This program shows the basics of driving and turning.
+Ce programme montre les bases de la conduite et du virage.
 
 .. literalinclude::
     ../../examples/pup/robotics/drivebase_basics.py
 
-Remote controlling a car with front wheel steering
-**************************************************
+Contrôler à distance une voiture avec direction des roues avant
+***************************************************************
 
-This program shows how you can drive a car with front wheel steering
-using the :class:`remote control <pybricks.pupdevices.Remote>`.
+Ce programme montre comment vous pouvez conduire une voiture avec direction
+des roues avant en utilisant la :class:`télécommande <pybricks.pupdevices.Remote>`.
 
-In this program, the ports match those of the `LEGO Technic 42099 Off-Roader
-<https://pybricks.com/projects/sets/technic/42099-off-roader/>`_, but you can
-use any other car with front wheel steering. If your vehicle has only one
-drive motor, you can use a single motor instead of a tuple of the motors used
-below.
+Dans ce programme, les ports correspondent à ceux du `LEGO Technic 42099
+Off-Roader <https://pybricks.com/projects/sets/technic/42099-off-roader/>`_,
+mais vous pouvez utiliser n'importe quelle autre voiture avec direction des
+roues avant. Si votre véhicule n'a qu'un seul moteur de traction, vous pouvez
+utiliser un seul moteur au lieu d'un ensemble de moteurs comme ci-dessous.
 
 .. literalinclude::
     ../../examples/pup/robotics/car_remote.py

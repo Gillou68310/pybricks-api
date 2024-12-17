@@ -1,6 +1,6 @@
 .. pybricks-requirements:: xbox-controller
 
-Xbox Controller
+Manette Xbox
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: ../../main/diagrams_source/xboxcontroller.png
@@ -15,17 +15,20 @@ Xbox Controller
 
   .. automethod:: pybricks.iodevices::XboxController.buttons.pressed
 
-    Buttons include:
+    Les boutons incluent :
 
       * ``Button.A``, ``Button.B``, ``Button.X``, ``Button.Y``.
       * ``Button.UP``, ``Button.DOWN``, ``Button.LEFT``, ``Button.RIGHT``
-        (direction pad). At most two of these can be pressed at the same time.
-      * ``Button.LB`` and ``Button.RB`` (bumpers).
-      * ``Button.LJ`` and ``Button.RJ`` (pressing the joysticks).
-      * ``Button.VIEW``, ``Button.MENU``, ``Button.GUIDE`` (the Xbox logo), and ``Button.UPLOAD``.
-      * ``Button.P1``, ``Button.P2``, ``Button.P3``, and ``Button.P4`` (Elite Series 2 only).
-        Pressing the paddles may also be detected as other button presses,
-        depending on the currently active profile.
+        (croix directionnelle). Au maximum deux de ces boutons peuvent être
+        pressés en même temps.
+      * ``Button.LB`` et ``Button.RB`` (pare-chocs).
+      * ``Button.LJ`` et ``Button.RJ`` (appuyer sur les joysticks).
+      * ``Button.VIEW``, ``Button.MENU``, ``Button.GUIDE`` (le logo Xbox), et
+        ``Button.UPLOAD``.
+      * ``Button.P1``, ``Button.P2``, ``Button.P3``, et ``Button.P4`` (Elite
+        Series 2 uniquement). Appuyer sur les palettes peut également être
+        détecté comme d'autres pressions de boutons, selon le profil
+        actuellement actif.
 
   .. blockimg:: pybricks_blockJoystickValue_lj_x
 
@@ -68,57 +71,58 @@ Xbox Controller
 
 .. _xbox-controller-pairing:
 
-Xbox Controller Pairing Instructions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-The first time you use a controller with a hub, you will need to pair
-them: Turn the controller on and then press and hold the pairing
-button on the back of the controller for a few seconds. When you release
-it, the Xbox button starts flashing more rapidly. Then start your program.
+Instructions de jumelage de la manette Xbox
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+La première fois que vous utilisez une manette avec un hub, vous devrez les
+jumeler : Allumez la manette, puis appuyez et maintenez le bouton de jumelage
+à l'arrière de la manette pendant quelques secondes. Lorsque vous le relâchez,
+le bouton Xbox commence à clignoter plus rapidement. Ensuite, démarrez votre
+programme.
 
-When pairing and the connection is succesful, the Xbox button will stop
-flashing and stay on for as long as the program is running.
+Lorsque le jumelage et la connexion sont réussis, le bouton Xbox cesse de
+clignoter et reste allumé tant que le programme est en cours d'exécution.
 
-Repeat Connections
-==================
+Connexions répétées
+===================
 
-If you keep using the same controller with the same hub, you can simply
-turn the controller on the next time and the hub will connect to it
-automatically when your program with this class runs.
+Si vous continuez à utiliser la même manette avec le même hub, vous pouvez
+simplement allumer la manette la prochaine fois et le hub se connectera
+automatiquement à elle lorsque votre programme avec cette classe sera exécuté.
 
-The Xbox controller only accepts this simpler connection with the most
-recently connected device. So if you connect to your Xbox console again, or
-connect to another hub, you will need to pair them again as described
-above.
+La manette Xbox n'accepte cette connexion simplifiée qu'avec le dernier
+appareil connecté. Donc, si vous vous connectez à nouveau à votre console Xbox
+ou à un autre hub, vous devrez les jumeler à nouveau comme décrit ci-dessus.
 
-Compatible Controllers
-============================
+Manettes compatibles
+====================
 
-All Xbox controllers released since 2016 are compatible. This includes the
-controller from the One S (``1708`` from 2016), the Elite Series 2 (``1797``
-from 2019), and the Series X/S (``1914`` from 2020), which is
-the latest model as of this writing.
+Toutes les manettes Xbox sorties depuis 2016 sont compatibles. Cela inclut la
+manette de la One S (``1708`` de 2016), l'Elite Series 2 (``1797`` de 2019),
+et la Series X/S (``1914`` de 2020), qui est le dernier modèle à ce jour.
 
 .. raw:: html
 
-  <p>See also <a href="https://en.wikipedia.org/wiki/Xbox_Wireless_Controller#Summary" target="_blank">
-  this overview</a> of model numbers including pictures of each controller.</p>
+  <p>Voir aussi <a href="https://en.wikipedia.org/wiki/Xbox_Wireless_Controller#Summary" target="_blank">
+  cet aperçu</a> des numéros de modèle incluant des images de
+  chaque manette.</p>
 
-Updating the Xbox Controller
-============================
+Mise à jour de la manette Xbox
+==============================
 
-If you frequently use the Xbox Controller with your console, your controller
-is probably already up to date. If you have not used it for a while or if you
-bought one recently, you may need to update it.
+Si vous utilisez fréquemment la manette Xbox avec votre console, votre manette
+est probablement déjà à jour. Si vous ne l'avez pas utilisée depuis un certain
+temps ou si vous en avez acheté une récemment, vous devrez peut-être la mettre
+à jour.
 
-To update the controller without a console, you can use the Xbox Accessories
-app on a Windows computer. You can download it from the Microsoft Store.
-Connect the controller via USB to the computer and follow the instructions in
-the app to click on "Update now".
+Pour mettre à jour la manette sans console, vous pouvez utiliser l'application
+Accessoires Xbox sur un ordinateur Windows. Vous pouvez la télécharger depuis
+le Microsoft Store. Connectez la manette via USB à l'ordinateur et suivez les
+instructions dans l'application pour cliquer sur "Mettre à jour maintenant".
 
-Technic Hub Limitations
-=======================
+Limitations du Technic Hub
+==========================
 
-Due to limitations of the Technic Hub, the hub will disconnect from the
-computer when searching for the Xbox controller. This means you will not be
-able to see output from the ``print`` command. Also, you'll have to connect to
-the computer again if you want to change your program.
+En raison des limitations du Technic Hub, le hub se déconnectera de
+l'ordinateur lors de la recherche de la manette Xbox. Cela signifie que vous
+ne pourrez pas voir la sortie de la commande ``print``. De plus, vous devrez
+vous reconnecter à l'ordinateur si vous souhaitez modifier votre programme.

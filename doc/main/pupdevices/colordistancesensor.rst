@@ -1,7 +1,7 @@
 .. pybricks-requirements::
 
-Color and Distance Sensor
-^^^^^^^^^^^^^^^^^^^^^^^^^
+Capteur de Couleur et de Distance
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: ../../main/cad/output/pupdevice-colordistance.png
    :width: 35 %
@@ -35,11 +35,12 @@ Color and Distance Sensor
 
     .. automethod:: pybricks.pupdevices.ColorDistanceSensor.detectable_colors
 
-    .. rubric:: Built-in light
+    .. rubric:: Lumière intégrée
 
-    This sensor has a built-in light. You can make it red, green, blue, or turn
-    it off. If you use the sensor to measure something afterwards, the light
-    automatically turns back on at the default color for that sensing method.
+    Ce capteur dispose d'une lumière intégrée. Vous pouvez la rendre rouge,
+    verte, bleue ou l'éteindre. Si vous utilisez le capteur pour mesurer
+    quelque chose par la suite, la lumière se rallume automatiquement à la
+    couleur par défaut pour cette méthode de détection.
 
     .. blockimg:: pybricks_blockLightOnColor_colordistancesensor_on
 
@@ -49,45 +50,47 @@ Color and Distance Sensor
 
     .. automethod:: pybricks.pupdevices::ColorDistanceSensor.light.off
 
-Examples
+Exemples
 -------------------
 
-Measuring color
-***************
+Mesurer la couleur
+******************
 
 .. literalinclude::
     ../../../examples/pup/sensor_color_distance/color_print.py
 
 
-Waiting for a color
-*******************
+Attendre une couleur
+********************
 
 .. literalinclude::
     ../../../examples/pup/sensor_color_distance/wait_for_color.py
 
-Measuring distance and blinking the light
-*****************************************
+Mesurer la distance et faire clignoter la lumière
+*************************************************
 
 .. literalinclude::
     ../../../examples/pup/sensor_color_distance/distance_blink.py
 
-Reading hue, saturation, value
-**********************************
+Lire la teinte, la saturation, la valeur
+****************************************
 
 .. literalinclude::
     ../../../examples/pup/sensor_color_distance/hsv.py
 
-Changing the detectable colors
-******************************
+Changer les couleurs détectables
+********************************
 
-By default, the sensor is configured to detect red, yellow, green,
-blue, white, or no color, which suits many applications.
+Par défaut, le capteur est configuré pour détecter le rouge, le jaune, le
+vert, le bleu, le blanc ou aucune couleur, ce qui convient à de nombreuses
+applications.
 
-For better results in your application, you can measure your desired
-colors in advance, and tell the sensor to look only for those colors.
-Be sure to measure them at the **same distance and light conditions**
-as in your final application. Then you'll get very accurate results
-even for colors that are otherwise hard to detect.
+Pour de meilleurs résultats dans votre application, vous pouvez mesurer vos
+couleurs souhaitées à l'avance et dire au capteur de ne rechercher que ces
+couleurs. Assurez-vous de les mesurer à la **même distance et dans les mêmes
+conditions d'éclairage** que dans votre application finale. Vous obtiendrez
+alors des résultats très précis même pour les couleurs qui sont autrement
+difficiles à détecter.
 
 .. literalinclude::
     ../../../examples/pup/sensor_color_distance/detectable_colors.py

@@ -1,6 +1,6 @@
 .. pybricks-requirements::
 
-Ultrasonic Sensor
+Capteur Ultrasonique
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: ../../main/diagrams/sensor_ultrasonic_lights.png
@@ -17,10 +17,10 @@ Ultrasonic Sensor
 
     .. automethod:: pybricks.pupdevices.UltrasonicSensor.presence
 
-    .. rubric:: Built-in lights
+    .. rubric:: Lumières intégrées
 
-    This sensor has 4 built-in lights. You can adjust the brightness of each
-    light.
+    Ce capteur a 4 lumières intégrées. Vous pouvez ajuster la luminosité de
+    chaque lumière.
 
     .. blockimg:: pybricks_blockLightOn_ultrasonicsensor_on
 
@@ -33,17 +33,17 @@ Ultrasonic Sensor
 
     .. automethod:: pybricks.pupdevices::UltrasonicSensor.lights.off
 
-Examples
--------------------
+Exemples
+--------
 
-Measuring distance and switching on the lights
-**********************************************
+Mesurer la distance et allumer les lumières
+*******************************************
 
 .. literalinclude::
     ../../../examples/pup/sensor_ultrasonic/basics.py
 
-Gradually change the brightness of the lights
-**********************************************
+Changer progressivement la luminosité des lumières
+**************************************************
 
 .. literalinclude::
     ../../../examples/pup/sensor_ultrasonic/math.py

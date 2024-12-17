@@ -14,7 +14,7 @@ Essential Hub
 .. autoclass:: pybricks.hubs.EssentialHub
     :no-members:
 
-    .. rubric:: Using the hub status light
+    .. rubric:: Utilisation de la lumière d'état du hub
 
     .. blockimg:: pybricks_blockLightOnColor_essentialhub_on
 
@@ -28,7 +28,7 @@ Essential Hub
 
     .. automethod:: pybricks.hubs::EssentialHub.light.animate
 
-    .. rubric:: Using the button
+    .. rubric:: Utilisation du bouton
 
     .. blockimg:: pybricks_blockButtonIsPressed_EssentialHub
 
@@ -41,7 +41,7 @@ Essential Hub
 
     .. automethod:: pybricks.hubs::EssentialHub.system.set_stop_button
 
-    .. rubric:: Using the IMU
+    .. rubric:: Utilisation de l'IMU
 
     .. blockimg:: pybricks_blockImuStatus_EssentialHub_ready
 
@@ -86,7 +86,7 @@ Essential Hub
 
     .. automethod:: pybricks.hubs::EssentialHub.imu.settings
 
-    .. rubric:: Using connectionless Bluetooth messaging
+    .. rubric:: Utilisation de la messagerie Bluetooth sans connexion
 
     .. blockimg:: pybricks_blockBleBroadcast_EssentialHub
 
@@ -100,7 +100,7 @@ Essential Hub
 
     .. automethod:: pybricks.hubs::EssentialHub.ble.version
 
-    .. rubric:: Using the battery
+    .. rubric:: Utilisation de la batterie
 
     .. blockimg:: pybricks_blockBatteryMeasure_EssentialHub_battery.voltage
 
@@ -110,7 +110,7 @@ Essential Hub
 
     .. automethod:: pybricks.hubs::EssentialHub.battery.current
 
-    .. rubric:: Getting the charger status
+    .. rubric:: Obtenir le statut du chargeur
 
     .. automethod:: pybricks.hubs::EssentialHub.charger.connected
 
@@ -118,13 +118,13 @@ Essential Hub
 
     .. automethod:: pybricks.hubs::EssentialHub.charger.status
 
-    .. rubric:: System control
+    .. rubric:: Contrôle du système
 
     .. automethod:: pybricks.hubs::EssentialHub.system.name
 
     .. automethod:: pybricks.hubs::EssentialHub.system.storage
 
-        You can store up to 512 bytes of data on this hub.
+        Vous pouvez stocker jusqu'à 512 octets de données sur ce hub.
 
     .. blockimg:: pybricks_blockHubShutdown_EssentialHub
 
@@ -132,95 +132,92 @@ Essential Hub
 
     .. automethod:: pybricks.hubs::EssentialHub.system.reset_reason
 
-Status light examples
----------------------
+Exemples de lumière d'état
+--------------------------
 
-Turning the light on and off
-****************************
+Allumer et éteindre la lumière
+******************************
 
 .. literalinclude::
     ../../../examples/pup/hub_common/build/light_off_essentialhub.py
 
-Changing brightness and using custom colors
-*******************************************
+Changer la luminosité et utiliser des couleurs personnalisées
+*************************************************************
 
 .. literalinclude::
     ../../../examples/pup/hub_common/build/light_hsv_essentialhub.py
 
-Making the light blink
-**********************
+Faire clignoter la lumière
+**************************
 
 .. literalinclude::
     ../../../examples/pup/hub_common/build/light_blink_essentialhub.py
 
-Creating light animations
-*************************
+Créer des animations lumineuses
+*******************************
 
 .. literalinclude::
     ../../../examples/pup/hub_common/build/light_animate_essentialhub.py
 
-IMU examples
+Exemples d'IMU
 ---------------
 
-Testing which way is up
-********************************
+Tester quelle direction est vers le haut
+****************************************
 
 .. literalinclude::
     ../../../examples/pup/hub_common/build/imu_up_essentialhub.py
 
-
-Reading the tilt value
-********************************
+Lire la valeur de l'inclinaison
+*******************************
 
 .. literalinclude::
     ../../../examples/pup/hub_common/build/imu_tilt_essentialhub.py
 
-Using a custom hub orientation
-**************************************************
+Utiliser une orientation personnalisée du hub
+*********************************************
 
 .. literalinclude::
     ../../../examples/pup/hub_common/build/imu_tilt_blast_essentialhub.py
 
-Reading acceleration and angular velocity vectors
-**************************************************
+Lire les vecteurs d'accélération et de vitesse angulaire
+********************************************************
 
 .. literalinclude::
     ../../../examples/pup/hub_common/build/imu_read_vector_essentialhub.py
 
-Reading acceleration and angular velocity on one axis
-*****************************************************
+Lire l'accélération et la vitesse angulaire sur un axe
+******************************************************
 
 .. literalinclude::
     ../../../examples/pup/hub_common/build/imu_read_scalar_essentialhub.py
 
+Exemples de Bluetooth
+---------------------
 
-Bluetooth examples
-------------------
-
-Broadcasting data to other hubs
-*******************************
+Diffuser des données vers d'autres hubs
+***************************************
 
 .. literalinclude::
     ../../../examples/pup/hub_common/build/ble_broadcast_essentialhub.py
 
-Observing data from other hubs
-******************************
+Observer les données d'autres hubs
+**********************************
 
 .. literalinclude::
     ../../../examples/pup/hub_common/build/ble_observe_essentialhub.py
 
+Exemples de système
+-------------------
 
-System examples
-----------------------------------
-
-Using the stop button during your program
-*****************************************
+Utiliser le bouton d'arrêt pendant votre programme
+**************************************************
 
 .. literalinclude::
     ../../../examples/pup/hub_common/build/button_single_essentialhub.py
 
-Turning the hub off
-*****************************************
+Éteindre le hub
+***************
 
 .. literalinclude::
     ../../../examples/pup/hub_common/build/system_shutdown_essentialhub.py

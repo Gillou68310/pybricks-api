@@ -16,7 +16,7 @@ Move Hub
 .. autoclass:: pybricks.hubs.MoveHub
     :no-members:
 
-    .. rubric:: Using the hub status light
+    .. rubric:: Utilisation de la lumière d'état du hub
 
     .. blockimg:: pybricks_blockLightOnColor_movehub_on
 
@@ -30,7 +30,7 @@ Move Hub
 
     .. automethod:: pybricks.hubs::MoveHub.light.animate
 
-    .. rubric:: Using the IMU
+    .. rubric:: Utilisation de l'IMU
 
     .. blockimg:: pybricks_blockImuUp_MoveHub
 
@@ -49,9 +49,9 @@ Move Hub
 
         .. versionchanged:: 3.2
 
-            Changed acceleration units from m/s² to mm/s².
+            Changement des unités d'accélération de m/s² à mm/s².
 
-    .. rubric:: Using connectionless Bluetooth messaging
+    .. rubric:: Utilisation de la messagerie Bluetooth sans connexion
 
     .. blockimg:: pybricks_blockBleBroadcast_PrimeHub
 
@@ -65,7 +65,7 @@ Move Hub
 
     .. automethod:: pybricks.hubs::MoveHub.ble.version
 
-    .. rubric:: Using the battery
+    .. rubric:: Utilisation de la batterie
 
     .. blockimg:: pybricks_blockBatteryMeasure_MoveHub_battery.voltage
 
@@ -75,7 +75,7 @@ Move Hub
 
     .. automethod:: pybricks.hubs::MoveHub.battery.current
 
-    .. rubric:: Button and system control
+    .. rubric:: Bouton et contrôle du système
 
     .. blockimg:: pybricks_blockButtonIsPressed_PrimeHub
 
@@ -92,9 +92,9 @@ Move Hub
 
     .. automethod:: pybricks.hubs::MoveHub.system.storage
 
-        You can store up to 128 bytes of data on this hub. The data is cleared
-        when you update the Pybricks firmware or if you restore the original
-        firmware.
+        Vous pouvez stocker jusqu'à 128 octets de données sur ce hub. Les
+        données sont effacées lorsque vous mettez à jour le firmware Pybricks
+        ou si vous restaurez le firmware d'origine.
 
     .. blockimg:: pybricks_blockHubShutdown_MoveHub
 
@@ -102,77 +102,78 @@ Move Hub
 
     .. automethod:: pybricks.hubs::MoveHub.system.reset_reason
 
-Status light examples
----------------------
+Exemples de lumière d'état
+--------------------------
 
-Turning the light on and off
+Allumer et éteindre la lumière
 ******************************
 
 .. literalinclude::
     ../../../examples/pup/hub_common/build/light_off_movehub.py
 
-Making the light blink
-******************************
+Faire clignoter la lumière
+**************************
 
 .. literalinclude::
     ../../../examples/pup/hub_common/build/light_blink_movehub.py
 
-IMU examples
+Exemples d'IMU
 ---------------
 
-Testing which way is up
-********************************
+Tester quelle direction est vers le haut
+****************************************
 
 .. literalinclude::
     ../../../examples/pup/hub_common/build/imu_up_movehub.py
 
-Reading acceleration
-**************************************************
+Lire l'accélération
+*******************
 
 .. literalinclude::
     ../../../examples/pup/hub_movehub/imu_read_acceleration.py
 
 
-Bluetooth examples
-------------------
+Exemples de Bluetooth
+---------------------
 
-Broadcasting data to other hubs
-*******************************
+Diffuser des données vers d'autres hubs
+***************************************
 
 .. literalinclude::
     ../../../examples/pup/hub_common/build/ble_broadcast_movehub.py
 
-Observing data from other hubs
-******************************
+Observer les données d'autres hubs
+**********************************
 
 .. literalinclude::
     ../../../examples/pup/hub_common/build/ble_observe_movehub.py
 
 
-Button and system examples
-----------------------------------
+Exemples de bouton et de système
+--------------------------------
 
-Using the stop button during your program
-*****************************************
+Utiliser le bouton d'arrêt pendant votre programme
+**************************************************
 
 .. literalinclude::
     ../../../examples/pup/hub_common/build/button_single_movehub.py
 
-Turning the hub off
-*****************************************
+Éteindre le hub
+***************
 
 .. literalinclude::
     ../../../examples/pup/hub_common/build/system_shutdown_movehub.py
 
-Making random numbers
-**************************************************
+Générer des nombres aléatoires
+******************************
 
-The Move Hub does not include the :mod:`urandom` module. If you need random
-numbers in your application, you can try a variation of the following example.
+Le Move Hub n'inclut pas le module :mod:`urandom`. Si vous avez besoin de
+nombres aléatoires dans votre application, vous pouvez essayer une variation
+de l'exemple suivant.
 
-To make it work better, change the initial value of ``_rand`` to something
-that is truly random in your application. You could use the IMU acceleration
-or a sensor value, for example.
+Pour que cela fonctionne mieux, changez la valeur initiale de ``_rand`` en
+quelque chose qui est vraiment aléatoire dans votre application. Vous pourriez
+utiliser l'accélération de l'IMU ou une valeur de capteur, par exemple.
 
 .. literalinclude::
     ../../../examples/pup/hub_movehub/randint_implementation.py

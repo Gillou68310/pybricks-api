@@ -1,9 +1,9 @@
-EV3 Analog Sensor
-^^^^^^^^^^^^^^^^^
+Capteur analogique EV3
+^^^^^^^^^^^^^^^^^^^^^^
 
 .. note::
 
-   This class is only available on EV3.
+   Cette classe est uniquement disponible sur EV3.
 
 .. figure:: ../../main/cad/output/iodevice-rj12brown.png
    :width: 25 %

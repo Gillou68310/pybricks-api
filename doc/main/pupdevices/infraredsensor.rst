@@ -1,7 +1,7 @@
 .. pybricks-requirements::
 
-Infrared Sensor
-^^^^^^^^^^^^^^^^^^^^^^^^^
+Capteur infrarouge
+^^^^^^^^^^^^^^^^^^
 
 .. figure:: ../../main/cad/output/pupdevice-infrared.png
    :width: 35 %
@@ -21,11 +21,11 @@ Infrared Sensor
 
     .. automethod:: pybricks.pupdevices.InfraredSensor.count
 
-Examples
--------------------
+Exemples
+--------
 
-Measuring distance, object count, and reflection
-************************************************
+Mesurer la distance, le nombre d'objets et la réflexion
+********************************************************
 
 .. literalinclude::
     ../../../examples/pup/sensor_infrared/basics.py

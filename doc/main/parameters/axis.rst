@@ -1,10 +1,10 @@
 .. pybricks-requirements:: stm32-float
 
-Axis
+Axe
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. autoclass:: pybricks.parameters.Axis
     :no-members:
 
-On Move Hub, doing math with these vectors is not supported. The axes can still
-be used to set up the hub orientation.
+Sur Move Hub, faire des calculs avec ces vecteurs n'est pas pris en charge.
+Les axes peuvent encore être utilisés pour configurer l'orientation du hub.

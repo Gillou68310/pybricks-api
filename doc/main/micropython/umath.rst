@@ -1,17 +1,17 @@
 .. pybricks-requirements:: stm32-extra stm32-float
 
-:mod:`umath <umath>` -- Math functions
-============================================================
+:mod:`umath <umath>` -- Fonctions mathématiques
+===============================================
 
 .. module:: umath
 
-This MicroPython module is similar to the `math module`_ in Python.
+Ce module MicroPython est similaire au `math module`_ en Python.
 
-See also the :ref:`built-in math functions<builtinmath>` that can be used
-without importing anything.
+Voir aussi les :ref:`fonctions mathématiques intégrées<builtinmath>` qui
+peuvent être utilisées sans rien importer.
 
-Rounding and sign
--------------------------------------
+Arrondi et signe
+----------------
 
 .. blockimg:: pybricks_blockMathOp_roundup
 
@@ -29,8 +29,8 @@ Rounding and sign
 
 .. autofunction:: umath.copysign
 
-Powers and logarithms
--------------------------------
+Puissances et logarithmes
+-------------------------
 
 .. autodata:: umath.e
 
@@ -52,8 +52,8 @@ Powers and logarithms
 
 .. autofunction:: umath.sqrt
 
-Trigonometry
--------------------------------
+Trigonométrie
+-------------
 
 .. autodata:: umath.pi
 
@@ -89,8 +89,8 @@ Trigonometry
 
 .. autofunction:: umath.atan2
 
-Other math functions
--------------------------------
+Autres fonctions mathématiques
+------------------------------
 
 .. autofunction:: umath.isfinite
 

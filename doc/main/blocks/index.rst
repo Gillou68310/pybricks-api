@@ -1,17 +1,17 @@
 .. pybricks-requirements::
 
-Other blocks
+Autres blocs
 =====================================================
 
-Most blocks correspond directly to one of the documented Python commands. This
-page lists the remaining blocks.
+La plupart des blocs correspondent directement à l'une des commandes Python
+documentées. Cette page répertorie les blocs restants.
 
-This page will be expanded with more details in the next release.
+Cette page sera étoffée avec plus de détails dans la prochaine version.
 
 Math
 ------------------------
 
-See also :mod:`umath` for other math operations.
+Voir aussi :mod:`umath` pour d'autres opérations mathématiques.
 
 .. blockimg:: pybricks_blockMathFormula
 
@@ -27,7 +27,7 @@ See also :mod:`umath` for other math operations.
 
 .. blockimg:: pybricks_blockMathArithmetic_power
 
-Logic
+Logique
 --------------------------
 
 .. blockimg:: pybricks_blockLogicCompareDouble
@@ -60,7 +60,7 @@ Logic
 
 .. blockimg:: pybricks_blockIsIn
 
-Flow
+Flux
 --------------------------
 
 .. blockimg:: pybricks_blockFlowBreakContinue_break
@@ -79,20 +79,18 @@ Flow
 
 .. blockimg:: pybricks_blockFlowWhile_while
 
-
 .. blockimg:: pybricks_blockIfElse_if_else
 
 .. blockimg:: pybricks_blockIfElse_if_else_else
 
 .. blockimg:: pybricks_blockIfElse_if_only
 
-
-Device and system setup
---------------------------
+Configuration des appareils et du système
+-----------------------------------------
 
 .. blockimg:: pybricks_blockGlobalSetup
 
-Waiting
+Attente
 ------------------------
 
 .. blockimg:: pybricks_blockWaitTime
@@ -100,8 +98,6 @@ Waiting
 .. blockimg:: pybricks_blockWaitUntil
 
 .. blockimg:: pybricks_blockWaitForever
-
-
 
 Variables
 --------------------------
@@ -112,14 +108,14 @@ Variables
 
 .. blockimg:: pybricks_blockVariableSetValue
 
-Multitasking
+Multitâche
 --------------------------
 
 .. blockimg:: pybricks_blockGlobalStart
 
 .. blockimg:: pybricks_blockMultiTask
 
-Your own tasks
+Vos propres tâches
 --------------------------
 
 .. blockimg:: pybricks_variables_setup_function_basic
@@ -128,7 +124,7 @@ Your own tasks
 
 .. blockimg:: pybricks_blockTaskReturn
 
-External tasks
+Tâches externes
 --------------------------
 
 .. blockimg:: pybricks_variables_setup_imported_function
@@ -137,12 +133,12 @@ External tasks
 
 .. blockimg:: pybricks_blockImportTaskCallValue
 
-Comments
+Commentaires
 --------------------------
 
 .. blockimg:: pybricks_blockComment
 
-Stopping programs
+Arrêt des programmes
 --------------------------
 
 .. blockimg:: pybricks_blockProgramStop

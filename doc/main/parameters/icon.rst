@@ -1,8 +1,8 @@
 .. pybricks-requirements:: light-matrix
 
-Icon
+Icône
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. autoclass:: pybricks.parameters.Icon
 
-    See the :ref:`make_icons` section for examples.
+    Voir la section :ref:`make_icons` pour des exemples.

@@ -1,7 +1,7 @@
 .. pybricks-requirements:: stm32-extra
 
-:mod:`micropython` -- MicroPython internals
-===========================================
+:mod:`micropython` -- Internes de MicroPython
+=============================================
 
 .. automodule:: micropython
     :no-members:
@@ -23,32 +23,32 @@
 .. autofunction:: micropython.stack_use
 
 
-Examples
+Exemples
 ---------------------
 
-Using constants for efficiency
-******************************
+Utilisation des constantes pour l'efficacité
+********************************************
 
 .. literalinclude::
     ../../../examples/micropython/const.py
 
-Checking free RAM
-******************************
+Vérification de la RAM libre
+****************************
 
 .. literalinclude::
     ../../../examples/micropython/memuse.py
 
-This prints information in the format shown below. In this example for the
-SPIKE Prime Hub, there are 257696 bytes (251 KB) worth of memory remaining for
-the variables in your code. ::
+Cela imprime des informations dans le format montré ci-dessous. Dans cet
+exemple pour le SPIKE Prime Hub, il reste 257696 octets (251 KB) de mémoire
+pour les variables de votre code. ::
 
     stack: 372 out of 40184
     GC: total: 258048, used: 352, free: 257696
     No. of 1-blocks: 4, 2-blocks: 2, max blk sz: 8, max free sz: 16103
 
 
-Getting more memory statistics
-******************************
+Obtenir plus de statistiques sur la mémoire
+*******************************************
 
 .. literalinclude::
     ../../../examples/micropython/memstat.py

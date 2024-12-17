@@ -1,13 +1,13 @@
 .. pybricks-requirements::
 
-:mod:`tools <pybricks.tools>` -- General purpose tools
+:mod:`tools <pybricks.tools>` -- Outils à usage général
 ========================================================
 
 .. automodule:: pybricks.tools
     :no-members:
 
-Timing tools
----------------
+Outils de synchronisation
+-------------------------
 
 .. blockimg:: pybricks_blockWaitTime
 
@@ -34,8 +34,8 @@ Timing tools
 
     .. automethod:: pybricks.tools.StopWatch.reset
 
-Input tools
------------
+Outils d'entrée
+---------------
 
 .. blockimg:: pybricks_blockReadInput_read_input_first_byte
 
@@ -52,8 +52,7 @@ Input tools
 
 .. versionchanged:: 3.3
 
-    Added ``last`` and ``chr`` options.
-
+    Ajout des options ``last`` et ``chr``.
 
 .. pybricks-requirements:: light-matrix
 
@@ -62,12 +61,13 @@ Input tools
 .. literalinclude::
     ../../../examples/pup/tools/hub_menu.py
 
-Linear algebra tools
---------------------
+Outils d'algèbre linéaire
+-------------------------
 
 .. versionchanged:: 3.3
 
-    These tools were previously located in the ``pybricks.geometry`` module.
+    Ces outils étaient précédemment situés dans le module
+    ``pybricks.geometry``.
 
 .. pybricks-requirements:: stm32-float
 
@@ -86,14 +86,14 @@ Linear algebra tools
 
 .. autofunction:: pybricks.tools.cross
 
-Multitasking
---------------------
+Multitâche
+----------
 
 .. versionadded:: 3.3
 
-Pybricks supports cooperative multitasking using the ``async`` and ``await``
-keywords. This allows operations that normally take some time to complete to
-run in parallel with other operations.
+Pybricks prend en charge le multitâche coopératif en utilisant les mots-clés
+``async`` et ``await``. Cela permet aux opérations qui prennent normalement du
+temps de s'exécuter en parallèle avec d'autres opérations.
 
 .. blockimg:: pybricks_blockMultiTask
 
@@ -101,9 +101,8 @@ run in parallel with other operations.
 
 .. autofunction:: pybricks.tools.run_task
 
-The following example shows how to use multitasking to make a robot drive
-forward, then turn and move a gripper at the same time, and then drive
-backward.
+L'exemple suivant montre comment utiliser le multitâche pour faire avancer un
+robot, puis tourner et déplacer une pince en même temps, puis reculer.
 
 .. literalinclude::
     ../../../examples/pup/robotics/drivebase_async.py
@@ -112,10 +111,12 @@ backward.
 
 .. class:: await
 
-Whenever you see a function or method prefixed by ``await``, this means that
-it supports multitasking. When running a coroutine with ``run_task``, all
-methods and functions prefixed by ``await`` will act as coroutines.
+Chaque fois que vous voyez une fonction ou une méthode préfixée par ``await``,
+cela signifie qu'elle prend en charge le multitâche. Lors de l'exécution d'une
+coroutine avec ``run_task``, toutes les méthodes et fonctions préfixées par
+``await`` agiront comme des coroutines.
 
-If you don't use multitasking, you can ignore the ``await`` keyword and write
-programs as usual. Specifically, when ``run_task`` is not used, functions
-prefixed by ``await`` will act as normal functions.
+Si vous n'utilisez pas le multitâche, vous pouvez ignorer le mot-clé ``await``
+et écrire des programmes comme d'habitude. Plus précisément, lorsque
+``run_task`` n'est pas utilisé, les fonctions préfixées par ``await`` agiront
+comme des fonctions normales.

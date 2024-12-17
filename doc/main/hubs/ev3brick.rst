@@ -7,17 +7,17 @@ MINDSTORMS EV3 Brick
 .. autoclass:: pybricks.hubs.EV3Brick
     :no-members:
 
-    .. rubric:: Using the buttons
+    .. rubric:: Utilisation des boutons
 
     .. automethod:: pybricks.hubs::EV3Brick.buttons.pressed
 
-    .. rubric:: Using the brick status light
+    .. rubric:: Utilisation de la lumière d'état du brick
 
     .. automethod:: pybricks.hubs::EV3Brick.light.on
 
     .. automethod:: pybricks.hubs::EV3Brick.light.off
 
-    .. rubric:: Using the speaker
+    .. rubric:: Utilisation du haut-parleur
 
     .. automethod:: pybricks.hubs::EV3Brick.speaker.beep
 
@@ -31,9 +31,9 @@ MINDSTORMS EV3 Brick
 
     .. automethod:: pybricks.hubs::EV3Brick.speaker.set_volume
 
-    .. rubric:: Using the screen
+    .. rubric:: Utilisation de l'écran
 
-    .. |this image| replace:: the screen
+    .. |this image| replace:: l'écran
 
     .. automethod:: pybricks.hubs::EV3Brick.screen.clear
 
@@ -65,38 +65,38 @@ MINDSTORMS EV3 Brick
 
     .. automethod:: pybricks.hubs::EV3Brick.screen.save
 
-    .. rubric:: Using the battery
+    .. rubric:: Utilisation de la batterie
 
     .. automethod:: pybricks.hubs::EV3Brick.battery.voltage
 
     .. automethod:: pybricks.hubs::EV3Brick.battery.current
 
-Status light examples
----------------------
+Exemples de lumière d'état
+--------------------------
 
-Turn the light on and change the color
-**************************************
+Allumer la lumière et changer la couleur
+****************************************
 
 .. literalinclude::
     ../../../examples/ev3/light_color/main.py
 
-Screen examples
----------------------
+Exemples d'écran
+----------------
 
-Show an image on the screen
-***************************
+Afficher une image sur l'écran
+******************************
 
 .. literalinclude::
     ../../../examples/ev3/screen_image/main.py
 
-Drawing shapes on the screen
-****************************
+Dessiner des formes sur l'écran
+*******************************
 
 .. literalinclude::
     ../../../examples/ev3/screen_draw/main.py
 
-Using different fonts
-*********************
+Utiliser différentes polices
+****************************
 
 .. raw:: latex
 
@@ -109,96 +109,96 @@ Using different fonts
 
     \end{CJK}
 
-.. rubric:: Available languages and voices for speech
+.. rubric:: Langues et voix disponibles pour la parole
 
 .. [#espeak_lang]
 
-    You can choose the following languages:
+    Vous pouvez choisir les langues suivantes :
 
     - ``'af'``: Afrikaans
-    - ``'an'``: Aragonese
-    - ``'bg'``: Bulgarian
-    - ``'bs'``: Bosnian
+    - ``'an'``: Aragonais
+    - ``'bg'``: Bulgare
+    - ``'bs'``: Bosniaque
     - ``'ca'``: Catalan
-    - ``'cs'``: Czech
-    - ``'cy'``: Welsh
-    - ``'da'``: Danish
-    - ``'de'``: German
-    - ``'el'``: Greek
-    - ``'en'``: English (default)
-    - ``'en-gb'``: English (United Kingdom)
-    - ``'en-sc'``: English (Scotland)
-    - ``'en-uk-north'``: English (United Kingdom, Northern)
-    - ``'en-uk-rp'``: English (United Kingdom, Received Pronunciation)
-    - ``'en-uk-wmids'``: English (United Kingdom, West Midlands)
-    - ``'en-us'``: English (United States)
-    - ``'en-wi'``: English (West Indies)
-    - ``'eo'``: Esperanto
-    - ``'es'``: Spanish
-    - ``'es-la'``: Spanish (Latin America)
-    - ``'et'``: Estonian
-    - ``'fa'``: Persian
-    - ``'fa-pin'``: Persian
-    - ``'fi'``: Finnish
-    - ``'fr-be'``: French (Belgium)
-    - ``'fr-fr'``: French (France)
-    - ``'ga'``: Irish
-    - ``'grc'``: Greek
+    - ``'cs'``: Tchèque
+    - ``'cy'``: Gallois
+    - ``'da'``: Danois
+    - ``'de'``: Allemand
+    - ``'el'``: Grec
+    - ``'en'``: Anglais (par défaut)
+    - ``'en-gb'``: Anglais (Royaume-Uni)
+    - ``'en-sc'``: Anglais (Écosse)
+    - ``'en-uk-north'``: Anglais (Royaume-Uni, Nord)
+    - ``'en-uk-rp'``: Anglais (Royaume-Uni, Prononciation Reçue)
+    - ``'en-uk-wmids'``: Anglais (Royaume-Uni, Midlands de l'Ouest)
+    - ``'en-us'``: Anglais (États-Unis)
+    - ``'en-wi'``: Anglais (Antilles)
+    - ``'eo'``: Espéranto
+    - ``'es'``: Espagnol
+    - ``'es-la'``: Espagnol (Amérique Latine)
+    - ``'et'``: Estonien
+    - ``'fa'``: Persan
+    - ``'fa-pin'``: Persan
+    - ``'fi'``: Finnois
+    - ``'fr-be'``: Français (Belgique)
+    - ``'fr-fr'``: Français (France)
+    - ``'ga'``: Irlandais
+    - ``'grc'``: Grec
     - ``'hi'``: Hindi
-    - ``'hr'``: Croatian
-    - ``'hu'``: Hungarian
-    - ``'hy'``: Armenian
-    - ``'hy-west'``: Armenian (Western)
-    - ``'id'``: Indonesian
-    - ``'is'``: Icelandic
-    - ``'it'``: Italian
+    - ``'hr'``: Croate
+    - ``'hu'``: Hongrois
+    - ``'hy'``: Arménien
+    - ``'hy-west'``: Arménien (Occidental)
+    - ``'id'``: Indonésien
+    - ``'is'``: Islandais
+    - ``'it'``: Italien
     - ``'jbo'``: Lojban
-    - ``'ka'``: Georgian
+    - ``'ka'``: Géorgien
     - ``'kn'``: Kannada
-    - ``'ku'``: Kurdish
+    - ``'ku'``: Kurde
     - ``'la'``: Latin
     - ``'lfn'``: Lingua Franca Nova
-    - ``'lt'``: Lithuanian
-    - ``'lv'``: Latvian
-    - ``'mk'``: Macedonian
+    - ``'lt'``: Lituanien
+    - ``'lv'``: Letton
+    - ``'mk'``: Macédonien
     - ``'ml'``: Malayalam
-    - ``'ms'``: Malay
-    - ``'ne'``: Nepali
-    - ``'nl'``: Dutch
-    - ``'no'``: Norwegian
-    - ``'pa'``: Punjabi
-    - ``'pl'``: Polish
-    - ``'pt-br'``: Portuguese (Brazil)
-    - ``'pt-pt'``: Portuguese (Portugal)
-    - ``'ro'``: Romanian
-    - ``'ru'``: Russian
-    - ``'sk'``: Slovak
-    - ``'sq'``: Albanian
-    - ``'sr'``: Serbian
-    - ``'sv'``: Swedish
+    - ``'ms'``: Malais
+    - ``'ne'``: Népali
+    - ``'nl'``: Néerlandais
+    - ``'no'``: Norvégien
+    - ``'pa'``: Pendjabi
+    - ``'pl'``: Polonais
+    - ``'pt-br'``: Portugais (Brésil)
+    - ``'pt-pt'``: Portugais (Portugal)
+    - ``'ro'``: Roumain
+    - ``'ru'``: Russe
+    - ``'sk'``: Slovaque
+    - ``'sq'``: Albanais
+    - ``'sr'``: Serbe
+    - ``'sv'``: Suédois
     - ``'sw'``: Swahili
-    - ``'ta'``: Tamil
-    - ``'tr'``: Turkish
-    - ``'vi'``: Vietnamese
-    - ``'vi-hue'``: Vietnamese (Hue)
-    - ``'vi-sgn'``: Vietnamese (Saigon)
-    - ``'zh'``: Mandarin Chinese
-    - ``'zh-yue'``: Cantonese Chinese
+    - ``'ta'``: Tamoul
+    - ``'tr'``: Turc
+    - ``'vi'``: Vietnamien
+    - ``'vi-hue'``: Vietnamien (Hue)
+    - ``'vi-sgn'``: Vietnamien (Saigon)
+    - ``'zh'``: Chinois Mandarin
+    - ``'zh-yue'``: Chinois Cantonais
 
-    You can choose the following voices:
+    Vous pouvez choisir les voix suivantes :
 
-    - ``'f1'``: female variant 1
-    - ``'f2'``: female variant 2
-    - ``'f3'``: female variant 3
-    - ``'f4'``: female variant 4
-    - ``'f5'``: female variant 5
-    - ``'m1'``: male variant 1
-    - ``'m2'``: male variant 2
-    - ``'m3'``: male variant 3
-    - ``'m4'``: male variant 4
-    - ``'m5'``: male variant 5
-    - ``'m6'``: male variant 6
-    - ``'m7'``: male variant 7
-    - ``'croak'``: croak
-    - ``'whisper'``: whisper
-    - ``'whisperf'``: female whisper
+    - ``'f1'``: variante féminine 1
+    - ``'f2'``: variante féminine 2
+    - ``'f3'``: variante féminine 3
+    - ``'f4'``: variante féminine 4
+    - ``'f5'``: variante féminine 5
+    - ``'m1'``: variante masculine 1
+    - ``'m2'``: variante masculine 2
+    - ``'m3'``: variante masculine 3
+    - ``'m4'``: variante masculine 4
+    - ``'m5'``: variante masculine 5
+    - ``'m6'``: variante masculine 6
+    - ``'m7'``: variante masculine 7
+    - ``'croak'``: croassement
+    - ``'whisper'``: chuchotement
+    - ``'whisperf'``: chuchotement féminin

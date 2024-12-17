@@ -1,11 +1,11 @@
-Built-in classes and functions
-=====================================================
+Classes et fonctions intégrées
+==============================
 
-The classes and functions shown on this page can be used without
-importing anything.
+Les classes et fonctions présentées sur cette page peuvent être utilisées sans
+importer quoi que ce soit.
 
-Input and output
-------------------------
+Entrée et sortie
+----------------
 
 .. pybricks-requirements:: stm32-extra
 
@@ -19,8 +19,8 @@ Input and output
 
 .. autofunction:: ubuiltins.print
 
-Basic types
----------------------------
+Types de base
+-------------
 
 .. pybricks-requirements::
 
@@ -59,8 +59,8 @@ Basic types
 
 .. autoclass:: ubuiltins.type
 
-Sequences
----------------------------
+Séquences
+---------
 
 .. pybricks-requirements:: stm32-extra
 
@@ -146,8 +146,8 @@ Sequences
 
 .. autoclass:: ubuiltins.tuple
 
-Iterators
---------------------------
+Itérateurs
+----------
 
 .. pybricks-requirements::
 
@@ -189,8 +189,8 @@ Iterators
 
 .. autofunction:: ubuiltins.zip
 
-Conversion functions
-------------------------
+Fonctions de conversion
+-----------------------
 
 .. pybricks-requirements::
 
@@ -218,10 +218,11 @@ Conversion functions
 
 .. _builtinmath:
 
-Math functions
-----------------------
+Fonctions mathématiques
+-----------------------
 
-See also :mod:`umath` for floating point math operations.
+Voir aussi :mod:`umath` pour les opérations mathématiques en virgule
+flottante.
 
 .. pybricks-requirements::
 
@@ -259,8 +260,8 @@ See also :mod:`umath` for floating point math operations.
 
 .. autofunction:: ubuiltins.sum
 
-Runtime functions
--------------------------
+Fonctions d'exécution
+---------------------
 
 .. pybricks-requirements::
 
@@ -290,9 +291,8 @@ Runtime functions
 
 .. autofunction:: ubuiltins.locals
 
-
-Class functions
-------------------------
+Fonctions de classe
+-------------------
 
 .. pybricks-requirements::
 
@@ -326,9 +326,8 @@ Class functions
 
 .. autofunction:: ubuiltins.super
 
-
-Method decorators
------------------
+Décorateurs de méthode
+----------------------
 
 .. pybricks-requirements::
 

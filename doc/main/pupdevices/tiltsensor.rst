@@ -1,6 +1,6 @@
 .. pybricks-requirements::
 
-Tilt Sensor
+Capteur d'inclinaison
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: ../../main/cad/output/pupdevice-tilt.png
@@ -18,11 +18,11 @@ Tilt Sensor
 
     .. automethod:: tilt
 
-Examples
--------------------
+Exemples
+--------
 
-Measuring pitch and roll
-************************
+Mesurer le tangage et le roulis
+*******************************
 
 .. literalinclude::
     ../../../examples/pup/sensor_tilt/basics.py

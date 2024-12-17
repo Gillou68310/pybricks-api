@@ -1,7 +1,7 @@
 .. pybricks-requirements::
 
-:mod:`pupdevices <pybricks.pupdevices>` -- Motors, sensors, lights
-==================================================================
+:mod:`pupdevices <pybricks.pupdevices>` -- Moteurs, capteurs, lumières
+==============================================================================================================
 
 .. automodule:: pybricks.pupdevices
     :no-members:

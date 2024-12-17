@@ -1,6 +1,6 @@
 .. pybricks-requirements::
 
-Light
+Lumière
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: ../../main/cad/output/pupdevice-light.png
@@ -19,17 +19,17 @@ Light
 
     .. automethod:: pybricks.pupdevices.Light.off
 
-Examples
--------------------
+Exemples
+--------
 
-Making the light blink
-**********************
+Faire clignoter la lumière
+**************************
 
 .. literalinclude::
     ../../../examples/pup/light/basics.py
 
-Gradually change the brightness
-*******************************
+Changer progressivement la luminosité
+*************************************
 
 .. literalinclude::
     ../../../examples/pup/light/math.py

@@ -1,6 +1,6 @@
 .. pybricks-requirements::
 
-Color Sensor
+Capteur de Couleur
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: ../../main/diagrams/sensor_color_lights.png
@@ -25,7 +25,7 @@ Color Sensor
 
     .. automethod:: pybricks.pupdevices.ColorSensor.ambient
 
-    .. rubric:: Advanced color sensing
+    .. rubric:: Détection avancée des couleurs
 
     .. blockimg:: pybricks_blockColor_ColorSensor_hsv
 
@@ -33,11 +33,12 @@ Color Sensor
 
     .. automethod:: pybricks.pupdevices.ColorSensor.detectable_colors
 
-    .. rubric:: Built-in lights
+    .. rubric:: Lumières intégrées
 
-    This sensor has 3 built-in lights. You can adjust the brightness of each
-    light. If you use the sensor to measure something, the lights will
-    be turned on or off as needed for the measurement.
+    Ce capteur dispose de 3 lumières intégrées. Vous pouvez ajuster la
+    luminosité de chaque lumière. Si vous utilisez le capteur pour mesurer
+    quelque chose, les lumières seront allumées ou éteintes selon les besoins
+    de la mesure.
 
     .. blockimg:: pybricks_blockLightOn_colorsensor_on
 
@@ -51,59 +52,61 @@ Color Sensor
     .. automethod:: pybricks.pupdevices::ColorSensor.lights.off
 
 
-Examples
+Exemples
 -------------------
 
-Measuring color and reflection
-******************************
+Mesurer la couleur et la réflexion
+**********************************
 
 .. literalinclude::
     ../../../examples/pup/sensor_color/color_print.py
 
 
-Waiting for a color
-*******************
+Attendre une couleur
+********************
 
 .. literalinclude::
     ../../../examples/pup/sensor_color/wait_for_color.py
 
 
-Reading *reflected* hue, saturation, and value
-************************************************
+Lire la teinte, la saturation et la valeur *réfléchies*
+*******************************************************
 
 .. literalinclude::
     ../../../examples/pup/sensor_color/hsv.py
 
 
-Changing the detectable colors
-******************************
+Changer les couleurs détectables
+********************************
 
-By default, the sensor is configured to detect red, yellow, green,
-blue, white, or no color, which suits many applications.
+Par défaut, le capteur est configuré pour détecter le rouge, le jaune, le
+vert, le bleu, le blanc ou aucune couleur, ce qui convient à de nombreuses
+applications.
 
-For better results in your application, you can measure your desired
-colors in advance, and tell the sensor to look only for those colors.
-Be sure to measure them at the **same distance and light conditions**
-as in your final application. Then you'll get very accurate results
-even for colors that are otherwise hard to detect.
+Pour de meilleurs résultats dans votre application, vous pouvez mesurer vos
+couleurs souhaitées à l'avance et dire au capteur de ne rechercher que ces
+couleurs. Assurez-vous de les mesurer à la **même distance et dans les mêmes
+conditions d'éclairage** que dans votre application finale. Vous obtiendrez
+alors des résultats très précis même pour les couleurs qui sont autrement
+difficiles à détecter.
 
 .. literalinclude::
     ../../../examples/pup/sensor_color/detectable_colors.py
 
-Reading *ambient* hue, saturation, value, and color
-***************************************************
+Lire la teinte, la saturation, la valeur et la couleur *ambiantes*
+******************************************************************
 
 .. literalinclude::
     ../../../examples/pup/sensor_color/color_ambient.py
 
-Blinking the built-in lights
-****************************
+Faire clignoter les lumières intégrées
+**************************************
 
 .. literalinclude::
     ../../../examples/pup/sensor_color/lights_blink.py
 
-Turning off the lights when the program ends
-**********************************************
+Éteindre les lumières à la fin du programme
+*******************************************
 
 .. literalinclude::
     ../../../examples/pup/sensor_color/cleanup.py

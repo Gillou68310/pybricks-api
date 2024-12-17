@@ -1,11 +1,11 @@
 .. pybricks-requirements:: stm32-extra
 
-:mod:`ustruct` -- Pack and unpack binary data
-====================================================
+:mod:`ustruct` -- Emballer et déballer des données binaires
+===========================================================
 
 .. automodule:: ustruct
 
-The following byte orders are supported:
+Les ordres d'octets suivants sont pris en charge :
 
 +-----------+------------------------+----------+-----------+
 | Character | Byte order             | Size     | Alignment |
@@ -19,7 +19,7 @@ The following byte orders are supported:
 | !         | network (= big-endian) | standard | none      |
 +-----------+------------------------+----------+-----------+
 
-The following data types are supported:
+Les types de données suivants sont pris en charge :
 
 +--------+--------------------+-------------+---------------+
 | Format | C Type             | Python type | Standard size |
@@ -53,4 +53,4 @@ The following data types are supported:
 | P      | void *             | integer     |               |
 +--------+--------------------+-------------+---------------+
 
-   - \(1\) Supports values up to +/-1073741823
+   - \(1\) Prend en charge des valeurs jusqu'à +/-1073741823

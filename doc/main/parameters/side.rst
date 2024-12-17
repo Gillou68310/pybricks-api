@@ -1,12 +1,12 @@
 .. pybricks-requirements::
 
-Side
+Côté
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. class:: Side
 
-    Side of a hub or a sensor. These devices are
-    mostly rectangular boxes with six sides:
+    Côté d'un hub ou d'un capteur. Ces dispositifs sont principalement des
+    boîtes rectangulaires avec six côtés :
 
     .. autoattribute:: pybricks.parameters.Side.TOP
         :annotation:
@@ -27,9 +27,10 @@ Side
         :annotation:
 
 
-    Screens or light matrices have only four sides. For those,
-    ``TOP`` is treated the same as ``FRONT``, and ``BOTTOM`` is treated the
-    same as ``BACK``. The diagrams below define the sides for relevant devices.
+    Les écrans ou les matrices de lumière n'ont que quatre côtés. Pour
+    ceux-ci, ``TOP`` est traité de la même manière que ``FRONT``, et
+    ``BOTTOM`` est traité de la même manière que ``BACK``. Les diagrammes
+    ci-dessous définissent les côtés pour les dispositifs pertinents.
 
     **Prime Hub**
 
@@ -58,9 +59,9 @@ Side
 
     .. versionchanged:: 3.2
 
-        Changed which side is the front.
+        Changement du côté avant.
 
-    **Tilt Sensor**
+    **Capteur d'inclinaison**
 
     .. figure:: ../../main/diagrams/orientation_tiltsensor.png
         :width: 50%

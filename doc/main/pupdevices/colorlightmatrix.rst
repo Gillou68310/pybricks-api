@@ -1,7 +1,7 @@
 .. pybricks-requirements::
 
-Color Light Matrix
-^^^^^^^^^^^^^^^^^^
+Matrice de Lumières Colorées
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: ../../main/diagrams/sensor_colorlightmatrix.png
    :width: 35 %

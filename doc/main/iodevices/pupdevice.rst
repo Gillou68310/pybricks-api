@@ -1,7 +1,7 @@
 .. pybricks-requirements:: pybricks-iodevices
 
-Powered Up Device
-^^^^^^^^^^^^^^^^^
+Appareil Powered Up
+^^^^^^^^^^^^^^^^^^^
 
 .. figure:: ../cad/output/iodevice-pupdevice.png
    :width: 60 %
@@ -15,11 +15,11 @@ Powered Up Device
 
     .. automethod:: pybricks.iodevices.PUPDevice.write
 
-Examples
--------------------
+Exemples
+--------
 
-Detecting devices
-******************************
+Détection des appareils
+************************
 
 .. literalinclude::
     ../../../examples/pup/iodevices_pupdevice/port_info.py

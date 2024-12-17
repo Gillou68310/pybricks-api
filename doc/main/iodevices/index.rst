@@ -1,7 +1,7 @@
 .. pybricks-requirements:: pybricks-iodevices
 
-:mod:`iodevices <pybricks.iodevices>` -- Custom devices
-============================================================
+:mod:`iodevices <pybricks.iodevices>` -- Appareils personnalisés
+================================================================
 
 .. module:: pybricks.iodevices
 
@@ -13,7 +13,8 @@
    lwp3device
    xboxcontroller
 
-This module has classes for generic and custom input/output devices.
+Ce module contient des classes pour les appareils d'entrée/sortie génériques
+et personnalisés.
 
 .. pybricks-classlink:: PUPDevice
 

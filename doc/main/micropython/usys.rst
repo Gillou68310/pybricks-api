@@ -1,11 +1,11 @@
 .. pybricks-requirements:: stm32-extra
 
-:mod:`usys` -- System specific functions
+:mod:`usys` -- Fonctions spécifiques au système
 ============================================================
 
-This MicroPython module is a subset of the `sys module`_ in Python.
+Ce module MicroPython est un sous-ensemble du `sys module`_ en Python.
 
-.. rubric:: Input and output streams
+.. rubric:: Flux d'entrée et de sortie
 
 .. module:: usys
 
@@ -18,7 +18,7 @@ This MicroPython module is a subset of the `sys module`_ in Python.
 .. autodata:: usys.stderr
     :annotation:
 
-.. rubric:: Version info
+.. rubric:: Informations sur la version
 
 .. autodata:: implementation
     :annotation:
@@ -29,10 +29,10 @@ This MicroPython module is a subset of the `sys module`_ in Python.
 .. autodata:: version_info
     :annotation:
 
-Examples
+Exemples
 ---------------
 
-Version information
+Informations sur la version
 *******************************
 
 .. literalinclude::
@@ -41,12 +41,13 @@ Version information
 .. literalinclude::
     ../../../examples/micropython/usys/micropython_version.py
 
-Standard input and output
+Entrée et sortie standard
 *******************************
 
-The ``stdin`` stream can be used to capture input via the Pybricks Code
-input/output window. See the `keyboard input`_ project to learn how this works.
-This approach can be extended to exchange data with any `other device`_ as well.
+Le flux ``stdin`` peut être utilisé pour capturer des entrées via la fenêtre
+d'entrée/sortie de Pybricks Code. Voir le projet `keyboard input`_ pour
+apprendre comment cela fonctionne. Cette approche peut être étendue pour
+échanger des données avec tout `other device`_ également.
 
 .. _keyboard input: https://pybricks.com/projects/tutorials/wireless/hub-to-device/pc-keyboard/
 .. _other device: https://pybricks.com/projects/tutorials/wireless/hub-to-device/

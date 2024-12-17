@@ -1,7 +1,8 @@
-Exceptions and errors
-=====================================================
+Exceptions et erreurs
+=====================
 
-This section lists all available exceptions in alphabetical order.
+Cette section répertorie toutes les exceptions disponibles par ordre
+alphabétique.
 
 .. autoclass:: ubuiltins.ArithmeticError
     :no-members:
@@ -80,25 +81,25 @@ This section lists all available exceptions in alphabetical order.
 .. autoclass:: ubuiltins.ZeroDivisionError
     :no-members:
 
-Examples
+Exemples
 ---------------------
 
-Debugging in the REPL terminal
-*****************************************
+Débogage dans le terminal REPL
+******************************
 
 .. literalinclude::
     ../../../examples/micropython/keyboard_interrupt.py
 
-Running code when the stop button is pressed
-********************************************
+Exécution du code lorsque le bouton d'arrêt est pressé
+******************************************************
 
 .. literalinclude::
     ../../../examples/micropython/system_exit.py
 
 .. _device_detection:
 
-Detecting devices using ``OSError``
-*****************************************
+Détection des appareils à l'aide de ``OSError``
+***********************************************
 
 .. literalinclude::
     ../../../examples/micropython/oserror.py

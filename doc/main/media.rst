@@ -1,25 +1,26 @@
-:mod:`media <pybricks.media>` -- Sounds and images
-==================================================
+:mod:`media <pybricks.media>` -- Sons et images
+===============================================
 
 .. module:: pybricks.media
 
-This module describes media such as sound and images that you can use in your
-projects. Media are divided into submodules that indicate on which platform
-they are available.
+Ce module décrit les médias tels que les sons et les images que vous pouvez
+utiliser dans vos projets. Les médias sont divisés en sous-modules qui
+indiquent sur quelle plateforme ils sont disponibles.
 
-:mod:`media.ev3dev <pybricks.media.ev3dev>` -- Sounds and Images
----------------------------------------------------------------------
+:mod:`media.ev3dev <pybricks.media.ev3dev>` -- Sons et images
+-------------------------------------------------------------
 
 .. module:: pybricks.media.ev3dev
 
-EV3 MicroPython is built on top of ev3dev, which comes with a variety of image
-and sound files. You can access them using the classes below.
+EV3 MicroPython est construit sur ev3dev, qui est livré avec une variété de
+fichiers image et son. Vous pouvez y accéder en utilisant les classes
+ci-dessous.
 
-You can also use your own sound and image files by placing them in your project
-folder.
+Vous pouvez également utiliser vos propres fichiers son et image en les
+plaçant dans votre dossier de projet.
 
-Image files
-^^^^^^^^^^^
+Fichiers image
+^^^^^^^^^^^^^^
 
 .. autoclass:: pybricks.media.ev3dev.ImageFile
     :no-members:
@@ -103,14 +104,14 @@ Image files
         .. image:: ../../media/ev3dev-media/images/mono/lego/ev3_icon.png
             :width: 15 %
 
-    .. rubric:: **Objects**
+    .. rubric:: **Objets**
 
     .. data:: TARGET
 
         .. image:: ../../media/ev3dev-media/images/mono/objects/target.png
             :width: 15 %
 
-    .. rubric:: **Eyes**
+    .. rubric:: **Yeux**
 
     .. data:: ANGRY
 
@@ -126,7 +127,6 @@ Image files
 
         .. image:: ../../media/ev3dev-media/images/mono/eyes/bottom_left.png
             :width: 15 %
-
 
     .. data:: BOTTOM_RIGHT
 
@@ -223,8 +223,8 @@ Image files
         .. image:: ../../media/ev3dev-media/images/mono/eyes/winking.png
             :width: 15 %
 
-Sound files
-^^^^^^^^^^^
+Fichiers sonores
+^^^^^^^^^^^^^^^^
 
 .. autoclass:: pybricks.media.ev3dev.SoundFile
     :no-members:
@@ -237,10 +237,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/b944cb55a5775696298d64ee851ace43/boing.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/expressions/boing.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/expressions/boing.wav>`
 
     .. data:: BOO
 
@@ -248,10 +248,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/ea7e11c484e34fcaf27a69754cd17f2f/boo.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/expressions/boo.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/expressions/boo.wav>`
 
     .. data:: CHEERING
 
@@ -259,10 +259,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/ba0b72ad10fdc60cb55cdd148b60d9ca/cheering.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/expressions/cheering.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/expressions/cheering.wav>`
 
     .. data:: CRUNCHING
 
@@ -270,10 +270,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/98a3c519b10e0678a220d9a8fd4f75c4/crunching.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/expressions/crunching.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/expressions/crunching.wav>`
 
     .. data:: CRYING
 
@@ -281,10 +281,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/2a351015ee7991b3c5cdf091349c42ce/crying.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/expressions/crying.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/expressions/crying.wav>`
 
     .. data:: FANFARE
 
@@ -292,10 +292,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/fe3a5c8cfd539a19d2e125cd3d09925e/fanfare.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/expressions/fanfare.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/expressions/fanfare.wav>`
 
     .. data:: KUNG_FU
 
@@ -303,10 +303,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/b420a7196ea0e0d448629bf8411d9a18/kung_fu.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/expressions/kung_fu.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/expressions/kung_fu.wav>`
 
     .. data:: LAUGHING_1
 
@@ -314,10 +314,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/8f344a69525a1363a24197a944e4e889/laughing_1.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/expressions/laughing_1.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/expressions/laughing_1.wav>`
 
     .. data:: LAUGHING_2
 
@@ -325,10 +325,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/bdc8586f7e1aa11a8f7f59608b258282/laughing_2.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/expressions/laughing_2.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/expressions/laughing_2.wav>`
 
     .. data:: MAGIC_WAND
 
@@ -336,10 +336,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/5b625fd3e50894dd8fd00d7a82abd444/magic_wand.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/expressions/magic_wand.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/expressions/magic_wand.wav>`
 
     .. data:: OUCH
 
@@ -347,10 +347,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/d3190754b2a5a2810ec8e58faad80aa0/ouch.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/expressions/ouch.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/expressions/ouch.wav>`
 
     .. data:: SHOUTING
 
@@ -358,10 +358,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/19afb20dc569394df64285240357bcb9/shouting.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/expressions/shouting.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/expressions/shouting.wav>`
 
     .. data:: SMACK
 
@@ -369,10 +369,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/eed7a4c460df736068054a66e3b398eb/smack.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/expressions/smack.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/expressions/smack.wav>`
 
     .. data:: SNEEZING
 
@@ -380,10 +380,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/4e6b29e8cd056f9fcdda34b0f586dcca/sneezing.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/expressions/sneezing.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/expressions/sneezing.wav>`
 
     .. data:: SNORING
 
@@ -391,10 +391,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/9a8d4ecc97db992cb132d93a7a4870e4/snoring.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/expressions/snoring.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/expressions/snoring.wav>`
 
     .. data:: UH_OH
 
@@ -402,11 +402,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/ba1d663a61c1d7c22848061bcf71fd04/uh-oh.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/expressions/uh-oh.wav>`
-
+        :download:`Télécharger <../../media/ev3dev-media/sounds/expressions/uh-oh.wav>`
 
     .. rubric:: **Information**
 
@@ -416,10 +415,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/b732c0bb59841c6d7bd9ae1ac66f2b7a/activate.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/information/activate.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/information/activate.wav>`
 
     .. data:: ANALYZE
 
@@ -427,10 +426,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/42a7600ad32aa70f0ae65f6fe87df16a/analyze.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/information/analyze.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/information/analyze.wav>`
 
     .. data:: BACKWARDS
 
@@ -438,10 +437,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/d5fccfd2d4bc349992b1d3a769cce852/backwards.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/information/backwards.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/information/backwards.wav>`
 
     .. data:: COLOR
 
@@ -449,10 +448,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/1d94a6f6c9366bdd58ef1ea4e913fa91/color.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/information/color.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/information/color.wav>`
 
     .. data:: DETECTED
 
@@ -460,10 +459,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/a7f751e62eda2c3cb7305d152baacaec/detected.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/information/detected.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/information/detected.wav>`
 
     .. data:: DOWN
 
@@ -471,10 +470,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/29b40c48a495e8642644c8b482edfe9e/down.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/information/down.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/information/down.wav>`
 
     .. data:: ERROR
 
@@ -482,10 +481,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/b0dfa1c62b0507a0c73f42af7f7d48cf/error.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/information/error.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/information/error.wav>`
 
     .. data:: ERROR_ALARM
 
@@ -493,11 +492,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/12b7e7b80c992edef495d9039fe38c81/error_alarm.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/information/error_alarm.wav>`
-
+        :download:`Télécharger <../../media/ev3dev-media/sounds/information/error_alarm.wav>`
 
     .. data:: FLASHING
 
@@ -505,10 +503,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/e0cda6bd2911871e5d8efe07ddd0204a/flashing.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/information/flashing.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/information/flashing.wav>`
 
     .. data:: FORWARD
 
@@ -516,10 +514,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/d0ca20711ebfaabe03cb19aaa7591a64/forward.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/information/forward.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/information/forward.wav>`
 
     .. data:: LEFT
 
@@ -527,10 +525,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/34c75b65be9c243917f710bd3a99b864/left.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/information/left.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/information/left.wav>`
 
     .. data:: OBJECT
 
@@ -538,10 +536,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/1b7b8bd9d98edc72425c0a3d13355a62/object.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/information/object.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/information/object.wav>`
 
     .. data:: RIGHT
 
@@ -549,10 +547,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/df9920c7eab74a1b9b88669cb40cc70c/right.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/information/right.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/information/right.wav>`
 
     .. data:: SEARCHING
 
@@ -560,10 +558,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/1eb1baec8745f4a0258588d048af2faf/searching.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/information/searching.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/information/searching.wav>`
 
     .. data:: START
 
@@ -571,10 +569,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/687ce2c79e5dd5e3bf1856769f4dbc66/start.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/information/start.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/information/start.wav>`
 
     .. data:: STOP
 
@@ -582,10 +580,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/2ffaf2c0aea075cd085f7e7e9bfde3da/stop.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/information/stop.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/information/stop.wav>`
 
     .. data:: TOUCH
 
@@ -593,10 +591,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/1b2e04632c9d5493e7892e9063f4c774/touch.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/information/touch.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/information/touch.wav>`
 
     .. data:: TURN
 
@@ -604,10 +602,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/3b93fb451261396cb22803bca32ffc98/turn.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/information/turn.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/information/turn.wav>`
 
     .. data:: UP
 
@@ -615,10 +613,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/4d57fb9f5016ab031509003bd5e2599e/up.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/information/up.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/information/up.wav>`
 
     .. rubric:: **Communication**
 
@@ -628,10 +626,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/a59280f3dccc7fabe5fec2f08d7a5531/bravo.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/communication/bravo.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/communication/bravo.wav>`
 
     .. data:: EV3
 
@@ -639,10 +637,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/16e3cba2752b2bd7e7b679554e2af9be/ev3.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/communication/ev3.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/communication/ev3.wav>`
 
     .. data:: FANTASTIC
 
@@ -650,10 +648,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/5d47bd0472935f4a003b6d5f3ddf689e/fantastic.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/communication/fantastic.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/communication/fantastic.wav>`
 
     .. data:: GAME_OVER
 
@@ -661,10 +659,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/1608f605abf2147d1e1c24868345140f/game_over.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/communication/game_over.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/communication/game_over.wav>`
 
     .. data:: GO
 
@@ -672,10 +670,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/07ca1a415b549f46fedfae99d1a96aa5/go.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/communication/go.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/communication/go.wav>`
 
     .. data:: GOOD_JOB
 
@@ -683,10 +681,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/8bd379acf75502b828ba914a3bc3e427/good_job.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/communication/good_job.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/communication/good_job.wav>`
 
     .. data:: GOOD
 
@@ -694,10 +692,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/4bdca05d0338824c9c57123e3688fd4a/good.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/communication/good.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/communication/good.wav>`
 
     .. data:: GOODBYE
 
@@ -705,10 +703,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/94480a85f6482adadc5b42899107915a/goodbye.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/communication/goodbye.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/communication/goodbye.wav>`
 
     .. data:: HELLO
 
@@ -716,10 +714,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/04d29715977ff8744aa96a0c02bee9cc/hello.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/communication/hello.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/communication/hello.wav>`
 
     .. data:: HI
 
@@ -727,10 +725,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/d179305e8c4f3303a4e8d81470d31d66/hi.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/communication/hi.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/communication/hi.wav>`
 
     .. data:: LEGO
 
@@ -738,10 +736,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/04470100c29fe28963c1ec294155c17f/lego.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/communication/lego.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/communication/lego.wav>`
 
     .. data:: MINDSTORMS
 
@@ -749,10 +747,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/ebfbf138f94b02ee98c0dc4b48024f69/mindstorms.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/communication/mindstorms.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/communication/mindstorms.wav>`
 
     .. data:: MORNING
 
@@ -760,10 +758,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/a6c1130e01dd511c5db03b44e3b8ca82/morning.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/communication/morning.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/communication/morning.wav>`
 
     .. data:: NO
 
@@ -771,10 +769,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/1b17c7c11fbd18719d4ed95896180b41/no.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/communication/no.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/communication/no.wav>`
 
     .. data:: OKAY
 
@@ -782,10 +780,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/c87eda5c4a6f0cc90b15d5298f3fd2e4/okay.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/communication/okay.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/communication/okay.wav>`
 
     .. data:: OKEY_DOKEY
 
@@ -793,10 +791,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/63213245edef225194bf8a27d845306c/okey-dokey.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/communication/okey-dokey.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/communication/okey-dokey.wav>`
 
     .. data:: SORRY
 
@@ -804,10 +802,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/51e56126d63130ceab8f3e117883d6c7/sorry.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/communication/sorry.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/communication/sorry.wav>`
 
     .. data:: THANK_YOU
 
@@ -815,10 +813,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/fa960a507c5c19a5fa3ef68a3bf89006/thank_you.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/communication/thank_you.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/communication/thank_you.wav>`
 
     .. data:: YES
 
@@ -826,13 +824,12 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/d8e1b79be55b12172c3cdb8dae87e500/yes.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/communication/yes.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/communication/yes.wav>`
 
-
-    .. rubric:: **Movement sounds**
+    .. rubric:: **Sons de mouvement**
 
     .. data:: SPEED_DOWN
 
@@ -840,10 +837,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/9ca3327caddb0984624cf897b3cab7a6/speed_down.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/movements/speed_down.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/movements/speed_down.wav>`
 
     .. data:: SPEED_IDLE
 
@@ -851,10 +848,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/ebae3bb4b8bea8c307f81454f8871369/speed_idle.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/movements/speed_idle.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/movements/speed_idle.wav>`
 
     .. data:: SPEED_UP
 
@@ -862,12 +859,12 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/b9ba6804e4fc490b5991de59e18bbc27/speed_up.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/movements/speed_up.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/movements/speed_up.wav>`
 
-    .. rubric:: **Colors**
+    .. rubric:: **Couleurs**
 
     .. data:: BLACK
 
@@ -875,10 +872,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/4ec641727ef967eae4094713799dcb87/black.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/colors/black.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/colors/black.wav>`
 
     .. data:: BLUE
 
@@ -886,10 +883,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/7c76ecd9d178acd347d180134c163d19/blue.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/colors/blue.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/colors/blue.wav>`
 
     .. data:: BROWN
 
@@ -897,10 +894,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/9b8576ad237f5a909643c44d0e0f8fdb/brown.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/colors/brown.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/colors/brown.wav>`
 
     .. data:: GREEN
 
@@ -908,10 +905,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/e7db31dd878f95fbd9450330cf307e61/green.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/colors/green.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/colors/green.wav>`
 
     .. data:: RED
 
@@ -919,10 +916,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/e01ec34c4c304b627ab6cad85cab4f3c/red.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/colors/red.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/colors/red.wav>`
 
     .. data:: WHITE
 
@@ -930,10 +927,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/4998b5d327d0ed0c47ed22bd54871d00/white.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/colors/white.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/colors/white.wav>`
 
     .. data:: YELLOW
 
@@ -941,13 +938,12 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/5978ea64c468fcc6e29ef275bdd05c53/yellow.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/colors/yellow.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/colors/yellow.wav>`
 
-
-    .. rubric:: **Mechanical**
+    .. rubric:: **Mécanique**
 
     .. data:: AIR_RELEASE
 
@@ -955,10 +951,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/9995ce699985b42f9e35d316bc1656ff/air_release.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/mechanical/air_release.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/mechanical/air_release.wav>`
 
     .. data:: AIRBRAKE
 
@@ -966,10 +962,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/a6ecee4507319bc7f7be0f4cf443f945/airbrake.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/mechanical/airbrake.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/mechanical/airbrake.wav>`
 
     .. data:: BACKING_ALERT
 
@@ -977,10 +973,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/8c9992be9bd53d991a9c68e345419ab4/backing_alert.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/mechanical/backing_alert.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/mechanical/backing_alert.wav>`
 
     .. data:: HORN_1
 
@@ -988,10 +984,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/c933279fb74362bb2a8212e8a7d3c986/horn_1.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/mechanical/horn_1.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/mechanical/horn_1.wav>`
 
     .. data:: HORN_2
 
@@ -999,10 +995,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/4aff855ecbc8c1d1990644459b9e4691/horn_2.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/mechanical/horn_2.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/mechanical/horn_2.wav>`
 
     .. data:: LASER
 
@@ -1010,10 +1006,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/c3dad0070eaf14f37c4fd833ee2582b6/laser.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/mechanical/laser.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/mechanical/laser.wav>`
 
     .. data:: MOTOR_IDLE
 
@@ -1021,10 +1017,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/9ad779fa443396bf655fa4941fa00555/motor_idle.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/mechanical/motor_idle.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/mechanical/motor_idle.wav>`
 
     .. data:: MOTOR_START
 
@@ -1032,10 +1028,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/4170a2f720d8fc69cbeb15884ef8005c/motor_start.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/mechanical/motor_start.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/mechanical/motor_start.wav>`
 
     .. data:: MOTOR_STOP
 
@@ -1043,10 +1039,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/e53e1d13274a14350428c97b79cfef8f/motor_stop.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/mechanical/motor_stop.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/mechanical/motor_stop.wav>`
 
     .. data:: RATCHET
 
@@ -1054,10 +1050,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/5f15a075f732ecb59da6a2b567f022be/ratchet.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/mechanical/ratchet.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/mechanical/ratchet.wav>`
 
     .. data:: SONAR
 
@@ -1065,10 +1061,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/a3a9f5db7e771598a20e092029414a38/sonar.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/mechanical/sonar.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/mechanical/sonar.wav>`
 
     .. data:: TICK_TACK
 
@@ -1076,13 +1072,12 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/3d5ed9d439851dc0d9498198e3e607dd/tick_tack.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/mechanical/tick_tack.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/mechanical/tick_tack.wav>`
 
-
-    .. rubric:: **Animal sounds**
+    .. rubric:: **Sons d'animaux**
 
     .. data:: CAT_PURR
 
@@ -1090,10 +1085,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/4694c85a42f6a788cef83dbcfd98fcc3/cat_purr.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/animals/cat_purr.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/animals/cat_purr.wav>`
 
     .. data:: DOG_BARK_1
 
@@ -1101,10 +1096,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/c7da3202c16b18c6c8739d645616fc0a/dog_bark_1.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/animals/dog_bark_1.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/animals/dog_bark_1.wav>`
 
     .. data:: DOG_BARK_2
 
@@ -1112,10 +1107,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/5041f485aea84ceb556b3651cf28e29f/dog_bark_2.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/animals/dog_bark_2.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/animals/dog_bark_2.wav>`
 
     .. data:: DOG_GROWL
 
@@ -1123,10 +1118,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/a50921fb985b4c3eb754a7acd0a1db3c/dog_growl.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/animals/dog_growl.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/animals/dog_growl.wav>`
 
     .. data:: DOG_SNIFF
 
@@ -1134,10 +1129,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/9aadf239f507defc6ab4b21f294c18e6/dog_sniff.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/animals/dog_sniff.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/animals/dog_sniff.wav>`
 
     .. data:: DOG_WHINE
 
@@ -1145,10 +1140,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/d02000b17efa8a07e5b4c543c9ded1aa/dog_whine.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/animals/dog_whine.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/animals/dog_whine.wav>`
 
     .. data:: ELEPHANT_CALL
 
@@ -1156,10 +1151,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/b1c1e431b258f0f6b0fb5bb046948bf2/elephant_call.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/animals/elephant_call.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/animals/elephant_call.wav>`
 
     .. data:: INSECT_BUZZ_1
 
@@ -1167,10 +1162,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/f2a89bfce31f89c4c0a18f463b283ebd/insect_buzz_1.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/animals/insect_buzz_1.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/animals/insect_buzz_1.wav>`
 
     .. data:: INSECT_BUZZ_2
 
@@ -1178,10 +1173,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/5913cfa39dc1e67e809f76be8fd65f96/insect_buzz_2.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/animals/insect_buzz_2.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/animals/insect_buzz_2.wav>`
 
     .. data:: INSECT_CHIRP
 
@@ -1189,10 +1184,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/3addbcfc1952ae61cd9214cba29de3b8/insect_chirp.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/animals/insect_chirp.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/animals/insect_chirp.wav>`
 
     .. data:: SNAKE_HISS
 
@@ -1200,10 +1195,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/20c3a57752c7bf1d0fd8019e334fd326/snake_hiss.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/animals/snake_hiss.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/animals/snake_hiss.wav>`
 
     .. data:: SNAKE_RATTLE
 
@@ -1211,10 +1206,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/e80fda03977f450bbaf4a2aa6c546a57/snake_rattle.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/animals/snake_rattle.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/animals/snake_rattle.wav>`
 
     .. data:: T_REX_ROAR
 
@@ -1222,14 +1217,12 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/04e91ebc628278165a9c5223a43c42d4/t-rex_roar.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/animals/t-rex_roar.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/animals/t-rex_roar.wav>`
 
-
-
-    .. rubric:: **Numbers**
+    .. rubric:: **Nombres**
 
     .. data:: ZERO
 
@@ -1237,10 +1230,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/4a0dd703ccc0a39fa770d7452aceb75a/zero.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/numbers/zero.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/numbers/zero.wav>`
 
     .. data:: ONE
 
@@ -1248,10 +1241,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/af38ef82b676e52aa3e4e19d8a3b266c/one.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/numbers/one.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/numbers/one.wav>`
 
     .. data:: TWO
 
@@ -1259,10 +1252,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/c7519408a5909c58b42fd5e2550ab3f0/two.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/numbers/two.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/numbers/two.wav>`
 
     .. data:: THREE
 
@@ -1270,10 +1263,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/fcdf73cd26b6b6ae425ecea7b6157a2e/three.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/numbers/three.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/numbers/three.wav>`
 
     .. data:: FOUR
 
@@ -1281,10 +1274,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/f6a1e4321548226d3fa425a06f03f6ec/four.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/numbers/four.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/numbers/four.wav>`
 
     .. data:: FIVE
 
@@ -1292,10 +1285,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/b89b2ae608016677c214d22660fd1810/five.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/numbers/five.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/numbers/five.wav>`
 
     .. data:: SIX
 
@@ -1303,10 +1296,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/cfbb82133b24cb22b9f6be2f72e8410b/six.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/numbers/six.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/numbers/six.wav>`
 
     .. data:: SEVEN
 
@@ -1314,10 +1307,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/b970687710cce4e4a61116e2fe4a165d/seven.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/numbers/seven.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/numbers/seven.wav>`
 
     .. data:: EIGHT
 
@@ -1325,10 +1318,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/e8e13344d41e8e972019eba243905dd4/eight.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/numbers/eight.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/numbers/eight.wav>`
 
     .. data:: NINE
 
@@ -1336,10 +1329,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/44877fe3b7ab43f0dfbdb1cb8473e50c/nine.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/numbers/nine.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/numbers/nine.wav>`
 
     .. data:: TEN
 
@@ -1347,13 +1340,12 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/dfc2e6d07ce2e78043833c70a44658be/ten.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/numbers/ten.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/numbers/ten.wav>`
 
-
-    .. rubric:: **System sounds**
+    .. rubric:: **Sons système**
 
     .. data:: CLICK
 
@@ -1361,10 +1353,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/e2b0ba3e2187949a70d98d8586318268/click.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/system/click.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/system/click.wav>`
 
     .. data:: CONFIRM
 
@@ -1372,10 +1364,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/7b517a25eb0c610d0c7b4b75585ca09d/confirm.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/system/confirm.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/system/confirm.wav>`
 
     .. data:: GENERAL_ALERT
 
@@ -1383,10 +1375,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/989d1cc35edba4a15f7baf7e89daa950/general_alert.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/system/general_alert.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/system/general_alert.wav>`
 
     .. data:: OVERPOWER
 
@@ -1394,10 +1386,10 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/1132af3a5999cb9f63da3af06cf2e5a0/overpower.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/system/overpower.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/system/overpower.wav>`
 
     .. data:: READY
 
@@ -1405,13 +1397,13 @@ Sound files
 
             <audio controls="controls">
                 <source src="_downloads/41b4038c31b97bbed12827b086b14f4a/ready.wav" type="audio/wav">
-                Your browser does not support the <code>audio</code> element.
+                Votre navigateur ne supporte pas l'élément <code>audio</code>.
             </audio>
 
-        :download:`Download <../../media/ev3dev-media/sounds/system/ready.wav>`
+        :download:`Télécharger <../../media/ev3dev-media/sounds/system/ready.wav>`
 
-Fonts
-^^^^^
+Polices
+^^^^^^^
 
 .. autoclass:: pybricks.media.ev3dev.Font
     :no-members:
@@ -1431,45 +1423,46 @@ Fonts
 
     .. automethod:: pybricks.media.ev3dev.Font.text_height
 
-    **Exploring more fonts**
+    **Explorer plus de polices**
 
-    Behind the scenes, Pybricks uses Fontconfig_ for fonts. The Fontconfig
-    command line tools can be used to explore available fonts in more
-    detail. To do so, go to the ev3dev device browser,
-    right click on your EV3 brick, and click *Open SSH Terminal*. Then you can
-    enter one of these commands::
+    En coulisses, Pybricks utilise Fontconfig_ pour les polices. Les outils de
+    ligne de commande Fontconfig peuvent être utilisés pour explorer les
+    polices disponibles plus en détail. Pour ce faire, allez dans le
+    navigateur de périphériques ev3dev, cliquez avec le bouton droit sur votre
+    brique EV3 et cliquez sur *Ouvrir un terminal SSH*. Ensuite, vous pouvez
+    entrer l'une de ces commandes::
 
-        # List available font families.
+        # Lister les familles de polices disponibles.
         fc-list :scalable=false family
-        # Perform lookup similar to Font.DEFAULT
+        # Effectuer une recherche similaire à Font.DEFAULT
         fc-match :scalable=false:dpi=119:family=Lucida:size=12
-        # Perform lookup similar to Font(size=24,lang=zh-cn)
+        # Effectuer une recherche similaire à Font(size=24,lang=zh-cn)
         fc-match :scalable=false:dpi=119:size=24:lang=zh-cn
 
-    Pybricks only allows the use of bitmap fonts (``scalable=false``)
-    and the screen on the EV3 has 119 pixels per inch (``dpi=119``).
+    Pybricks n'autorise que l'utilisation de polices bitmap (``scalable=false``)
+    et l'écran de l'EV3 a 119 pixels par pouce (``dpi=119``).
 
 .. _FontConfig: https://www.freedesktop.org/wiki/Software/fontconfig/
 
 
-Image manipulation
-^^^^^^^^^^^^^^^^^^
+Manipulation d'images
+^^^^^^^^^^^^^^^^^^^^^
 
-Instead of drawing directly on the EV3 screen, you can make and interact
-with image files using the ``Image`` class given below.
+Au lieu de dessiner directement sur l'écran EV3, vous pouvez créer et
+interagir avec des fichiers image en utilisant la classe ``Image`` ci-dessous.
 
-.. |this image| replace:: this image
+.. |this image| replace:: cette image
 
 .. autoclass:: pybricks.media.ev3dev.Image
     :no-members:
 
     .. automethod:: pybricks.media.ev3dev.Image.empty
 
-    .. rubric:: Drawing text
+    .. rubric:: Dessiner du texte
 
-    There are two ways to draw text on images. :meth:`draw_text` lets text be
-    placed precisely on the image or :meth:`print` can be used to automatically
-    print text on a new line.
+    Il existe deux façons de dessiner du texte sur des images. :meth:`draw_text`
+    permet de placer du texte précisément sur l'image ou :meth:`print` peut être
+    utilisé pour imprimer automatiquement du texte sur une nouvelle ligne.
 
     .. automethod:: pybricks.media.ev3dev.Image.draw_text
 
@@ -1478,18 +1471,18 @@ with image files using the ``Image`` class given below.
     .. automethod:: pybricks.media.ev3dev.Image.set_font
 
 
-    .. rubric:: Drawing images
+    .. rubric:: Dessiner des images
 
-    A copy of another image can be drawn on an image. Also consider using
-    sub-images to copy part of an image.
+    Une copie d'une autre image peut être dessinée sur une image. Pensez
+    également à utiliser des sous-images pour copier une partie d'une image.
 
     .. automethod:: pybricks.media.ev3dev.Image.draw_image
 
 
-    .. rubric:: Drawing shapes
+    .. rubric:: Dessiner des formes
 
-    These are the methods to draw basic shapes, including points, lines,
-    rectangles and circles.
+    Voici les méthodes pour dessiner des formes de base, y compris des points,
+    des lignes, des rectangles et des cercles.
 
     .. automethod:: pybricks.media.ev3dev.Image.draw_pixel
 
@@ -1500,180 +1493,180 @@ with image files using the ``Image`` class given below.
     .. automethod:: pybricks.media.ev3dev.Image.draw_circle
 
 
-    .. rubric:: Image properties
+    .. rubric:: Propriétés de l'image
 
     .. autoattribute:: pybricks.media.ev3dev.Image.width
 
     .. autoattribute:: pybricks.media.ev3dev.Image.height
 
 
-    .. rubric:: Replacing the entire image
+    .. rubric:: Remplacer l'image entière
 
     .. automethod:: pybricks.media.ev3dev.Image.clear
 
     .. automethod:: pybricks.media.ev3dev.Image.load_image
 
 
-    .. rubric:: Saving the image
+    .. rubric:: Sauvegarder l'image
 
     .. automethod:: pybricks.media.ev3dev.Image.save
 
-.. rubric:: Available languages for fonts
+.. rubric:: Langues disponibles pour les polices
 
 .. [#font_lang]
 
-    Note: Languages depend on installed fonts. Additional language
-    codes are possible and some listed language codes may not have
-    a satisfactory font.
+    Remarque : Les langues dépendent des polices installées. Des codes de
+    langue supplémentaires sont possibles et certains codes de langue
+    répertoriés peuvent ne pas avoir une police satisfaisante.
 
     - ``'aa'``: Afar
     - ``'af'``: Afrikaans
-    - ``'an'``: Aragonese
+    - ``'an'``: Aragonais
     - ``'av'``: Avaric
     - ``'ay'``: Aymara
-    - ``'az-az'``: Azerbaijani
-    - ``'be'``: Belarusian
-    - ``'bg'``: Bulgarian
+    - ``'az-az'``: Azerbaïdjanais
+    - ``'be'``: Biélorusse
+    - ``'bg'``: Bulgare
     - ``'bi'``: Bislama
     - ``'bm'``: Bambara
     - ``'br'``: Breton
-    - ``'bs'``: Bosnian
-    - ``'bua'``: Buriat
+    - ``'bs'``: Bosniaque
+    - ``'bua'``: Bouriate
     - ``'ca'``: Catalan
-    - ``'ce'``: Chechen
+    - ``'ce'``: Tchétchène
     - ``'ch'``: Chamorro
-    - ``'co'``: Corsican
-    - ``'crh'``: Crimean
-    - ``'cs'``: Czech
-    - ``'csb'``: Kashubian
-    - ``'cy'``: Welsh
-    - ``'da'``: Danish
-    - ``'de'``: German
-    - ``'ee'``: Ewe
-    - ``'el'``: Greek
-    - ``'en'``: English
-    - ``'eo'``: Esperanto
-    - ``'es'``: Spanish
-    - ``'et'``: Estonian
+    - ``'co'``: Corse
+    - ``'crh'``: Criméen
+    - ``'cs'``: Tchèque
+    - ``'csb'``: Cachoube
+    - ``'cy'``: Gallois
+    - ``'da'``: Danois
+    - ``'de'``: Allemand
+    - ``'ee'``: Éwé
+    - ``'el'``: Grec
+    - ``'en'``: Anglais
+    - ``'eo'``: Espéranto
+    - ``'es'``: Espagnol
+    - ``'et'``: Estonien
     - ``'eu'``: Basque
-    - ``'ff'``: Fulah
-    - ``'fi'``: Finnish
-    - ``'fil'``: Filipino
-    - ``'fj'``: Fijian
-    - ``'fo'``: Faroese
-    - ``'fr'``: French
-    - ``'fur'``: Friulian
-    - ``'fy'``: Western Frisian
-    - ``'ga'``: Irish
-    - ``'gd'``: Gaelic
-    - ``'gl'``: Galician
-    - ``'gv'``: Manx
-    - ``'ha'``: Hausa
-    - ``'haw'``: Hawaiian
-    - ``'he'``: Hebrew
+    - ``'ff'``: Peul
+    - ``'fi'``: Finnois
+    - ``'fil'``: Philippin
+    - ``'fj'``: Fidjien
+    - ``'fo'``: Féroïen
+    - ``'fr'``: Français
+    - ``'fur'``: Frioulan
+    - ``'fy'``: Frison occidental
+    - ``'ga'``: Irlandais
+    - ``'gd'``: Gaélique
+    - ``'gl'``: Galicien
+    - ``'gv'``: Mannois
+    - ``'ha'``: Haoussa
+    - ``'haw'``: Hawaïen
+    - ``'he'``: Hébreu
     - ``'ho'``: Hiri Motu
-    - ``'hr'``: Croatian
-    - ``'hsb'``: Upper Sorbian
-    - ``'ht'``: Haitian
-    - ``'hu'``: Hungarian
+    - ``'hr'``: Croate
+    - ``'hsb'``: Haut-sorabe
+    - ``'ht'``: Haïtien
+    - ``'hu'``: Hongrois
     - ``'ia'``: Interlingua
-    - ``'id'``: Indonesian
+    - ``'id'``: Indonésien
     - ``'ie'``: Interlingue
     - ``'ik'``: Inupiaq
     - ``'io'``: Ido
-    - ``'is'``: Icelandic
-    - ``'it'``: Italian
-    - ``'ja'``: Japanese
-    - ``'jv'``: Javanese
+    - ``'is'``: Islandais
+    - ``'it'``: Italien
+    - ``'ja'``: Japonais
+    - ``'jv'``: Javanais
     - ``'ki'``: Kikuyu
     - ``'kj'``: Kuanyama
     - ``'kl'``: Kalaallisut
-    - ``'ko'``: Korean
-    - ``'ku-tr'``: Kurdish
-    - ``'kum'``: Kumyk
-    - ``'kw'``: Cornish
+    - ``'ko'``: Coréen
+    - ``'ku-tr'``: Kurde
+    - ``'kum'``: Koumyk
+    - ``'kw'``: Cornique
     - ``'kwm'``: Kwambi
     - ``'la'``: Latin
-    - ``'lb'``: Luxembourgish
-    - ``'lez'``: Lezghian
+    - ``'lb'``: Luxembourgeois
+    - ``'lez'``: Lezghien
     - ``'lg'``: Ganda
-    - ``'li'``: Limburgan
+    - ``'li'``: Limbourgeois
     - ``'ln'``: Lingala
-    - ``'lt'``: Lithuanian
-    - ``'lv'``: Latvian
-    - ``'mg'``: Malagasy
-    - ``'mh'``: Marshallese
+    - ``'lt'``: Lituanien
+    - ``'lv'``: Letton
+    - ``'mg'``: Malgache
+    - ``'mh'``: Marshallais
     - ``'mi'``: Maori
-    - ``'mk'``: Macedonian
-    - ``'mn-mn'``: Mongolian
-    - ``'mo'``: Moldavian
-    - ``'ms'``: Malay
-    - ``'mt'``: Maltese
-    - ``'na'``: Nauru
-    - ``'nb'``: Norwegian Bokmål
-    - ``'nds'``: Low German
+    - ``'mk'``: Macédonien
+    - ``'mn-mn'``: Mongol
+    - ``'mo'``: Moldave
+    - ``'ms'``: Malais
+    - ``'mt'``: Maltais
+    - ``'na'``: Nauruan
+    - ``'nb'``: Norvégien Bokmål
+    - ``'nds'``: Bas allemand
     - ``'ng'``: Ndonga
-    - ``'nl'``: Dutch
-    - ``'nn'``: Norwegian Nynorsk
-    - ``'no'``: Norwegian
-    - ``'nr'``: South Ndebele
-    - ``'nso'``: Northern Sotho
+    - ``'nl'``: Néerlandais
+    - ``'nn'``: Norvégien Nynorsk
+    - ``'no'``: Norvégien
+    - ``'nr'``: Ndebele du Sud
+    - ``'nso'``: Sotho du Nord
     - ``'nv'``: Navajo
     - ``'ny'``: Chichewa
     - ``'oc'``: Occitan
     - ``'om'``: Oromo
-    - ``'os'``: Ossetian
-    - ``'pap-an'``: Papiamento, Netherlands Antilles
+    - ``'os'``: Ossète
+    - ``'pap-an'``: Papiamento, Antilles néerlandaises
     - ``'pap-aw'``: Papiamento, Aruba
-    - ``'pl'``: Polish
-    - ``'pt'``: Portuguese
+    - ``'pl'``: Polonais
+    - ``'pt'``: Portugais
     - ``'qu'``: Quechua
-    - ``'quz'``: Cusco Quechua
-    - ``'rm'``: Romansh
+    - ``'quz'``: Quechua de Cusco
+    - ``'rm'``: Romanche
     - ``'rn'``: Rundi
-    - ``'ro'``: Romanian
-    - ``'ru'``: Russian
+    - ``'ro'``: Roumain
+    - ``'ru'``: Russe
     - ``'rw'``: Kinyarwanda
-    - ``'sc'``: Sardinian
-    - ``'sco'``: Scots
-    - ``'se'``: Northern Sami
-    - ``'sel'``: Selkup
+    - ``'sc'``: Sarde
+    - ``'sco'``: Écossais
+    - ``'se'``: Same du Nord
+    - ``'sel'``: Selkoupe
     - ``'sg'``: Sango
-    - ``'sk'``: Slovak
-    - ``'sl'``: Slovenian
+    - ``'sk'``: Slovaque
+    - ``'sl'``: Slovène
     - ``'sm'``: Samoan
-    - ``'sma'``: Southern Sami
-    - ``'smj'``: Lule Sami
-    - ``'smn'``: Inari Sami
-    - ``'sms'``: Skolt Sami
+    - ``'sma'``: Same du Sud
+    - ``'smj'``: Same de Lule
+    - ``'smn'``: Same d'Inari
+    - ``'sms'``: Same skolt
     - ``'sn'``: Shona
     - ``'so'``: Somali
-    - ``'sq'``: Albanian
-    - ``'sr'``: Serbian
+    - ``'sq'``: Albanais
+    - ``'sr'``: Serbe
     - ``'ss'``: Swati
-    - ``'st'``: Southern Sotho
-    - ``'su'``: Sundanese
-    - ``'sv'``: Swedish
+    - ``'st'``: Sotho du Sud
+    - ``'su'``: Soundanais
+    - ``'sv'``: Suédois
     - ``'sw'``: Swahili
-    - ``'tk'``: Turkmen
+    - ``'tk'``: Turkmène
     - ``'tl'``: Tagalog
     - ``'tn'``: Tswana
     - ``'to'``: Tonga
-    - ``'tr'``: Turkish
+    - ``'tr'``: Turc
     - ``'ts'``: Tsonga
-    - ``'ty'``: Tahitian
-    - ``'uk'``: Ukrainian
-    - ``'uz'``: Uzbek
+    - ``'ty'``: Tahitien
+    - ``'uk'``: Ukrainien
+    - ``'uz'``: Ouzbek
     - ``'vo'``: Volapük
-    - ``'vot'``: Votic
-    - ``'wa'``: Walloon
-    - ``'wen'``: Sorbian
+    - ``'vot'``: Vote
+    - ``'wa'``: Wallon
+    - ``'wen'``: Sorabe
     - ``'wo'``: Wolof
     - ``'xh'``: Xhosa
-    - ``'yap'``: Yapese
+    - ``'yap'``: Yapois
     - ``'yi'``: Yiddish
     - ``'za'``: Zhuang
-    - ``'zh-cn'``: Chinese, China
-    - ``'zh-sg'``: Chinese, Singapore
-    - ``'zh-tw'``: Chinese, Taiwan
-    - ``'zu'``: Zulu
+    - ``'zh-cn'``: Chinois, Chine
+    - ``'zh-sg'``: Chinois, Singapour
+    - ``'zh-tw'``: Chinois, Taïwan
+    - ``'zu'``: Zoulou

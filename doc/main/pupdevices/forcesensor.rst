@@ -1,6 +1,6 @@
 .. pybricks-requirements::
 
-Force Sensor
+Capteur de force
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: ../../main/cad/output/pupdevice-force.png
@@ -23,17 +23,17 @@ Force Sensor
 
     .. automethod:: pybricks.pupdevices.ForceSensor.touched
 
-Examples
--------------------
+Exemples
+--------
 
-Measuring force and movement
-****************************
+Mesurer la force et le mouvement
+********************************
 
 .. literalinclude::
     ../../../examples/pup/sensor_force/basics.py
 
-Measuring peak force
-********************
+Mesurer la force maximale
+*************************
 
 .. literalinclude::
     ../../../examples/pup/sensor_force/peak.py

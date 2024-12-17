@@ -1,20 +1,21 @@
-:mod:`messaging <pybricks.messaging>` -- Messaging
-==================================================
+:mod:`messaging <pybricks.messaging>` -- Messagerie
+===================================================
 
 .. module:: pybricks.messaging
 
 .. currentmodule:: pybricks.messaging
 
-An EV3 Brick can send information to another EV3 Brick using Bluetooth. This
-page shows you how to connect multiple bricks and how to write scripts to send
-messages between them.
+Un EV3 Brick peut envoyer des informations à un autre EV3 Brick en utilisant
+Bluetooth. Cette page vous montre comment connecter plusieurs briques et
+comment écrire des scripts pour envoyer des messages entre elles.
 
-Pairing two EV3 Bricks
-----------------------
+Appairage de deux EV3 Bricks
+----------------------------
 
-Before two EV3 bricks can exchange messages, they must be *paired*.
-You'll need to do this only the first time. First, activate bluetooth on all
-EV3 bricks as shown in :numref:`fig_bluetooth_on`.
+Avant que deux EV3 Bricks puissent échanger des messages, elles doivent être
+*appairées*. Vous n'aurez besoin de le faire que la première fois. Tout
+d'abord, activez le Bluetooth sur toutes les EV3 Bricks comme indiqué dans
+:numref:`fig_bluetooth_on`.
 
 .. _fig_bluetooth_on:
 
@@ -23,13 +24,14 @@ EV3 bricks as shown in :numref:`fig_bluetooth_on`.
    :alt: bluetooth_on
    :align: center
 
-   Turn on Bluetooth and make Bluetooth visible.
+   Activez le Bluetooth et rendez le Bluetooth visible.
 
-Now you can make one EV3 Brick search for the other and pair with it, as shown
-in :numref:`fig_bluetooth_pair`.
+Maintenant, vous pouvez faire en sorte qu'une EV3 Brick recherche l'autre et
+s'appaire avec elle, comme indiqué dans :numref:`fig_bluetooth_pair`.
 
-Once they are paired, do *not* click *connect* in the menu that appears.
-The connection will be made when you run your programs, as described below.
+Une fois qu'elles sont appairées, ne cliquez *pas* sur *connecter* dans le
+menu qui apparaît. La connexion sera établie lorsque vous exécuterez vos
+programmes, comme décrit ci-dessous.
 
 .. _fig_bluetooth_pair:
 
@@ -38,22 +40,23 @@ The connection will be made when you run your programs, as described below.
    :alt: bluetooth_pair
    :align: center
 
-   Pairing one EV3 Brick to another EV3 Brick.
+   Appairage d'une EV3 Brick à une autre EV3 Brick.
 
-When you scan for Bluetooth devices, you'll see a list of device names. By
-default, all EV3 Bricks are named *ev3dev*. Click `here`_ to
-learn how to change that name. This makes it easy to tell them apart.
+Lorsque vous scannez les appareils Bluetooth, vous verrez une liste de noms
+d'appareils. Par défaut, toutes les EV3 Bricks sont nommées *ev3dev*. Cliquez
+`here`_ pour apprendre comment changer ce nom. Cela facilite leur distinction.
 
-Repeat the steps in :numref:`fig_bluetooth_pair` if you want to pair more than
-two EV3 Bricks.
+Répétez les étapes dans :numref:`fig_bluetooth_pair` si vous souhaitez
+appairer plus de deux EV3 Bricks.
 
-Server and Client
+Serveur et Client
 -----------------
 
-A wireless network consists of EV3 Bricks acting as servers or clients. A
-example with one server and one client is shown in :numref:`fig_messaging`.
-Messages can be sent in both ways: the server can send a message to the client,
-and the client can send a message to the server.
+Un réseau sans fil se compose de EV3 Bricks agissant comme serveurs ou
+clients. Un exemple avec un serveur et un client est montré dans
+:numref:`fig_messaging`. Les messages peuvent être envoyés dans les deux sens
+: le serveur peut envoyer un message au client, et le client peut envoyer un
+message au serveur.
 
 .. _fig_messaging:
 
@@ -62,36 +65,37 @@ and the client can send a message to the server.
    :alt: messaging
    :align: center
 
-   An example network with one server and one clients.
+   Un exemple de réseau avec un serveur et un client.
 
-The only difference between the client and the server is which one initiates
-the connection at the beginning of the program:
+La seule différence entre le client et le serveur est lequel initie la
+connexion au début du programme :
 
-    - The **server** must always be started first. It uses the
-      ``BluetoothMailboxServer`` class. Then it waits for clients using
-      the ``wait_for_connection`` method.
-    - The **client** uses the ``BluetoothMailboxClient`` class. It
-      connects to the server using the ``connect`` method.
-    - After that, sending and receiving messages is done in the same way on
-      both EV3 Bricks.
+    - Le **serveur** doit toujours être démarré en premier. Il utilise la
+      classe ``BluetoothMailboxServer``. Ensuite, il attend les clients en
+      utilisant la méthode ``wait_for_connection``.
+    - Le **client** utilise la classe ``BluetoothMailboxClient``. Il se
+      connecte au serveur en utilisant la méthode ``connect``.
+    - Après cela, l'envoi et la réception de messages se font de la même
+      manière sur les deux EV3 Bricks.
 
 .. autoclass:: BluetoothMailboxServer
 
 .. autoclass:: BluetoothMailboxClient
 
+Boîtes aux lettres
+------------------
 
-Mailboxes
----------
+Les boîtes aux lettres sont utilisées pour envoyer des données vers et depuis
+d'autres EV3 Bricks.
 
-Mailboxes are used to send data to and from other EV3 Bricks.
+Une boîte aux lettres a un ``nom``, similaire au "sujet" d'un email. Si deux
+EV3 Bricks ont une boîte aux lettres avec le même nom, elles peuvent s'envoyer
+des messages. Chaque EV3 Brick peut lire sa propre boîte aux lettres et
+envoyer des messages à la boîte aux lettres de l'autre EV3 Brick.
 
-A Mailbox has a ``name``, similar to the "subject" of an email. If two EV3
-Bricks have a Mailbox with the same name, they can send messages between them.
-Each EV3 Brick can read its own Mailbox, and send messages to the Mailbox on
-the other EV3 Brick.
-
-Depending on the type of messages you would like to exchange (bytes, booleans,
-numbers, or text), you can choose one of the Mailboxes below.
+En fonction du type de messages que vous souhaitez échanger (octets, booléens,
+nombres ou texte), vous pouvez choisir l'une des boîtes aux lettres
+ci-dessous.
 
 .. autoclass:: Mailbox
 
@@ -104,27 +108,27 @@ numbers, or text), you can choose one of the Mailboxes below.
 .. autoclass:: TextMailbox
     :no-members:
 
-Examples
------------------
+Exemples
+--------
 
-**EV3 Bluetooth server**
+**Serveur Bluetooth EV3**
 
-This is the full version of the excerpt shown in :numref:`fig_messaging`.
+Voici la version complète de l'extrait montré dans :numref:`fig_messaging`.
 
 .. literalinclude:: ../../examples/ev3/bluetooth_server/server.py
 
-**EV3 Bluetooth client**
+**Client Bluetooth EV3**
 
-This is the full version of the excerpt shown in :numref:`fig_messaging`.
+Voici la version complète de l'extrait montré dans :numref:`fig_messaging`.
 
 .. literalinclude:: ../../examples/ev3/bluetooth_client/client.py
 
-Making bigger networks
-----------------------
+Créer des réseaux plus grands
+-----------------------------
 
-The classes in this module are not limited to just two EV3 Bricks. for
-example, you can add more clients to your network. An example with pseudo-code
-is shown in :numref:`fig_messaging_network`.
+Les classes de ce module ne sont pas limitées à seulement deux EV3 Bricks. Par
+exemple, vous pouvez ajouter plus de clients à votre réseau. Un exemple avec
+du pseudo-code est montré dans :numref:`fig_messaging_network`.
 
 .. _fig_messaging_network:
 
@@ -133,6 +137,6 @@ is shown in :numref:`fig_messaging_network`.
    :alt: messaging
    :align: center
 
-   An example network with one server and two clients.
+   Un exemple de réseau avec un serveur et deux clients.
 
 .. _here: https://pybricks.com/install/mindstorms-ev3/beyond-micropython

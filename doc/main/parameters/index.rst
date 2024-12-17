@@ -1,7 +1,7 @@
 .. pybricks-requirements::
 
-:mod:`parameters <pybricks.parameters>` -- Parameters and constants
-===================================================================
+:mod:`parameters <pybricks.parameters>` -- Paramètres et constantes
+===========================================================================================================
 
 .. automodule:: pybricks.parameters
     :no-members:
