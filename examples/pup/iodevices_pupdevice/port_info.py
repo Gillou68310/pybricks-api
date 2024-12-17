@@ -2,7 +2,7 @@ from pybricks.iodevices import PUPDevice
 from pybricks.parameters import Port
 from uerrno import ENODEV
 
-# Dictionary of device identifiers along with their name.
+# Dictionnaire des identifiants de dispositifs avec leur nom.
 device_names = {
     # pybricks.pupdevices.DCMotor
     1: "Wedo 2.0 Medium Motor",
@@ -34,41 +34,41 @@ device_names = {
     64: "SPIKE 3x3 Color Light Matrix",
 }
 
-# Make a list of known ports.
+# Faire une liste des ports connus.
 ports = [Port.A, Port.B]
 
-# On hubs that support it, add more ports.
+# Sur les hubs qui le supportent, ajouter plus de ports.
 try:
     ports.append(Port.C)
     ports.append(Port.D)
 except AttributeError:
     pass
 
-# On hubs that support it, add more ports.
+# Sur les hubs qui le supportent, ajouter plus de ports.
 try:
     ports.append(Port.E)
     ports.append(Port.F)
 except AttributeError:
     pass
 
-# Go through all available ports.
+# Parcourir tous les ports disponibles.
 for port in ports:
 
-    # Try to get the device, if it is attached.
+    # Essayer d'obtenir le dispositif, s'il est connecté.
     try:
         device = PUPDevice(port)
     except OSError as ex:
         if ex.args[0] == ENODEV:
-            # No device found on this port.
+            # Aucun dispositif trouvé sur ce port.
             print(port, ": ---")
             continue
         else:
             raise
 
-    # Get the device id
+    # Obtenir l'identifiant du dispositif.
     id = device.info()["id"]
 
-    # Look up the name.
+    # Rechercher le nom.
     try:
         print(port, ":", device_names[id])
     except KeyError:

@@ -1,16 +1,16 @@
 from pybricks.pupdevices import Remote
 
 try:
-    # Search for a remote for 5 seconds.
+    # Chercher une télécommande pendant 5 secondes.
     my_remote = Remote(timeout=5000)
 
     print("Connected!")
 
-    # Here you can write code that uses the remote.
+    # Ici, vous pouvez écrire du code qui utilise la télécommande.
 
 except OSError:
 
     print("Could not find the remote.")
 
-    # Here you can make your robot do something
-    # without the remote.
+    # Ici, vous pouvez faire faire quelque chose à votre robot
+    # sans la télécommande.

@@ -2,20 +2,20 @@ from pybricks.pupdevices import InfraredSensor
 from pybricks.parameters import Port
 from pybricks.tools import wait
 
-# Initialize the sensor.
+# Initialiser le capteur.
 ir = InfraredSensor(Port.A)
 
 while True:
-    # Read all the information we can get from this sensor.
+    # Lire toutes les informations que nous pouvons obtenir de ce capteur.
     dist = ir.distance()
     count = ir.count()
     ref = ir.reflection()
 
-    # Print the values
+    # Imprimer les valeurs
     print("Distance:", dist, "Count:", count, "Reflection:", ref)
 
-    # Move the sensor around and move your hands in front
-    # of it to see what happens to the values.
+    # Déplacez le capteur et bougez vos mains devant
+    # pour voir ce qui arrive aux valeurs.
 
-    # Wait some time so we can read what is printed.
+    # Attendre un peu pour pouvoir lire ce qui est imprimé.
     wait(200)

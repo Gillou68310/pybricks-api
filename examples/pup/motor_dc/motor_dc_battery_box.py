@@ -2,12 +2,12 @@ from pybricks.pupdevices import DCMotor
 from pybricks.parameters import Port
 from pybricks.tools import wait
 
-# Initialize the motor.
+# Initialiser le moteur.
 train_motor = DCMotor(Port.A)
 
-# Choose the "power" level for your train. Negative means reverse.
+# Choisir le niveau de "puissance" pour votre train. Négatif signifie inverse.
 train_motor.dc(50)
 
-# Keep doing nothing. The train just keeps going.
+# Continuer à ne rien faire. Le train continue simplement.
 while True:
     wait(1000)

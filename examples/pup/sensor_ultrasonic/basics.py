@@ -2,20 +2,20 @@ from pybricks.pupdevices import UltrasonicSensor
 from pybricks.parameters import Port
 from pybricks.tools import wait
 
-# Initialize the sensor.
+# Initialiser le capteur.
 eyes = UltrasonicSensor(Port.A)
 
 while True:
-    # Print the measured distance.
+    # Imprimer la distance mesurée.
     print(eyes.distance())
 
-    # If an object is detected closer than 500mm:
+    # Si un objet est détecté à moins de 500mm :
     if eyes.distance() < 500:
-        # Turn the lights on.
+        # Allumer les lumières.
         eyes.lights.on(100)
     else:
-        # Turn the lights off.
+        # Éteindre les lumières.
         eyes.lights.off()
 
-    # Wait some time so we can read what is printed.
+    # Attendre un certain temps pour pouvoir lire ce qui est imprimé.
     wait(100)

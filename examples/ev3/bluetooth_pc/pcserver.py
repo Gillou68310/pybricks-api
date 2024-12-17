@@ -1,28 +1,28 @@
 #!/usr/bin/env python3
 from pybricks.messaging import BluetoothMailboxServer, TextMailbox
 
-# This demo makes your PC talk to an EV3 over Bluetooth.
+# Cette démo permet à votre PC de communiquer avec un EV3 via Bluetooth.
 #
-# This is identical to the EV3 server example in ../bluetooth_server
+# Ceci est identique à l'exemple de serveur EV3 dans ../bluetooth_server
 #
-# The only difference is that it runs in Python3 on your computer, thanks to
-# the Python3 implementation of the messaging module that is included here.
-# As far as the EV3 is concerned, it thinks it just talks to an EV3 client.
+# La seule différence est qu'il s'exécute en Python3 sur votre ordinateur, grâce à
+# l'implémentation Python3 du module de messagerie qui est incluse ici.
+# En ce qui concerne l'EV3, il pense qu'il parle simplement à un client EV3.
 #
-# So, the EV3 client example needs no further modifications. The connection
-# procedure is also the same as documented in the messaging module docs:
+# Ainsi, l'exemple de client EV3 ne nécessite aucune modification supplémentaire. La procédure de connexion
+# est également la même que celle documentée dans les docs du module de messagerie :
 # https://docs.pybricks.com/en/latest/messaging.html
 
 server = BluetoothMailboxServer()
 mbox = TextMailbox("greeting", server)
 
-# The server must be started before the client!
+# Le serveur doit être démarré avant le client !
 print("waiting for connection...")
 server.wait_for_connection()
 print("connected!")
 
-# In this program, the server waits for the client to send the first message
-# and then sends a reply.
+# Dans ce programme, le serveur attend que le client envoie le premier message
+# puis envoie une réponse.
 mbox.wait()
 print(mbox.read())
 mbox.send("hello to you!")

@@ -1,12 +1,12 @@
 from pybricks.pupdevices import Remote
 
-# Connect to any remote.
+# Se connecter à n'importe quelle télécommande.
 my_remote = Remote()
 
-# Print the current name of the remote.
+# Imprimer le nom actuel de la télécommande.
 print(my_remote.name())
 
-# Choose a new name.
+# Choisir un nouveau nom.
 my_remote.name("truck2")
 
 print("Done!")

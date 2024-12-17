@@ -2,14 +2,14 @@ from pybricks.hubs import PrimeHub
 from pybricks.tools import wait
 from pybricks.parameters import Side
 
-# Initialize the hub.
+# Initialiser le hub.
 hub = PrimeHub()
 
-# Rotate the display. Now right is up.
+# Faire pivoter l'affichage. Maintenant, la droite est en haut.
 hub.display.orientation(up=Side.RIGHT)
 
-# Display a number. This will be shown sideways.
+# Afficher un nombre. Cela sera affiché de côté.
 hub.display.number(23)
 
-# Wait so we can see what is displayed.
+# Attendre pour voir ce qui est affiché.
 wait(10000)

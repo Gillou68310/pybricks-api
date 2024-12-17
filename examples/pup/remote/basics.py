@@ -2,19 +2,19 @@ from pybricks.pupdevices import Remote
 from pybricks.parameters import Button
 from pybricks.tools import wait
 
-# Connect to the remote.
+# Se connecter à la télécommande.
 my_remote = Remote()
 
 while True:
-    # Check which buttons are pressed.
+    # Vérifier quels boutons sont pressés.
     pressed = my_remote.buttons.pressed()
 
-    # Show the result.
+    # Afficher le résultat.
     print("pressed:", pressed)
 
-    # Check a specific button.
+    # Vérifier un bouton spécifique.
     if Button.CENTER in pressed:
         print("You pressed the center button!")
 
-    # Wait so we can see the result.
+    # Attendre pour voir le résultat.
     wait(100)

@@ -1,14 +1,14 @@
 from pybricks.pupdevices import Motor
 from pybricks.parameters import Port
 
-# Initialize motors on port A and B.
+# Initialiser les moteurs sur les ports A et B.
 track_motor = Motor(Port.A)
 gripper_motor = Motor(Port.B)
 
-# Make the track motor start moving,
-# but don't wait for it to finish.
+# Faire démarrer le moteur de la chenille,
+# mais ne pas attendre qu'il ait fini.
 track_motor.run_angle(500, 360, wait=False)
 
-# Now make the gripper motor rotate. This
-# means they move at the same time.
+# Maintenant, faire tourner le moteur de la pince. Cela
+# signifie qu'ils bougent en même temps.
 gripper_motor.run_angle(200, 720)

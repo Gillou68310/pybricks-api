@@ -4,22 +4,22 @@ from pybricks.pupdevices import Motor
 from pybricks.parameters import Port
 from pybricks.tools import wait
 
-# Initialize the hub.
+# Initialiser le hub.
 hub = ThisHub(broadcast_channel=1)
 
-# Initialize the motors.
+# Initialiser les moteurs.
 left_motor = Motor(Port.A)
 right_motor = Motor(Port.B)
 
 while True:
-    # Read the motor angles to be sent to the other hub.
+    # Lire les angles des moteurs à envoyer à l'autre hub.
     left_angle = left_motor.angle()
     right_angle = right_motor.angle()
 
-    # Set the broadcast data and start broadcasting if not already doing so.
+    # Définir les données de diffusion et commencer à diffuser si ce n'est pas déjà fait.
     data = (left_angle, right_angle)
     hub.ble.broadcast(data)
 
-    # Broadcasts are only sent every 100 milliseconds, so there is no reason
-    # to call the broadcast() method more often than that.
+    # Les diffusions ne sont envoyées que toutes les 100 millisecondes, il n'y a donc
+    # aucune raison d'appeler la méthode broadcast() plus souvent que cela.
     wait(100)

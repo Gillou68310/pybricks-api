@@ -2,14 +2,14 @@ from pybricks.pupdevices import ColorSensor
 from pybricks.parameters import Port
 from pybricks.tools import wait
 
-# Initialize the sensor.
+# Initialiser le capteur.
 sensor = ColorSensor(Port.A)
 
-# Repeat forever.
+# Répéter indéfiniment.
 while True:
 
-    # Turn on one light at a time, at half the brightness.
-    # Do this for all 3 lights and repeat that 5 times.
+    # Allumer une lumière à la fois, à moitié de la luminosité.
+    # Faites cela pour les 3 lumières et répétez cela 5 fois.
     for i in range(5):
         sensor.lights.on([50, 0, 0])
         wait(100)
@@ -18,10 +18,10 @@ while True:
         sensor.lights.on([0, 0, 50])
         wait(100)
 
-    # Turn all lights on at maximum brightness.
+    # Allumer toutes les lumières à pleine luminosité.
     sensor.lights.on(100)
     wait(500)
 
-    # Turn all lights off.
+    # Éteindre toutes les lumières.
     sensor.lights.off()
     wait(500)

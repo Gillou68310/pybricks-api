@@ -1,10 +1,10 @@
 from pybricks.hubs import PrimeHub
 from pybricks.tools import wait, Matrix
 
-# Initialize the hub.
+# Initialiser le hub.
 hub = PrimeHub()
 
-# Make a square that is bright on the outside and faint in the middle.
+# Faire un carré lumineux à l'extérieur et faible au milieu.
 SQUARE = Matrix(
     [
         [100, 100, 100, 100, 100],
@@ -15,15 +15,15 @@ SQUARE = Matrix(
     ]
 )
 
-# Display the square.
+# Afficher le carré.
 hub.display.icon(SQUARE)
 wait(3000)
 
-# Make an image using a Python list comprehension. In this image, the
-# brightness of each pixel is the sum of the row and column index. So the
-# light is faint in the top left and bright in the bottom right.
+# Créer une image en utilisant une compréhension de liste Python. Dans cette image,
+# la luminosité de chaque pixel est la somme de l'index de la ligne et de la colonne.
+# Ainsi, la lumière est faible en haut à gauche et brillante en bas à droite.
 GRADIENT = Matrix([[(r + c) for c in range(5)] for r in range(5)]) * 12.5
 
-# Display the generated gradient.
+# Afficher le gradient généré.
 hub.display.icon(GRADIENT)
 wait(3000)

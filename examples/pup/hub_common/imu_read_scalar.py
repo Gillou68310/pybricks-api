@@ -3,19 +3,19 @@ from pybricks.hubs import ThisHub
 from pybricks.tools import wait
 from pybricks.parameters import Axis
 
-# Initialize the hub.
+# Initialiser le hub.
 hub = ThisHub()
 
-# Get the acceleration or angular_velocity along a single axis.
-# If you need only one value, this is more memory efficient.
+# Obtenir l'accélération ou la vitesse angulaire le long d'un seul axe.
+# Si vous avez besoin d'une seule valeur, c'est plus efficace en mémoire.
 while True:
 
-    # Read the forward acceleration.
+    # Lire l'accélération vers l'avant.
     forward_acceleration = hub.imu.acceleration(Axis.X)
 
-    # Read the yaw rate.
+    # Lire le taux de lacet.
     yaw_rate = hub.imu.angular_velocity(Axis.Z)
 
-    # Print the yaw rate.
+    # Imprimer le taux de lacet.
     print(yaw_rate)
     wait(100)

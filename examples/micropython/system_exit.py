@@ -4,13 +4,13 @@ print("Started!")
 
 try:
 
-    # Run your script here as you normally would. In this
-    # example we just wait forever and do nothing.
+    # Exécutez votre script ici comme vous le feriez normalement. Dans cet
+    # exemple, nous attendons simplement indéfiniment et ne faisons rien.
     while True:
         wait(1000)
 
 except SystemExit:
-    # This code will run when you press the stop button.
-    # This can be useful to "clean up", such as to move
-    # the motors back to their starting positions.
+    # Ce code s'exécutera lorsque vous appuyez sur le bouton d'arrêt.
+    # Cela peut être utile pour "nettoyer", comme pour ramener
+    # les moteurs à leurs positions de départ.
     print("You pressed the stop button!")

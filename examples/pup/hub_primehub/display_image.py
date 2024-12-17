@@ -2,17 +2,17 @@ from pybricks.hubs import PrimeHub
 from pybricks.tools import wait
 from pybricks.parameters import Icon
 
-# Initialize the hub.
+# Initialiser le hub.
 hub = PrimeHub()
 
-# Display a big arrow pointing up.
+# Afficher une grande flèche pointant vers le haut.
 hub.display.icon(Icon.UP)
 
-# Wait so we can see what is displayed.
+# Attendre pour voir ce qui est affiché.
 wait(2000)
 
-# Display a heart at half brightness.
+# Afficher un cœur à moitié de luminosité.
 hub.display.icon(Icon.HEART / 2)
 
-# Wait so we can see what is displayed.
+# Attendre pour voir ce qui est affiché.
 wait(2000)

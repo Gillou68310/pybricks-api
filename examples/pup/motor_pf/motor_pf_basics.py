@@ -2,19 +2,19 @@ from pybricks.pupdevices import ColorDistanceSensor, PFMotor
 from pybricks.parameters import Port, Color
 from pybricks.tools import wait
 
-# Initialize the sensor.
+# Initialiser le capteur.
 sensor = ColorDistanceSensor(Port.B)
 
-# Initialize a motor on channel 1, on the red output.
+# Initialiser un moteur sur le canal 1, sur la sortie rouge.
 motor = PFMotor(sensor, 1, Color.RED)
 
-# Rotate and then stop.
+# Tourner puis s'arrêter.
 motor.dc(100)
 wait(1000)
 motor.stop()
 wait(1000)
 
-# Rotate the other way at half speed, and then stop.
+# Tourner dans l'autre sens à mi-vitesse, puis s'arrêter.
 motor.dc(-50)
 wait(1000)
 motor.stop()

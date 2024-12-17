@@ -1,16 +1,16 @@
 from pybricks.hubs import PrimeHub
 from pybricks.parameters import Button
 
-# Initialize the hub.
+# Initialiser le hub.
 hub = PrimeHub()
 
-# Configure the stop button combination. Now, your program stops
-# if you press the center and Bluetooth buttons simultaneously.
+# Configurer la combinaison de boutons d'arrêt. Maintenant, votre programme s'arrête
+# si vous appuyez simultanément sur les boutons central et Bluetooth.
 hub.system.set_stop_button((Button.CENTER, Button.BLUETOOTH))
 
-# Now we can use the center button as a normal button.
+# Maintenant, nous pouvons utiliser le bouton central comme un bouton normal.
 while True:
 
-    # Play a sound if the center button is pressed.
+    # Jouer un son si le bouton central est pressé.
     if Button.CENTER in hub.buttons.pressed():
         hub.speaker.beep()

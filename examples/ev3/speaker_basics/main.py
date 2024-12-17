@@ -4,26 +4,23 @@ from pybricks.hubs import EV3Brick
 from pybricks.tools import wait
 from pybricks.media.ev3dev import SoundFile
 
-
-# Initialize the EV3
+# Initialiser l'EV3
 ev3 = EV3Brick()
 
+# BIP #########################################################################
 
-# BEEP ########################################################################
-
-# Simple beep
+# Bip simple
 ev3.speaker.beep()
 
 wait(1000)
 
-# Interesting beeps
+# Bips intéressants
 for f in range(100, 500, 100):
     ev3.speaker.beep(f)
 
 wait(1000)
 
-
-# PLAY NOTES ##################################################################
+# JOUER DES NOTES #############################################################
 
 # Twinkle, Twinkle Little Star
 A = [
@@ -49,20 +46,18 @@ ev3.speaker.play_notes(TWINKLE)
 
 wait(1000)
 
-
-# PLAY FILE ###################################################################
+# JOUER UN FICHIER ############################################################
 
 ev3.speaker.play_file(SoundFile.HELLO)
 
 wait(1000)
 
+# TEXTE À PAROLE ##############################################################
 
-# TEXT TO SPEECH ##############################################################
-
-# Say something in English
+# Dire quelque chose en anglais
 ev3.speaker.say("I am am E V 3. Pleased to meet you.")
 
-# Say something in Danish + female
+# Dire quelque chose en danois + voix féminine
 ev3.speaker.set_speech_options(voice="da+f5")
 ev3.speaker.say("Leg godt!")
 

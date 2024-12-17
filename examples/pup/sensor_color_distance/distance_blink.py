@@ -2,22 +2,22 @@ from pybricks.pupdevices import ColorDistanceSensor
 from pybricks.parameters import Port, Color
 from pybricks.tools import wait
 
-# Initialize the sensor.
+# Initialiser le capteur.
 sensor = ColorDistanceSensor(Port.A)
 
-# Repeat forever.
+# Répéter indéfiniment.
 while True:
 
-    # If the sensor sees an object nearby.
+    # Si le capteur voit un objet à proximité.
     if sensor.distance() <= 40:
 
-        # Then blink the light red/blue 5 times.
+        # Alors clignotez la lumière rouge/bleu 5 fois.
         for i in range(5):
             sensor.light.on(Color.RED)
             wait(30)
             sensor.light.on(Color.BLUE)
             wait(30)
     else:
-        # If the sensor sees nothing
-        # nearby, just wait briefly.
+        # Si le capteur ne voit rien
+        # à proximité, attendez juste un peu.
         wait(10)

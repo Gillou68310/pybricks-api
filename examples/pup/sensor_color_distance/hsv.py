@@ -2,20 +2,20 @@ from pybricks.pupdevices import ColorDistanceSensor
 from pybricks.parameters import Port
 from pybricks.tools import wait
 
-# Initialize the sensor.
+# Initialiser le capteur.
 sensor = ColorDistanceSensor(Port.A)
 
 while True:
-    # The standard color() method always "rounds" the
-    # measurement to the nearest "whole" color.
-    # That's useful for most applications.
+    # La méthode standard color() "arrondit" toujours la
+    # mesure à la couleur "entière" la plus proche.
+    # C'est utile pour la plupart des applications.
 
-    # But you can get the original hue, saturation,
-    # and value without "rounding", as follows:
+    # Mais vous pouvez obtenir la teinte, la saturation,
+    # et la valeur originales sans "arrondi", comme suit :
     color = sensor.hsv()
 
-    # Print the results.
+    # Imprimer les résultats.
     print(color)
 
-    # Wait so we can read the value.
+    # Attendre pour pouvoir lire la valeur.
     wait(500)

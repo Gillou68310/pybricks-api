@@ -2,14 +2,14 @@ from pybricks.pupdevices import Motor
 from pybricks.parameters import Port, Direction
 from pybricks.tools import wait
 
-# Initialize a motor on port A with the positive direction as counterclockwise.
-# Also specify one gear train with a 12-tooth and a 36-tooth gear. The 12-tooth
-# gear is attached to the motor axle. The 36-tooth gear is at the output axle.
+# Initialiser un moteur sur le port A avec la direction positive comme antihoraire.
+# Spécifier également un train d'engrenages avec un pignon de 12 dents et un pignon de 36 dents. Le pignon de 12 dents
+# est attaché à l'axe du moteur. Le pignon de 36 dents est à l'axe de sortie.
 geared_motor = Motor(Port.A, Direction.COUNTERCLOCKWISE, [12, 36])
 
-# Make the output axle run at 100 degrees per second. The motor speed
-# is automatically increased to compensate for the gears.
+# Faire tourner l'axe de sortie à 100 degrés par seconde. La vitesse du moteur
+# est automatiquement augmentée pour compenser les engrenages.
 geared_motor.run(100)
 
-# Wait for three seconds.
+# Attendre trois secondes.
 wait(3000)

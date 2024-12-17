@@ -9,27 +9,27 @@ ev3 = EV3Brick()
 # Initialize I2C Sensor
 device = I2CDevice(Port.S2, 0xD2 >> 1)
 
-# Recommended for reading
+# Recommandé pour la lecture
 (result,) = device.read(reg=0x0F, length=1)
 
-# Read 1 byte from no particular register:
+# Lire 1 octet sans registre particulier :
 device.read(reg=None, length=1)
 
-# Read 0 bytes from no particular register:
+# Lire 0 octet sans registre particulier :
 device.read(reg=None, length=0)
 
-# I2C write operations consist of a register byte followed
-# by a series of data bytes. Depending on your device, you
-# can choose to skip the register or data as follows:
+# Les opérations d'écriture I2C consistent en un octet de registre suivi
+# d'une série d'octets de données. Selon votre appareil, vous
+# pouvez choisir de sauter le registre ou les données comme suit :
 
-# Recommended for writing:
+# Recommandé pour l'écriture :
 device.write(reg=0x22, data=b"\x08")
 
-# Write 1 byte to no particular register:
+# Écrire 1 octet sans registre particulier :
 device.write(reg=None, data=b"\x08")
 
-# Write 0 bytes to a particular register:
+# Écrire 0 octet à un registre particulier :
 device.write(reg=0x08, data=None)
 
-# Write 0 bytes to no particular register:
+# Écrire 0 octet sans registre particulier :
 device.write(reg=None, data=None)

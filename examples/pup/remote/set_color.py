@@ -4,7 +4,7 @@ from pybricks.parameters import Button, Color
 
 def button_to_color(buttons):
 
-    # Return a color depending on the button.
+    # Retourner une couleur en fonction du bouton.
     if Button.LEFT_PLUS in buttons:
         return Color.RED
     if Button.LEFT_MINUS in buttons:
@@ -20,25 +20,25 @@ def button_to_color(buttons):
     if Button.CENTER in buttons:
         return Color.VIOLET
 
-    # Return no color by default.
+    # Retourner aucune couleur par défaut.
     return Color.NONE
 
 
-# Connect to the remote.
+# Se connecter à la télécommande.
 remote = Remote()
 
 while True:
-    # Wait until a button is pressed.
+    # Attendre qu'un bouton soit pressé.
     pressed = ()
     while not pressed:
         pressed = remote.buttons.pressed()
 
-    # Convert button code to color.
+    # Convertir le code du bouton en couleur.
     color = button_to_color(pressed)
 
-    # Set the remote light color.
+    # Définir la couleur de la lumière de la télécommande.
     remote.light.on(color)
 
-    # Wait until all buttons are released.
+    # Attendre que tous les boutons soient relâchés.
     while pressed:
         pressed = remote.buttons.pressed()

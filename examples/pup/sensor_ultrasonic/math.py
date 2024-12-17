@@ -4,26 +4,26 @@ from pybricks.tools import wait, StopWatch
 
 from umath import pi, sin
 
-# Initialize the sensor.
+# Initialiser le capteur.
 eyes = UltrasonicSensor(Port.A)
 
-# Initialize a timer.
+# Initialiser un chronomètre.
 watch = StopWatch()
 
-# We want one full light cycle to last three seconds.
+# Nous voulons qu'un cycle complet de lumière dure trois secondes.
 PERIOD = 3000
 
 while True:
-    # The phase is where we are in the unit circle now.
+    # La phase est où nous en sommes dans le cercle unité maintenant.
     phase = watch.time() / PERIOD * 2 * pi
 
-    # Each light follows a sine wave with a mean of 50, with an amplitude of 50.
-    # We offset this sine wave by 90 degrees for each light, so that all the
-    # lights do something different.
+    # Chaque lumière suit une onde sinusoïdale avec une moyenne de 50, avec une amplitude de 50.
+    # Nous décalons cette onde sinusoïdale de 90 degrés pour chaque lumière, afin que toutes les
+    # lumières fassent quelque chose de différent.
     brightness = [sin(phase + offset * pi / 2) * 50 + 50 for offset in range(4)]
 
-    # Set the brightness values for all lights.
+    # Régler les valeurs de luminosité pour toutes les lumières.
     eyes.lights.on(brightness)
 
-    # Wait some time.
+    # Attendre un certain temps.
     wait(50)

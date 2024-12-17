@@ -2,26 +2,26 @@ from pybricks.pupdevices import Motor
 from pybricks.parameters import Port, Direction
 from pybricks.robotics import DriveBase
 
-# Initialize both motors. In this example, the motor on the
-# left must turn counterclockwise to make the robot go forward.
+# Initialiser les deux moteurs. Dans cet exemple, le moteur sur la
+# gauche doit tourner dans le sens antihoraire pour que le robot avance.
 left_motor = Motor(Port.A, Direction.COUNTERCLOCKWISE)
 right_motor = Motor(Port.B)
 
-# Initialize the drive base. In this example, the wheel diameter is 56mm.
-# The distance between the two wheel-ground contact points is 112mm.
+# Initialiser la base de conduite. Dans cet exemple, le diamètre de la roue est de 56mm.
+# La distance entre les deux points de contact roue-sol est de 112mm.
 drive_base = DriveBase(left_motor, right_motor, wheel_diameter=56, axle_track=112)
 
-# Optionally, uncomment the line below to use the gyro for improved accuracy.
+# Optionnellement, décommentez la ligne ci-dessous pour utiliser le gyroscope pour une meilleure précision.
 # drive_base.use_gyro(True)
 
-# Drive forward by 500mm (half a meter).
+# Conduire en avant de 500mm (un demi-mètre).
 drive_base.straight(500)
 
-# Turn around clockwise by 180 degrees.
+# Faire demi-tour dans le sens horaire de 180 degrés.
 drive_base.turn(180)
 
-# Drive forward again to get back to the start.
+# Conduire en avant à nouveau pour revenir au point de départ.
 drive_base.straight(500)
 
-# Turn around counterclockwise.
+# Faire demi-tour dans le sens antihoraire.
 drive_base.turn(-180)

@@ -4,14 +4,14 @@ from pybricks.tools import wait
 
 from connection import SpikePrimeStreamReader
 
-# Beep!
+# Bip!
 ev3 = EV3Brick()
 ev3.speaker.beep()
 
-# Create the connection. See README.md to find the address for your SPIKE hub.
+# Créer la connexion. Voir README.md pour trouver l'adresse de votre hub SPIKE.
 spike = SpikePrimeStreamReader("F4:84:4C:AA:C8:A4")
 
-# Now you can simply read values!
+# Maintenant, vous pouvez simplement lire les valeurs !
 for i in range(100):
     print(spike.values())
     wait(100)

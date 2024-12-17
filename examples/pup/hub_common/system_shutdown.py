@@ -2,12 +2,12 @@
 from pybricks.hubs import ThisHub
 from pybricks.tools import wait
 
-# Initialize the hub.
+# Initialiser le hub.
 hub = ThisHub()
 
-# Say goodbye and give some time to send it.
+# Dire au revoir et donner du temps pour l'envoyer.
 print("Goodbye!")
 wait(100)
 
-# Shut the hub down.
+# Éteindre le hub.
 hub.system.shutdown()

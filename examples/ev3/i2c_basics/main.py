@@ -3,21 +3,20 @@ from pybricks.hubs import EV3Brick
 from pybricks.iodevices import I2CDevice
 from pybricks.parameters import Port
 
-# Initialize the EV3
+# Initialiser l'EV3
 ev3 = EV3Brick()
 
-# Initialize I2C Sensor
+# Initialiser le capteur I2C
 device = I2CDevice(Port.S2, 0xD2 >> 1)
 
-# Read one byte from the device.
-# For this device, we can read the Who Am I
-# register (0x0F) for the expected value: 211.
+# Lire un octet de l'appareil.
+# Pour cet appareil, nous pouvons lire le registre Who Am I
+# (0x0F) pour la valeur attendue : 211.
 if 211 not in device.read(0x0F):
     raise ValueError("Unexpected I2C device ID")
 
-# To write data, create a bytes object of one
-# or more bytes. For example:
+# Pour écrire des données, créez un objet bytes d'un ou plusieurs octets. Par exemple :
 # data = bytes((1, 2, 3))
 
-# Write one byte (value 0x08) to register 0x22
+# Écrire un octet (valeur 0x08) dans le registre 0x22
 device.write(0x22, bytes((0x08,)))

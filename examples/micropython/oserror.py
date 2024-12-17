@@ -4,16 +4,16 @@ from pybricks.parameters import Port
 from uerrno import ENODEV
 
 try:
-    # Try to initialize a motor.
+    # Essayez d'initialiser un moteur.
     my_motor = Motor(Port.A)
 
-    # If all goes well, you'll see this message.
+    # Si tout se passe bien, vous verrez ce message.
     print("Detected a motor.")
 except OSError as ex:
-    # If an OSError was raised, we can check what
-    # kind of error this was, like ENODEV.
+    # Si une OSError a été levée, nous pouvons vérifier quel
+    # type d'erreur c'était, comme ENODEV.
     if ex.errno == ENODEV:
-        # ENODEV is short for "Error, no device."
+        # ENODEV est l'abréviation de "Erreur, pas de dispositif."
         print("There is no motor this port.")
     else:
         print("Another error occurred.")

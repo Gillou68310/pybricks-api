@@ -2,17 +2,17 @@ from pybricks.pupdevices import Motor
 from pybricks.parameters import Port
 from pybricks.tools import wait
 
-# Initialize a motor on port A.
+# Initialiser un moteur sur le port A.
 example_motor = Motor(Port.A)
 
-# Make the motor run clockwise at 500 degrees per second.
+# Faire tourner le moteur dans le sens horaire à 500 degrés par seconde.
 example_motor.run(500)
 
-# Wait for three seconds.
+# Attendre trois secondes.
 wait(3000)
 
-# Make the motor run counterclockwise at 500 degrees per second.
+# Faire tourner le moteur dans le sens antihoraire à 500 degrés par seconde.
 example_motor.run(-500)
 
-# Wait for three seconds.
+# Attendre trois secondes.
 wait(3000)

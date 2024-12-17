@@ -4,17 +4,15 @@ from pybricks.hubs import EV3Brick
 from pybricks.tools import wait
 from pybricks.media.ev3dev import Image, ImageFile
 
-# It takes some time to load images from the SD card, so it is best to load
-# them once at the beginning of a program like this:
+# Le chargement des images à partir de la carte SD prend du temps, il est donc préférable de les charger
+# une seule fois au début du programme comme ceci :
 ev3_img = Image(ImageFile.EV3_ICON)
 
-
-# Initialize the EV3
+# Initialiser l'EV3
 ev3 = EV3Brick()
 
-
-# Show an image
+# Afficher une image
 ev3.screen.load_image(ev3_img)
 
-# Wait some time to look at the image
+# Attendre un peu pour regarder l'image
 wait(5000)

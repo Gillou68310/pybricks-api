@@ -2,21 +2,21 @@ from pybricks.pupdevices import Motor
 from pybricks.parameters import Port
 from pybricks.tools import wait
 
-# Initialize a motor on port A.
+# Initialiser un moteur sur le port A.
 example_motor = Motor(Port.A)
 
-# Start moving at 300 degrees per second.
+# Commencer à se déplacer à 300 degrés par seconde.
 example_motor.run(300)
 
-# Display the angle and speed 50 times.
+# Afficher l'angle et la vitesse 50 fois.
 for i in range(100):
 
-    # Read the angle (degrees) and speed (degrees per second).
+    # Lire l'angle (degrés) et la vitesse (degrés par seconde).
     angle = example_motor.angle()
     speed = example_motor.speed()
 
-    # Print the values.
+    # Imprimer les valeurs.
     print(angle, speed)
 
-    # Wait some time so we can read what is displayed.
+    # Attendre un peu pour pouvoir lire ce qui est affiché.
     wait(200)

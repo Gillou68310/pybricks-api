@@ -1,14 +1,14 @@
 #!/usr/bin/env pybricks-micropython
 
-# Before running this program, make sure the client and server EV3 bricks are
-# paired using Bluetooth, but do NOT connect them. The program will take care
-# of establishing the connection.
+# Avant d'exécuter ce programme, assurez-vous que les briques EV3 client et serveur
+# sont appariées via Bluetooth, mais ne les connectez PAS. Le programme se chargera
+# d'établir la connexion.
 
-# The server must be started before the client!
+# Le serveur doit être démarré avant le client !
 
 from pybricks.messaging import BluetoothMailboxClient, TextMailbox
 
-# This is the name of the remote EV3 or PC we are connecting to.
+# Ceci est le nom de l'EV3 ou du PC distant auquel nous nous connectons.
 SERVER = "ev3dev"
 
 client = BluetoothMailboxClient()
@@ -18,8 +18,8 @@ print("establishing connection...")
 client.connect(SERVER)
 print("connected!")
 
-# In this program, the client sends the first message and then waits for the
-# server to reply.
+# Dans ce programme, le client envoie le premier message puis attend que le
+# serveur réponde.
 mbox.send("hello!")
 mbox.wait()
 print(mbox.read())

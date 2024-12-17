@@ -1,39 +1,40 @@
 #!/usr/bin/env python3
-"""Generates hub-specific examples from common template script."""
+"""Génère des exemples spécifiques au hub à partir d'un script modèle commun."""
 
 import pathlib
 
-# Make build directory.
+# Créer le répertoire de construction.
 dir_path = pathlib.Path(__file__).parent
 build_path = dir_path / "build"
 build_path.mkdir(exist_ok=True)
 
-# Get list of scripts to be parsed.
+# Obtenir la liste des scripts à analyser.
 file_paths = [f for f in dir_path.glob("*.py") if f.stem != "make_examples"]
 
-# Go through all template scripts
+# Parcourir tous les scripts modèles
 for file_path in file_paths:
 
     with open(file_path) as template:
 
-        # First line contains hub info
+        # La première ligne contient les informations du hub
         hubs = template.readline().strip().split()[3:]
 
         print("Converting", template.name, "to", hubs)
 
+        # Parcourir tous les hubs
         for hub in hubs:
-            # Path to hub-specific output script.
+            # Chemin vers le script de sortie spécifique au hub.
             gen_path = build_path / (file_path.stem + "_" + hub.lower() + ".py")
 
-            # Reset source script and skip over header.
+            # Réinitialiser le script source et passer l'en-tête.
             template.seek(0)
             template.readline()
 
-            # Open destination script:
+            # Ouvrir le script de destination :
             with open(gen_path, "w") as dest_file:
 
-                # Read script line by line.
+                # Lire le script ligne par ligne.
                 for line in template.readlines():
 
-                    # Replace hub name if present.
+                    # Remplacer le nom du hub si présent.
                     dest_file.writelines(line.replace("ThisHub", hub))

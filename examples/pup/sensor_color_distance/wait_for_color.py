@@ -2,26 +2,24 @@ from pybricks.pupdevices import ColorDistanceSensor
 from pybricks.parameters import Port, Color
 from pybricks.tools import wait
 
-# Initialize the sensor.
+# Initialiser le capteur.
 sensor = ColorDistanceSensor(Port.A)
 
-
-# This is a function that waits for a desired color.
+# Ceci est une fonction qui attend une couleur désirée.
 def wait_for_color(desired_color):
-    # While the color is not the desired color, we keep waiting.
+    # Tant que la couleur n'est pas la couleur désirée, nous continuons à attendre.
     while sensor.color() != desired_color:
         wait(20)
 
-
-# Now we use the function we just created above.
+# Maintenant, nous utilisons la fonction que nous venons de créer ci-dessus.
 while True:
 
-    # Here you can make your train/vehicle go forward.
+    # Ici, vous pouvez faire avancer votre train/véhicule.
 
     print("Waiting for red ...")
     wait_for_color(Color.RED)
 
-    # Here you can make your train/vehicle go backward.
+    # Ici, vous pouvez faire reculer votre train/véhicule.
 
     print("Waiting for blue ...")
     wait_for_color(Color.BLUE)

@@ -5,16 +5,16 @@ from pybricks.parameters import Button
 
 from menu import wait_for_button
 
-# Initialize the EV3.
+# Initialiser l'EV3.
 ev3 = EV3Brick()
 
 while True:
-    # Show the menu and wait for one button to be selected.
+    # Afficher le menu et attendre qu'un bouton soit sélectionné.
     button = wait_for_button(ev3)
 
-    # Now you can do something, based on which button was pressed.
+    # Maintenant, vous pouvez faire quelque chose, en fonction du bouton pressé.
 
-    # In this demo, we just play a different sound for each button.
+    # Dans cette démo, nous jouons simplement un son différent pour chaque bouton.
     if button == Button.LEFT:
         ev3.speaker.beep(200)
     elif button == Button.RIGHT:

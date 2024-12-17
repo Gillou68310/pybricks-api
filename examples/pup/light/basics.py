@@ -2,15 +2,15 @@ from pybricks.pupdevices import Light
 from pybricks.parameters import Port
 from pybricks.tools import wait
 
-# Initialize the light.
+# Initialiser la lumière.
 light = Light(Port.A)
 
-# Blink the light forever.
+# Faire clignoter la lumière indéfiniment.
 while True:
-    # Turn the light on at 100% brightness.
+    # Allumer la lumière à 100% de luminosité.
     light.on(100)
     wait(500)
 
-    # Turn the light off.
+    # Éteindre la lumière.
     light.off()
     wait(500)

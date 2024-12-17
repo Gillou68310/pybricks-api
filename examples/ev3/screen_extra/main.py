@@ -7,14 +7,12 @@ from pybricks.parameters import Color
 from pybricks.tools import wait
 from pybricks.media.ev3dev import Font, Image
 
-
-# Initialize the EV3
+# Initialiser l'EV3
 ev3 = EV3Brick()
 
+# ÉCRAN DIVISÉ ###############################################################
 
-# SPLIT SCREEN ################################################################
-
-# Make a sub-image for the left half of the screen
+# Créer une sous-image pour la moitié gauche de l'écran
 left = Image(
     ev3.screen,
     sub=True,
@@ -24,7 +22,7 @@ left = Image(
     y2=ev3.screen.height - 1,
 )
 
-# Make a sub-image for the right half of the screen
+# Créer une sous-image pour la moitié droite de l'écran
 right = Image(
     ev3.screen,
     sub=True,
@@ -34,59 +32,56 @@ right = Image(
     y2=ev3.screen.height - 1,
 )
 
-# Use a monospaced font so that text is vertically aligned when we print
+# Utiliser une police à espacement fixe pour que le texte soit aligné verticalement lors de l'impression
 right.set_font(Font(size=8, monospace=True))
 
-
-# Graphing y = sin(x)
+# Graphique y = sin(x)
 def f(x):
     return math.sin(x)
 
-
 for t in range(200):
-    # Graph on left side
+    # Graphique sur le côté gauche
 
-    # Scale t to x-axis and compute y values
+    # Mettre à l'échelle t sur l'axe des x et calculer les valeurs de y
     x0 = (t - 1) * 2 * math.pi / left.width
     y0 = f(x0)
     x1 = t * 2 * math.pi / left.width
     y1 = f(x1)
 
-    # Scale y values to screen coordinates
+    # Mettre à l'échelle les valeurs de y aux coordonnées de l'écran
     sy0 = (-y0 + 1) * left.height / 2
     sy1 = (-y1 + 1) * left.height / 2
 
-    # Shift the current graph to the left one pixel
+    # Déplacer le graphique actuel vers la gauche d'un pixel
     left.draw_image(-1, 0, left)
-    # Fill the last column with white to erase the previous plot point
+    # Remplir la dernière colonne de blanc pour effacer le point de tracé précédent
     left.draw_line(left.width - 1, 0, left.width - 1, left.height - 1, 1, Color.WHITE)
-    # Draw the new value of the graph in the last column
+    # Dessiner la nouvelle valeur du graphique dans la dernière colonne
     left.draw_line(left.width - 2, int(sy0), left.width - 1, int(sy1), 3)
 
-    # Print every 10th value on right side
+    # Imprimer chaque 10ème valeur sur le côté droit
     if t % 10 == 0:
         right.print("{:10.2f}{:10.2f}".format(x1, y1))
 
     wait(100)
 
+# ANIMATION DE SPRITE #########################################################
 
-# SPRITE ANIMATION ############################################################
-
-# Copy of screen for double-buffering
+# Copie de l'écran pour le double tampon
 buf = Image(ev3.screen)
 
-# Load images from file
+# Charger les images à partir du fichier
 bg = Image("background.png")
 sprite = Image("sprite.png")
 
-# Number of cells in each sprite animation
+# Nombre de cellules dans chaque animation de sprite
 NUM_CELLS = 8
 
-# Each cell in the sprite is 75 x 100 pixels
+# Chaque cellule du sprite mesure 75 x 100 pixels
 CELL_WIDTH, CELL_HEIGHT = 75, 100
 
-# Get sub-images for each individual cell
-# This is more efficient that loading individual images
+# Obtenir des sous-images pour chaque cellule individuelle
+# C'est plus efficace que de charger des images individuelles
 walk_right = [
     Image(
         sprite,
@@ -110,19 +105,18 @@ walk_left = [
     for x in range(NUM_CELLS)
 ]
 
-
-# Walk from left to right
+# Marcher de gauche à droite
 for x in range(-100, 200, 2):
-    # Start with the background image
+    # Commencer avec l'image de fond
     buf.draw_image(0, 0, bg)
-    # Draw the current sprite - purple is treated as transparent
+    # Dessiner le sprite actuel - le violet est traité comme transparent
     buf.draw_image(x, 5, walk_right[x // 5 % NUM_CELLS], Color.PURPLE)
-    # Copy the double-buffer to the screen
+    # Copier le double tampon sur l'écran
     ev3.screen.draw_image(0, 0, buf)
-    # 20 frames per second
+    # 20 images par seconde
     wait(50)
 
-# Walk from right to left
+# Marcher de droite à gauche
 for x in range(200, -100, -2):
     buf.draw_image(0, 0, bg)
     buf.draw_image(x, 5, walk_left[x // 5 % NUM_CELLS], Color.PURPLE)

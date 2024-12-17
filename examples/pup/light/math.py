@@ -4,22 +4,22 @@ from pybricks.tools import wait, StopWatch
 
 from umath import pi, cos
 
-# Initialize the light and a StopWatch.
+# Initialiser la lumière et un chronomètre.
 light = Light(Port.A)
 watch = StopWatch()
 
-# Cosine pattern properties.
+# Propriétés du motif cosinus.
 PERIOD = 2000
 MAX = 100
 
-# Make the brightness fade in and out.
+# Faire varier la luminosité.
 while True:
-    # Get phase of the cosine.
+    # Obtenir la phase du cosinus.
     phase = watch.time() / PERIOD * 2 * pi
 
-    # Evaluate the brightness.
+    # Évaluer la luminosité.
     brightness = (0.5 - 0.5 * cos(phase)) * MAX
 
-    # Set light brightness and wait a bit.
+    # Régler la luminosité de la lumière et attendre un peu.
     light.on(brightness)
     wait(10)

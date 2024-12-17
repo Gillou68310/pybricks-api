@@ -3,10 +3,10 @@ from pybricks.hubs import ThisHub
 from pybricks.parameters import Color, Side
 from pybricks.tools import wait
 
-# Initialize the hub.
+# Initialiser le hub.
 hub = ThisHub()
 
-# Define colors for each side in a dictionary.
+# Définir les couleurs pour chaque côté dans un dictionnaire.
 SIDE_COLORS = {
     Side.TOP: Color.RED,
     Side.BOTTOM: Color.BLUE,
@@ -16,15 +16,15 @@ SIDE_COLORS = {
     Side.BACK: Color.BLACK,
 }
 
-# Keep updating the color based on detected up side.
+# Mettre à jour continuellement la couleur en fonction du côté détecté vers le haut.
 while True:
 
-    # Check which side of the hub is up.
+    # Vérifier quel côté du hub est vers le haut.
     up_side = hub.imu.up()
 
-    # Change the color based on the side.
+    # Changer la couleur en fonction du côté.
     hub.light.on(SIDE_COLORS[up_side])
 
-    # Also print the result.
+    # Imprimer également le résultat.
     print(up_side)
     wait(50)

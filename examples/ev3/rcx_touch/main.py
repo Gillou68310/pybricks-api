@@ -4,11 +4,9 @@ from pybricks.iodevices import AnalogSensor
 from pybricks.parameters import Port, Color
 from pybricks.tools import wait
 
-
 class RCXTouchSensor(AnalogSensor):
     def pressed(self):
         return self.resistance() < 50 * 1000
-
 
 ev3 = EV3Brick()
 btn = RCXTouchSensor(Port.S1)

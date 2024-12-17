@@ -2,13 +2,13 @@
 from pybricks.hubs import ThisHub
 from pybricks.tools import wait
 
-# Initialize the hub.
+# Initialiser le hub.
 hub = ThisHub()
 
 while True:
-    # Read the tilt values.
+    # Lire les valeurs d'inclinaison.
     pitch, roll = hub.imu.tilt()
 
-    # Print the result.
+    # Imprimer le résultat.
     print(pitch, roll)
     wait(200)

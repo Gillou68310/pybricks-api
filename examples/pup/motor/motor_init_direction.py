@@ -2,15 +2,15 @@ from pybricks.pupdevices import Motor
 from pybricks.parameters import Port, Direction
 from pybricks.tools import wait
 
-# Initialize a motor on port A with the positive direction as counterclockwise.
+# Initialiser un moteur sur le port A avec la direction positive comme antihoraire.
 example_motor = Motor(Port.A, Direction.COUNTERCLOCKWISE)
 
-# When we choose a positive speed value, the motor now goes counterclockwise.
+# Lorsque nous choisissons une valeur de vitesse positive, le moteur tourne maintenant dans le sens antihoraire.
 example_motor.run(500)
 
-# This is useful when your motor is mounted in reverse or upside down.
-# By changing the positive direction, your script will be easier to read,
-# because a positive value now makes your robot/mechanism go forward.
+# Cela est utile lorsque votre moteur est monté à l'envers ou à l'envers.
+# En changeant la direction positive, votre script sera plus facile à lire,
+# car une valeur positive fait maintenant avancer votre robot/mécanisme.
 
-# Wait for three seconds.
+# Attendre trois secondes.
 wait(3000)

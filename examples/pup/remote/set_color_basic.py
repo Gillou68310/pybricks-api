@@ -2,14 +2,14 @@ from pybricks.pupdevices import Remote
 from pybricks.parameters import Color
 from pybricks.tools import wait
 
-# Connect to the remote.
+# Se connecter à la télécommande.
 remote = Remote()
 
 while True:
-    # Set the color to red.
+    # Définir la couleur sur rouge.
     remote.light.on(Color.RED)
     wait(1000)
 
-    # Set the color to blue.
+    # Définir la couleur sur bleu.
     remote.light.on(Color.BLUE)
     wait(1000)

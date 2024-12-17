@@ -1,29 +1,27 @@
 from micropython import const, opt_level, mem_info, qstr_info, stack_use
 
-# Get stack at start.
+# Obtenir la pile au démarrage.
 stack_start = stack_use()
 
-# Print REPL compiler optimization level.
+# Afficher le niveau d'optimisation du compilateur REPL.
 print("level", opt_level())
 
-# Print memory usage.
+# Afficher l'utilisation de la mémoire.
 mem_info()
 
-# Print memory usage and a memory map.
+# Afficher l'utilisation de la mémoire et une carte mémoire.
 mem_info(True)
 
-# Print interned string information.
+# Afficher les informations sur les chaînes internées.
 qstr_info()
 
-# Print interned string information and their names.
+# Afficher les informations sur les chaînes internées et leurs noms.
 APPLES = const(123)
 _ORANGES = const(456)
 qstr_info(True)
 
-
 def test_stack():
     return stack_use()
 
-
-# Check the stack.
+# Vérifier la pile.
 print("Stack diff: ", test_stack() - stack_start)

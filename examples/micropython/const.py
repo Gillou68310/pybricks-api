@@ -1,13 +1,13 @@
 from micropython import const
 
-# This value can be used here. Other files can import it too.
+# Cette valeur peut être utilisée ici. D'autres fichiers peuvent l'importer aussi.
 APPLES = const(123)
 
-# These values can only be used within this file.
+# Ces valeurs ne peuvent être utilisées que dans ce fichier.
 _ORANGES = const(1 << 8)
 _BANANAS = const(789 + _ORANGES)
 
-# You can read the constants as normal values. The compiler
-# will just insert the numeric values for you.
+# Vous pouvez lire les constantes comme des valeurs normales. Le compilateur
+# insérera simplement les valeurs numériques pour vous.
 fruit = APPLES + _ORANGES + _BANANAS
 print(fruit)

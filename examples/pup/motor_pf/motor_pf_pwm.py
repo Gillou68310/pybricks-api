@@ -2,24 +2,24 @@ from pybricks.pupdevices import ColorDistanceSensor, PFMotor
 from pybricks.parameters import Port, Color, Direction
 from pybricks.tools import wait
 
-# Initialize the sensor.
+# Initialiser le capteur.
 sensor = ColorDistanceSensor(Port.B)
 
-# You can use multiple motors on different channels.
+# Vous pouvez utiliser plusieurs moteurs sur différents canaux.
 arm = PFMotor(sensor, 1, Color.BLUE)
 wheel = PFMotor(sensor, 4, Color.RED, Direction.COUNTERCLOCKWISE)
 
-# Accelerate both motors. Only these values are available.
-# Other values will be rounded down to the nearest match.
+# Accélérer les deux moteurs. Seules ces valeurs sont disponibles.
+# Les autres valeurs seront arrondies à la valeur la plus proche.
 for duty in [15, 30, 45, 60, 75, 90, 100]:
     arm.dc(duty)
     wheel.dc(duty)
     wait(1000)
 
-# To make the signal more reliable, there is a short
-# pause between commands. So, they change speed and
-# stop at a slightly different time.
+# Pour rendre le signal plus fiable, il y a une courte
+# pause entre les commandes. Ainsi, ils changent de vitesse et
+# s'arrêtent à des moments légèrement différents.
 
-# Brake both motors.
+# Freiner les deux moteurs.
 arm.brake()
 wheel.brake()

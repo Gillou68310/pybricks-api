@@ -2,17 +2,17 @@ from pybricks.pupdevices import DCMotor
 from pybricks.parameters import Port
 from pybricks.tools import wait
 
-# Initialize a motor without rotation sensors on port A.
+# Initialiser un moteur sans capteurs de rotation sur le port A.
 example_motor = DCMotor(Port.A)
 
-# Make the motor go clockwise (forward) at 70% duty cycle ("70% power").
+# Faire tourner le moteur dans le sens horaire (avant) à 70% du cycle de service ("70% de puissance").
 example_motor.dc(70)
 
-# Wait for three seconds.
+# Attendre trois secondes.
 wait(3000)
 
-# Make the motor go counterclockwise (backward) at 70% duty cycle.
+# Faire tourner le moteur dans le sens antihoraire (arrière) à 70% du cycle de service.
 example_motor.dc(-70)
 
-# Wait for three seconds.
+# Attendre trois secondes.
 wait(3000)

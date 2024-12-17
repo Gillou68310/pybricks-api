@@ -3,21 +3,21 @@ from pybricks.hubs import EV3Brick
 from pybricks.ev3devices import Motor
 from pybricks.parameters import Port
 
-# Create your objects here
+# Créez vos objets ici
 
-# Initialize the EV3 Brick.
+# Initialiser le Brick EV3.
 ev3 = EV3Brick()
 
-# Initialize a motor at port B.
+# Initialiser un moteur au port B.
 test_motor = Motor(Port.B)
 
-# Write your program here
+# Écrivez votre programme ici
 
-# Play a sound.
+# Jouer un son.
 ev3.speaker.beep()
 
-# Run the motor up to 500 degrees per second. To a target angle of 90 degrees.
+# Faire tourner le moteur jusqu'à 500 degrés par seconde. À un angle cible de 90 degrés.
 test_motor.run_target(500, 90)
 
-# Play another beep sound.
+# Jouer un autre bip sonore.
 ev3.speaker.beep(frequency=1000, duration=500)

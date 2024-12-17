@@ -4,30 +4,30 @@ from pybricks.parameters import Port
 
 import struct
 
-# This program uses the two PS4 sticks to control two EV3 Large Servo Motors
-# using tank like controls. For a full map of all PS4 buttons, trackpad, and
-# motion checkout: https://github.com/codeadamca/python-connect-ps4
+# Ce programme utilise les deux sticks PS4 pour contrôler deux moteurs servo EV3 Large
+# en utilisant des commandes de type tank. Pour une carte complète de tous les boutons PS4, du pavé tactile et
+# des mouvements, consultez : https://github.com/codeadamca/python-connect-ps4
 
-# Initialize EV3 motors
+# Initialiser les moteurs EV3
 left_motor = Motor(Port.B)
 right_motor = Motor(Port.C)
 left_speed = 0
 right_speed = 0
 
-# Locate the event file you want to react to, on my setup the PS4 controller
-# button events are located in /dev/input/event4
+# Localisez le fichier d'événements auquel vous souhaitez réagir, sur mon installation, les événements des boutons du contrôleur PS4
+# sont situés dans /dev/input/event4
 infile_path = "/dev/input/event4"
 in_file = open(infile_path, "rb")
 
-# Define the format the event data will be read.
+# Définir le format des données d'événement à lire.
 # https://docs.python.org/3/library/struct.html#format-characters
 FORMAT = "llHHi"
 EVENT_SIZE = struct.calcsize(FORMAT)
 event = in_file.read(EVENT_SIZE)
 
 
-# A helper function for converting stick values (0 to 255) to more usable
-# numbers (-100 to 100)
+# Une fonction d'aide pour convertir les valeurs des sticks (0 à 255) en nombres plus utilisables
+# (-100 à 100)
 def scale(val, src, dst):
 
     result = float(val - src[0]) / (src[1] - src[0])
@@ -35,63 +35,63 @@ def scale(val, src, dst):
     return result
 
 
-# Create a loop to react to events
-# This loop reacts to all main PS4 button and stick events. I have left out
-# buttons like share and options, but can easily be added in by referring
-# to the table at: https://github.com/codeadamca/python-connect-ps4
+# Créer une boucle pour réagir aux événements
+# Cette boucle réagit à tous les événements principaux des boutons et sticks PS4. J'ai omis
+# des boutons comme share et options, mais ils peuvent facilement être ajoutés en se référant
+# au tableau sur : https://github.com/codeadamca/python-connect-ps4
 
 
 while event:
 
-    # Place event data into variables
+    # Placer les données d'événement dans des variables
     (tv_sec, tv_usec, ev_type, code, value) = struct.unpack(FORMAT, event)
 
-    # If a button was pressed or released
+    # Si un bouton a été pressé ou relâché
     if ev_type == 1:
 
-        # React to the X button
+        # Réagir au bouton X
         if code == 304 and value == 0:
             print("The X button was released")
         elif code == 304 and value == 1:
             print("The X button was pressed")
 
-        # React to the Circle button
+        # Réagir au bouton Cercle
         elif code == 305 and value == 0:
             print("The Circle button was released")
         elif code == 305 and value == 1:
             print("The Circle button was pressed")
 
-        # React to the Triangle button
+        # Réagir au bouton Triangle
         elif code == 307 and value == 0:
             print("The Triangle button was released")
         elif code == 307 and value == 1:
             print("The Triangle button was pressed")
 
-        # React to the Square button
+        # Réagir au bouton Carré
         elif code == 308 and value == 0:
             print("The Square button was released")
         elif code == 308 and value == 1:
             print("The Square button was pressed")
 
-        # React to the L1 button
+        # Réagir au bouton L1
         elif code == 310 and value == 0:
             print("The L1 button was released")
         elif code == 310 and value == 1:
             print("The L1 button was pressed")
 
-        # React to the R1 button
+        # Réagir au bouton R1
         elif code == 311 and value == 0:
             print("The R1 button was released")
         elif code == 311 and value == 1:
             print("The R1 button was pressed")
 
-        # React to the L2 button
+        # Réagir au bouton L2
         elif code == 312 and value == 0:
             print("The L2 button was released")
         elif code == 312 and value == 1:
             print("The L2 button was pressed")
 
-        # React to the R2 button
+        # Réagir au bouton R2
         elif code == 313 and value == 0:
             print("The R2 button was released")
         elif code == 313 and value == 1:
@@ -99,29 +99,28 @@ while event:
 
     elif ev_type == 3:
 
-        # The sticks often trigger non-stop events, comment this out if you are
-        # not using the sticks as part of your project, or it becomes hard to
-        # read other data
+        # Les sticks déclenchent souvent des événements non-stop, commentez ceci si vous n'utilisez pas les sticks
+        # dans votre projet, ou si cela devient difficile de lire d'autres données
 
-        # React to the left stick vertical
+        # Réagir au stick gauche vertical
         if code == 1:
             print("The left stick vertical is at ", value)
             left_speed = scale(value, (0, 255), (100, -100))
 
-        # React to the left stick horizontal
+        # Réagir au stick gauche horizontal
         elif code == 0:
             print("The left stick horizontal is at ", value)
 
-        # React to the right stick vertical
+        # Réagir au stick droit vertical
         elif code == 4:
             print("The right stick vertical is at ", value)
             right_speed = scale(value, (0, 255), (100, -100))
 
-        # React to the right stick horizontal
+        # Réagir au stick droit horizontal
         elif code == 3:
             print("The right stick horizontal is at ", value)
 
-        # React to the Directional pad
+        # Réagir au pavé directionnel
         if code == 16 and value == -1:
             print("The horizontal directional pad is left")
         elif code == 16 and value == 1:
@@ -136,11 +135,11 @@ while event:
         elif code == 17 and value == 0:
             print("The horizontal directional pad is released")
 
-    # Set motor speed
+    # Définir la vitesse du moteur
     left_motor.dc(left_speed)
     right_motor.dc(right_speed)
 
-    # Read the next event
+    # Lire le prochain événement
     event = in_file.read(EVENT_SIZE)
 
 in_file.close()

@@ -2,22 +2,20 @@ from pybricks.parameters import Port
 from pybricks.pupdevices import ColorSensor
 from pybricks.tools import wait
 
-# Initialize the sensor.
+# Initialiser le capteur.
 sensor = ColorSensor(Port.A)
 
-
 def main():
-    # Run the main code.
+    # Exécuter le code principal.
     while True:
         print(sensor.color())
         wait(500)
 
-
-# Wrap the main code in try/finally so that the cleanup code always runs
-# when the program ends, even if an exception was raised.
+# Enveloppez le code principal dans un try/finally pour que le code de nettoyage s'exécute toujours
+# lorsque le programme se termine, même si une exception a été levée.
 try:
     main()
 finally:
-    # The cleanup code goes here.
+    # Le code de nettoyage va ici.
     print("Cleaning up.")
     sensor.lights.off()

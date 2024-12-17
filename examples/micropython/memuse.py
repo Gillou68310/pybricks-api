@@ -1,4 +1,4 @@
 from micropython import mem_info
 
-# Print memory usage.
+# Afficher l'utilisation de la mémoire.
 mem_info()

@@ -3,24 +3,24 @@ from pybricks.hubs import ThisHub
 from pybricks.parameters import Color, Button
 from pybricks.tools import wait, StopWatch
 
-# Initialize the hub.
+# Initialiser le hub.
 hub = ThisHub()
 
-# Disable the stop button.
+# Désactiver le bouton d'arrêt.
 hub.system.set_stop_button(None)
 
-# Check the button for 5 seconds.
+# Vérifier le bouton pendant 5 secondes.
 watch = StopWatch()
 while watch.time() < 5000:
 
-    # Set light to green if pressed, else red.
+    # Mettre la lumière en vert si pressé, sinon rouge.
     if hub.buttons.pressed():
         hub.light.on(Color.GREEN)
     else:
         hub.light.on(Color.RED)
 
-# Enable the stop button again.
+# Réactiver le bouton d'arrêt.
 hub.system.set_stop_button(Button.CENTER)
 
-# Now you can press the stop button as usual.
+# Maintenant, vous pouvez appuyer sur le bouton d'arrêt comme d'habitude.
 wait(5000)

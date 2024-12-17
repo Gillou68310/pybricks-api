@@ -4,43 +4,43 @@ from pybricks.iodevices import Ev3devSensor
 
 
 class MySensor(Ev3devSensor):
-    """Example of extending the Ev3devSensor class."""
+    """Exemple d'extension de la classe Ev3devSensor."""
 
     def __init__(self, port):
-        """Initialize the sensor."""
+        """Initialiser le capteur."""
 
-        # Initialize the parent class.
+        # Initialiser la classe parente.
         super().__init__(port)
 
-        # Get the sysfs path.
+        # Obtenir le chemin sysfs.
         self.path = "/sys/class/lego-sensor/sensor" + str(self.sensor_index)
 
     def get_modes(self):
-        """Get a list of mode strings so we don't have to look them up."""
+        """Obtenir une liste de chaînes de modes pour ne pas avoir à les chercher."""
 
-        # The path of the modes file.
+        # Le chemin du fichier des modes.
         modes_path = self.path + "/modes"
 
-        # Open the modes file.
+        # Ouvrir le fichier des modes.
         with open(modes_path, "r") as m:
 
-            # Read the contents.
+            # Lire le contenu.
             contents = m.read()
 
-            # Strip the newline symbol, and split at every space symbol.
+            # Supprimer le symbole de nouvelle ligne et diviser à chaque symbole d'espace.
             return contents.strip().split(" ")
 
 
-# Initialize the sensor
+# Initialiser le capteur
 sensor = MySensor(Port.S3)
 
-# Show where this sensor can be found
+# Montrer où ce capteur peut être trouvé
 print(sensor.path)
 
-# Print the available modes
+# Imprimer les modes disponibles
 modes = sensor.get_modes()
 print(modes)
 
-# Read mode 0 of this sensor
+# Lire le mode 0 de ce capteur
 val = sensor.read(modes[0])
 print(val)

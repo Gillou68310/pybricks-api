@@ -2,16 +2,16 @@ from pybricks.pupdevices import DCMotor
 from pybricks.parameters import Port, Direction
 from pybricks.tools import wait
 
-# Initialize a motor without rotation sensors on port A,
-# with the positive direction as counterclockwise.
+# Initialiser un moteur sans capteurs de rotation sur le port A,
+# avec la direction positive comme sens antihoraire.
 example_motor = DCMotor(Port.A, Direction.COUNTERCLOCKWISE)
 
-# When we choose a positive duty cycle, the motor now goes counterclockwise.
+# Lorsque nous choisissons un cycle de service positif, le moteur tourne maintenant dans le sens antihoraire.
 example_motor.dc(70)
 
-# This is useful when your (train) motor is mounted in reverse or upside down.
-# By changing the positive direction, your script will be easier to read,
-# because a positive value now makes your train/robot go forward.
+# Ceci est utile lorsque votre moteur (de train) est monté à l'envers ou à l'envers.
+# En changeant la direction positive, votre script sera plus facile à lire,
+# car une valeur positive fait maintenant avancer votre train/robot.
 
-# Wait for three seconds.
+# Attendre trois secondes.
 wait(3000)
